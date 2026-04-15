@@ -13,7 +13,7 @@ export function useChat() {
   const [messages, setMessages] = useState<ChatMessage[]>([
     {
       role: 'assistant',
-      content: "Hi! I'm Tola, TTL4G's virtual assistant 👋 I'm here to help you explore our leadership and cross-cultural training programs. What brings you here today?",
+      content: "Hi! I'm Joy, TTL4G's virtual assistant 👋 I'm here to help you explore our leadership and cross-cultural training programs. What brings you here today?",
       timestamp: new Date().toISOString(),
     },
   ])
@@ -77,7 +77,7 @@ export function useChat() {
     setMessages([
       {
         role: 'assistant',
-        content: "Hi! I'm Tola, TTL4G's virtual assistant 👋 How can I help you today?",
+        content: "Hi! I'm Joy, TTL4G's virtual assistant 👋 How can I help you today?",
         timestamp: new Date().toISOString(),
       },
     ])

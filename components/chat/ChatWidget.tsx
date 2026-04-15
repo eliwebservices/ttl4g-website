@@ -55,7 +55,7 @@ export default function ChatWidget() {
             >
               <X size={10} className="text-white" />
             </button>
-            👋 Hi! I'm Tola. How can I help you today?
+            👋 Hi! I'm Joy. How can I help you today?
           </div>
           {/* Tooltip arrow */}
           <div className="w-3 h-3 bg-[#1A3320] rotate-45 ml-auto mr-5 -mt-1.5" />

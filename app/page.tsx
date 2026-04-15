@@ -2,16 +2,50 @@ import Link from 'next/link'
 import Image from 'next/image'
 import {
   Trophy, TrendingUp, RefreshCw, Handshake, Target,
-  Globe, Clock, Award, ArrowRight, Quote
+  Globe, Clock, Award, ArrowRight, Quote, Star, Briefcase
 } from 'lucide-react'
 
+// const services = [
+//   { icon: Trophy, title: "Leadership Development", desc: "Equip your leaders with the mindset, skills, and strategies to drive organizational excellence and inspire high-performing teams." },
+//   { icon: TrendingUp, title: "Performance Management", desc: "Build robust systems that align individual goals with business outcomes and create a culture of accountability and growth." },
+//   { icon: RefreshCw, title: "Change Management", desc: "Navigate organizational transformation with confidence. We help your people embrace change and deliver results through transitions." },
+//   { icon: Handshake, title: "Cross-Cultural Intelligence", desc: "Master the art of doing business across cultures — specializing in Sino-Africa partnerships and global business contexts." },
+//   { icon: Target, title: "Coaching & Capacity Building", desc: "Unlock potential through personalized coaching programs that develop future-ready leaders at every level of your organization." },
+// ]
+
 const services = [
-  { icon: Trophy, title: "Leadership Development", desc: "Equip your leaders with the mindset, skills, and strategies to drive organizational excellence and inspire high-performing teams." },
-  { icon: TrendingUp, title: "Performance Management", desc: "Build robust systems that align individual goals with business outcomes and create a culture of accountability and growth." },
-  { icon: RefreshCw, title: "Change Management", desc: "Navigate organizational transformation with confidence. We help your people embrace change and deliver results through transitions." },
-  { icon: Handshake, title: "Cross-Cultural Intelligence", desc: "Master the art of doing business across cultures — specializing in Sino-Africa partnerships and global business contexts." },
-  { icon: Target, title: "Coaching & Capacity Building", desc: "Unlock potential through personalized coaching programs that develop future-ready leaders at every level of your organization." },
+  {
+    icon: Globe,
+    title: "Building High-Performance Global Teams",
+    desc: "Cross-cultural communication training that helps diverse teams collaborate effectively and deliver results across borders.",
+  },
+  {
+    icon: Star,
+    title: "Equipping Diplomats & Executives",
+    desc: "Our signature Sino-Africa program — deep cross-cultural awareness for professionals working with Chinese partners and organizations.",
+  },
+  {
+    icon: Target,
+    title: "Coaching for Growth",
+    desc: "Developing talent and driving performance — transforming managers into effective coaches who unlock their team's potential.",
+  },
+  {
+    icon: TrendingUp,
+    title: "Developing Strategic Leadership",
+    desc: "From self-mastery to leading teams and ecosystems — building the mindset and skills of tomorrow's African leaders.",
+  },
+  {
+    icon: RefreshCw,
+    title: "Leading Through Change",
+    desc: "Managing performance and transforming effectively — equipping leaders to guide organizations through uncertainty with confidence.",
+  },
+  {
+    icon: Briefcase,
+    title: "Business Setup in Nigeria",
+    desc: "Company registration, tax clearance, audit, and HR recruitment — your trusted partner for entering the Nigerian market.",
+  },
 ]
+
 
 const whyCards = [
   { icon: Award, title: "Nigeria's Premier Leadership Firm", desc: "Trusted by top organizations across Nigeria and West Africa for transformative leadership programs." },

@@ -10,8 +10,8 @@ const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About' },
   { href: '/services', label: 'Services' },
-  { href: '/cross-cultural', label: 'Cross-Cultural Hub' },
-  { href: '/insights', label: 'Insights' },
+  // { href: '/cross-cultural', label: 'Cross-Cultural Hub' },
+  // { href: '/insights', label: 'Insights' },
   { href: '/contact', label: 'Contact' },
 ]
 

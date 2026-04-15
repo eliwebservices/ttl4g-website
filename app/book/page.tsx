@@ -76,11 +76,10 @@ export default function BookPage() {
                   {/* Integration note */}
                   <div className="bg-[#D4A017]/10 rounded-xl p-4 text-xs text-left">
                     <p className="font-semibold text-[#D4A017] mb-1">
-                      For the developer:
+                      Hello sister Anni, your calendar will go here:
                     </p>
                     <p className="text-gray-500">
-                      Connect Calendly or Cal.com here. Once the client decides,
-                      replace this placeholder with the embed code.
+                      I'll connect a calendar API (Cal.com) here. I'll embed code here.
                     </p>
                   </div>
                 </div>
@@ -94,7 +93,7 @@ export default function BookPage() {
                     Prefer WhatsApp?
                   </p>
                   <a
-                    href="https://wa.me/2341234567890"
+                    href="https://wa.me/2349027099154"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-sm text-green-600 hover:underline font-medium"

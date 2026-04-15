@@ -1,42 +1,42 @@
-import { Mail, Phone, MapPin, MessageSquare } from 'lucide-react'
-import Link from 'next/link'
-import ContactForm from '@/components/sections/ContactForm'
+import { Mail, Phone, MapPin, MessageSquare } from "lucide-react";
+import Link from "next/link";
+import ContactForm from "@/components/sections/ContactForm";
 
 const contactInfo = [
   {
     icon: Mail,
-    label: 'Email',
-    value: 'info@ttl4g.com',
-    href: 'mailto:info@ttl4g.com',
-    iconColor: 'text-[#D4A017]',
-    bgColor: 'bg-[#D4A017]/10',
+    label: "Email",
+    value: "info@ttl4g.com",
+    href: "mailto:info@ttl4g.com",
+    iconColor: "text-[#D4A017]",
+    bgColor: "bg-[#D4A017]/10",
   },
   {
     icon: Phone,
-    label: 'Phone',
-    value: '+234 123 456 7890',
-    href: 'tel:+2341234567890',
-    iconColor: 'text-[#D4A017]',
-    bgColor: 'bg-[#D4A017]/10',
+    label: "Phone",
+    value: "+234 902 709 9154",
+    href: "tel:+2349027099154",
+    iconColor: "text-[#D4A017]",
+    bgColor: "bg-[#D4A017]/10",
   },
   {
     icon: MessageSquare,
-    label: 'WhatsApp',
-    value: 'Chat with us directly',
-    href: 'https://wa.me/2341234567890',
-    iconColor: 'text-green-500',
-    bgColor: 'bg-green-500/10',
+    label: "WhatsApp",
+    value: "Chat with us directly",
+    href: "https://wa.me/2349027099154",
+    iconColor: "text-green-500",
+    bgColor: "bg-green-500/10",
     external: true,
   },
   {
     icon: MapPin,
-    label: 'Office',
-    value: 'Lagos, Nigeria',
+    label: "Office",
+    value: "Oba Lateef Adams Estate Iloro Agege, Lagos, Nigeria",
     href: null,
-    iconColor: 'text-[#D4A017]',
-    bgColor: 'bg-[#D4A017]/10',
+    iconColor: "text-[#D4A017]",
+    bgColor: "bg-[#D4A017]/10",
   },
-]
+];
 
 export default function ContactPage() {
   return (
@@ -62,7 +62,6 @@ export default function ContactPage() {
       <section className="bg-[#FAF7F0] py-20">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-
             {/* ── Left: Contact Form ── */}
             <div>
               <h2 className="font-serif text-2xl font-bold text-[#1A3320] mb-6">
@@ -82,7 +81,9 @@ export default function ContactPage() {
                 {contactInfo.map((item, i) => {
                   const Inner = (
                     <div className="flex items-start gap-4 group">
-                      <div className={`w-12 h-12 rounded-xl ${item.bgColor} flex items-center justify-center flex-shrink-0`}>
+                      <div
+                        className={`w-12 h-12 rounded-xl ${item.bgColor} flex items-center justify-center flex-shrink-0`}
+                      >
                         <item.icon className={`w-5 h-5 ${item.iconColor}`} />
                       </div>
                       <div>
@@ -92,10 +93,10 @@ export default function ContactPage() {
                         <p className="text-sm text-gray-500">{item.value}</p>
                       </div>
                     </div>
-                  )
+                  );
 
                   if (!item.href) {
-                    return <div key={i}>{Inner}</div>
+                    return <div key={i}>{Inner}</div>;
                   }
 
                   return (
@@ -103,13 +104,13 @@ export default function ContactPage() {
                       key={i}
                       href={item.href}
                       {...(item.external
-                        ? { target: '_blank', rel: 'noopener noreferrer' }
+                        ? { target: "_blank", rel: "noopener noreferrer" }
                         : {})}
-                        className='block'
+                      className="block"
                     >
                       {Inner}
                     </a>
-                  )
+                  );
                 })}
               </div>
 
@@ -119,19 +120,24 @@ export default function ContactPage() {
                   Response Time
                 </p>
                 <p className="text-sm text-gray-500">
-                  We respond within 24 hours. For urgent inquiries,
-                  WhatsApp us directly.
+                  We respond within 24 hours. For urgent inquiries, WhatsApp us
+                  directly.
                 </p>
               </div>
 
               {/* Map placeholder */}
               <div className="bg-white rounded-2xl border border-gray-100 overflow-hidden">
-                <div className="h-48 bg-[#2A6B2A]/5 flex items-center justify-center">
-                  <div className="text-center">
-                    <MapPin className="w-8 h-8 text-[#D4A017] mx-auto mb-2" />
-                    <p className="text-sm text-gray-400">Google Maps embed</p>
-                    <p className="text-xs text-gray-400">Lagos, Nigeria</p>
-                  </div>
+                <div className="bg-white rounded-2xl border border-gray-100 overflow-hidden">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.519838900621!2d-0.26574699999996015!3d5.637646599999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf997f4aafbe41%3A0x2966e7dca85afcf0!2sEli%20Web%20Services!5e0!3m2!1sen!2sgh!4v1776210173999!5m2!1sen!2sgh"
+                    width="100%"
+                    height="250"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="TTL4G Office Location"
+                  />
                 </div>
               </div>
             </div>
@@ -157,5 +163,5 @@ export default function ContactPage() {
         </div>
       </section>
     </>
-  )
+  );
 }

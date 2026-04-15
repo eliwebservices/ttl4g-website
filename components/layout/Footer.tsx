@@ -189,11 +189,11 @@ export default function Footer() {
                   info@ttl4g.com
                 </a>
                 <a
-                  href="tel:+2341234567890"
+                  href="tel:+2349027099154"
                   className="flex items-center gap-2 hover:text-[#D4A017] transition-colors w-fit"
                 >
                   <Phone className="w-4 h-4 flex-shrink-0" />
-                  +234 123 456 7890
+                  +234 902 709 9154
                 </a>
                 <span className="flex items-center gap-2">
                   <MapPin className="w-4 h-4 flex-shrink-0" />

@@ -15,7 +15,7 @@ function MessageBubble({ message }: { message: ChatMessage }) {
     <div className={`flex ${isUser ? 'justify-end' : 'justify-start'} mb-3`}>
       {!isUser && (
         <div className="w-7 h-7 rounded-full bg-[#1A3320] flex items-center justify-center text-[#D4A017] text-xs font-bold mr-2 flex-shrink-0 mt-1">
-          T
+          J
         </div>
       )}
       <div
@@ -35,7 +35,7 @@ function TypingIndicator() {
   return (
     <div className="flex justify-start mb-3">
       <div className="w-7 h-7 rounded-full bg-[#1A3320] flex items-center justify-center text-[#D4A017] text-xs font-bold mr-2 flex-shrink-0">
-        T
+        J
       </div>
       <div className="bg-white rounded-2xl rounded-tl-sm px-4 py-3 shadow-sm border border-gray-100">
         <div className="flex gap-1 items-center h-4">
@@ -108,7 +108,7 @@ export default function ChatWindow({ onClose }: ChatWindowProps) {
             <span className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-green-400 rounded-full border-2 border-[#1A3320]" />
           </div>
           <div>
-            <p className="text-white font-semibold text-sm leading-tight">Tola</p>
+            <p className="text-white font-semibold text-sm leading-tight">Joy</p>
             <p className="text-green-300 text-xs">TTL4G Assistant · Online</p>
           </div>
         </div>
@@ -180,7 +180,7 @@ export default function ChatWindow({ onClose }: ChatWindowProps) {
             value={input}
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={handleKeyDown}
-            placeholder="Ask Tola anything..."
+            placeholder="Ask Joy anything..."
             disabled={isLoading}
             className="flex-1 bg-transparent text-sm text-gray-800 placeholder-gray-400 outline-none disabled:opacity-50"
           />
