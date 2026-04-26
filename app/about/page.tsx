@@ -3,10 +3,10 @@ import Link from 'next/link'
 
 const values = [
   { icon: Heart, title: "Integrity", desc: "We operate with transparency, honesty, and ethical commitment in every engagement." },
-  { icon: Star, title: "Excellence", desc: "We deliver world-class programs that meet the highest international standards." },
-  { icon: Globe, title: "Cultural Respect", desc: "We honor and leverage the richness of diverse cultures in every interaction." },
-  { icon: Lightbulb, title: "Innovation", desc: "We continuously evolve our methods to stay ahead of leadership trends." },
-  { icon: Users, title: "Collaboration", desc: "We believe the best outcomes emerge from genuine partnership with our clients." },
+  // { icon: Star, title: "Excellence", desc: "We deliver world-class programs that meet the highest international standards." },
+  // { icon: Globe, title: "Cultural Respect", desc: "We honor and leverage the richness of diverse cultures in every interaction." },
+  // { icon: Lightbulb, title: "Innovation", desc: "We continuously evolve our methods to stay ahead of leadership trends." },
+  // { icon: Users, title: "Collaboration", desc: "We believe the best outcomes emerge from genuine partnership with our clients." },
   { icon: Zap, title: "Impact", desc: "We measure our success by the tangible transformation we create in organizations." },
 ]
 
@@ -193,7 +193,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── Team ── */}
-      <section className="bg-white py-20">
+      {/* <section className="bg-white py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-14">
             <p className="text-[#D4A017] font-semibold uppercase tracking-widest text-sm mb-2">
@@ -218,10 +218,10 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ── Accreditations ── */}
-      <section className="bg-[#FAF7F0] py-16">
+      {/* <section className="bg-[#FAF7F0] py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-10">
             <p className="text-[#D4A017] font-semibold uppercase tracking-widest text-sm mb-2">
@@ -239,7 +239,7 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ── CTA ── */}
       <section className="bg-[#1A3320] py-16">

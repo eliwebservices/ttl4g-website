@@ -21,10 +21,10 @@ const quickLinks = [
 
 const services = [
   'Leadership Development',
-  'Performance Management',
-  'Change Management',
   'Cross-Cultural Intelligence',
   'Coaching & Capacity Building',
+  'Performance Management',
+  'Change Management',
 ]
 
 const socials = [
@@ -80,7 +80,7 @@ export default function Footer() {
       <section className="bg-[#2A6B2A] py-6">
         <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-white font-serif text-lg font-medium">
-            Get weekly leadership insights delivered to your inbox
+            Get monthly leadership insights delivered to your inbox
           </p>
           <div className="flex flex-col gap-2 w-full md:w-auto">
             <div className="flex gap-2">
@@ -197,7 +197,7 @@ export default function Footer() {
                 </a>
                 <span className="flex items-center gap-2">
                   <MapPin className="w-4 h-4 flex-shrink-0" />
-                  Lagos, Nigeria
+                  Abuja, Nigeria
                 </span>
               </div>
             </div>

@@ -48,7 +48,7 @@ export default function CrossCulturalPage() {
                 Deep Dive
               </p>
               <h2 className="font-serif text-3xl md:text-4xl font-bold text-white mb-4">
-                Sino-Africa Specialists
+                Sino-Africa Experts
               </h2>
               <div className="w-16 h-0.5 bg-[#D4A017] mx-auto" />
             </div>
@@ -115,7 +115,7 @@ export default function CrossCulturalPage() {
       </section>
 
       {/* ── Lead Magnet ── */}
-      <section className="bg-[#FAF7F0] py-20">
+      {/* <section className="bg-[#FAF7F0] py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto bg-white rounded-3xl border border-[#D4A017]/20 p-10 md:p-14 text-center shadow-lg">
             <span className="text-4xl block mb-4">📘</span>
@@ -129,7 +129,7 @@ export default function CrossCulturalPage() {
             <LeadMagnetForm />
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   )
 }

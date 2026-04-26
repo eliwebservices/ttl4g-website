@@ -32,7 +32,7 @@ const services = [
   {
     icon: TrendingUp,
     title: "Developing Strategic Leadership",
-    desc: "From self-mastery to leading teams and ecosystems — building the mindset and skills of tomorrow's African leaders.",
+    desc: "From self-mastery to leading teams and ecosystems — building the mindset and skills of tomorrow's leaders.",
   },
   {
     icon: RefreshCw,
@@ -97,7 +97,7 @@ export default function HomePage() {
             </p>
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white mb-6">
               Building Leaders Who Transform Organizations{' '}
-              <span className="text-[#D4A017]">Across Africa and Beyond</span>
+              <span className="text-[#D4A017]">and Impact Society</span>
             </h1>
             <p className="text-lg md:text-xl text-white/80 mb-10 max-w-2xl leading-relaxed">
               Leadership Development • Cross-Cultural Intelligence • Coaching • Performance & Change Management
@@ -121,7 +121,7 @@ export default function HomePage() {
       </section>
 
       {/* ── Trust Bar ── */}
-      <section className="bg-white py-5 border-b border-gray-100">
+      {/* <section className="bg-white py-5 border-b border-gray-100">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap items-center justify-center gap-6 md:gap-10 text-sm font-semibold uppercase tracking-wider text-gray-500">
             {trustBadges.map((text, i) => (
@@ -132,7 +132,7 @@ export default function HomePage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ── Core Services ── */}
       <section className="bg-[#FAF7F0] py-20">
@@ -172,7 +172,7 @@ export default function HomePage() {
       </section>
 
       {/* ── Why TTL4G ── */}
-      <section className="bg-[#1A3320] py-20">
+      {/* <section className="bg-[#1A3320] py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-14">
             <p className="text-[#D4A017] font-semibold uppercase tracking-widest text-sm mb-2">
@@ -197,7 +197,7 @@ export default function HomePage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ── Sino-Africa Spotlight ── */}
       <section className="bg-[#FAF7F0] py-20">
@@ -268,7 +268,7 @@ export default function HomePage() {
       </section>
 
       {/* ── Testimonials ── */}
-      <section className="bg-[#FAF7F0] py-20">
+      {/* <section className="bg-[#FAF7F0] py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-14">
             <p className="text-[#D4A017] font-semibold uppercase tracking-widest text-sm mb-2">
@@ -302,10 +302,10 @@ export default function HomePage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ── Blog Preview ── */}
-      <section className="bg-white py-20">
+      {/* <section className="bg-white py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-14">
             <p className="text-[#D4A017] font-semibold uppercase tracking-widest text-sm mb-2">
@@ -321,9 +321,9 @@ export default function HomePage() {
               <div
                 key={i}
                 className="bg-[#FAF7F0] rounded-2xl border border-gray-100 overflow-hidden hover:shadow-lg transition-shadow"
-              >
+              > */}
                 {/* Card image placeholder */}
-                <div className="h-40 bg-gradient-to-br from-[#2A6B2A] to-[#1A3320] relative flex items-center justify-center overflow-hidden">
+                {/* <div className="h-40 bg-gradient-to-br from-[#2A6B2A] to-[#1A3320] relative flex items-center justify-center overflow-hidden">
                   <div
                     className="absolute inset-0 opacity-10"
                     style={{ backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,0.1) 10px, rgba(255,255,255,0.1) 20px)' }}
@@ -354,7 +354,7 @@ export default function HomePage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ── Final CTA ── */}
       <section className="bg-[#1A3320] py-20">
@@ -377,7 +377,7 @@ export default function HomePage() {
               href="tel:+2341234567890"
               className="text-[#D4A017] font-semibold text-sm hover:underline"
             >
-              Or call: +234 123 456 7890
+              Or call: +234 902 709 9154
             </a>
           </div>
         </div>

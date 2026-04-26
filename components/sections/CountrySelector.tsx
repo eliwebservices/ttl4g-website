@@ -8,7 +8,7 @@ const countries = [
     flag: "🇨🇳", country: "China",
     dynamics: "Chinese business culture is built on Guanxi (relationships) and Mianzi (face). Decision-making is hierarchical, and trust is established over time through personal connections rather than contracts alone.",
     pitfalls: "Rushing negotiations, ignoring hierarchy, being too direct with criticism, failing to build personal relationships before business discussions, and misunderstanding the role of banquets in deal-making.",
-    approach: "We train teams in Guanxi-building, face-saving communication, hierarchical respect, banquet etiquette, and negotiation pacing adapted for Sino-African partnerships.",
+    approach: "We train teams in Guanxi-building, face-saving communication, hierarchical respect, banquet etiquette, and negotiation pacing adapted for productive partnerships.",
   },
   {
     flag: "🇩🇪", country: "Germany",

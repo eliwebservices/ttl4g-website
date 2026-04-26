@@ -151,7 +151,7 @@ const trainingServices = [
   },
   {
     title: "Equipping Diplomats and Executives",
-    subtitle: "Cross-Cultural Awareness for China",
+    subtitle: "Cross-Cultural Awareness for China/Nigeria",
     desc: [
       "Our signature Sino-Africa program prepares Nigerian and African professionals for the unique cultural dynamics of working with Chinese partners, colleagues, and organizations.",
       "From understanding Guanxi and Mianzi to mastering banquet etiquette, negotiation pacing, and hierarchical communication, this program gives participants a decisive edge in China-Africa business relationships.",
@@ -186,7 +186,7 @@ const trainingServices = [
     subtitle: "From Self-Mastery to Leading Teams and Ecosystems",
     desc: [
       "This flagship leadership development program takes leaders on a transformational journey — from deep self-awareness and personal mastery to strategic team leadership and ecosystem-level influence.",
-      "Combining cutting-edge leadership science with African leadership wisdom, the program develops the mindset, emotional intelligence, and strategic vision required to lead in complex, rapidly changing environments.",
+      "Combining cutting-edge leadership science with leadership wisdom, the program develops the mindset, emotional intelligence, and strategic vision required to lead in complex, rapidly changing environments.",
       "Delivered in tiered modules for emerging leaders, mid-level managers, and senior executives.",
     ],
     audience: "Emerging leaders, mid-level managers, senior executives, and high-potential talent across all industries.",
@@ -237,7 +237,7 @@ const consultingServices = [
     subtitle: "Registration, Compliance & HR Services",
     desc: [
       "Entering the Nigerian market is a significant opportunity — but navigating the regulatory, legal, and human capital landscape requires expert local knowledge.",
-      "TTL4G's Business Consulting division guides international companies and entrepreneurs through every step of establishing a compliant, well-staffed business presence in Nigeria.",
+      "TTL4G's Business Consulting division guides international companies and entrepreneurs through every step of establishing a compliant, business presence in Nigeria.",
       "From company registration and tax clearance to audit preparation and recruitment of management staff, we are your trusted on-the-ground partner.",
     ],
     audience: "International companies entering Nigeria, foreign investors, diaspora entrepreneurs, and organizations expanding their Nigerian operations.",
