@@ -10,6 +10,8 @@ const contactInfo = [
     href: "mailto:info@ttl4g.com",
     iconColor: "text-[#D4A017]",
     bgColor: "bg-[#D4A017]/10",
+    external: false,
+
   },
   // {
   //   icon: Phone,
