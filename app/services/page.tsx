@@ -159,7 +159,7 @@ const trainingServices = [
     ],
     audience: "Diplomats, government officials, business executives, and professionals engaged in Nigeria-China or Africa-China partnerships.",
     outcomes: [
-      "Deep understanding of Chinese business culture and protocols",
+      "Deep understanding of Chinese/Nigerian business culture and protocols",
       "Confidence in high-stakes Sino-Africa negotiations",
       "Ability to build lasting Guanxi-based relationships",
       "Reduced cultural mistakes that cost deals and partnerships",

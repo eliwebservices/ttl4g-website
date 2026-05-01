@@ -128,7 +128,7 @@ export default function ContactPage() {
               </div>
 
               {/* Map placeholder */}
-              <div className="bg-white rounded-2xl border border-gray-100 overflow-hidden">
+              {/* <div className="bg-white rounded-2xl border border-gray-100 overflow-hidden">
                 <div className="bg-white rounded-2xl border border-gray-100 overflow-hidden">
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.519838900621!2d-0.26574699999996015!3d5.637646599999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf997f4aafbe41%3A0x2966e7dca85afcf0!2sEli%20Web%20Services!5e0!3m2!1sen!2sgh!4v1776210173999!5m2!1sen!2sgh"
@@ -141,7 +141,7 @@ export default function ContactPage() {
                     title="TTL4G Office Location"
                   />
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

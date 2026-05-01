@@ -103,7 +103,7 @@ export default function ChatWindow({ onClose }: ChatWindowProps) {
         <div className="flex items-center gap-3">
           <div className="relative">
             <div className="w-9 h-9 rounded-full bg-[#D4A017] flex items-center justify-center text-[#1A3320] font-bold text-sm">
-              T
+              J
             </div>
             <span className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-green-400 rounded-full border-2 border-[#1A3320]" />
           </div>

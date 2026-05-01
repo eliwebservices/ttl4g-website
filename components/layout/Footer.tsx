@@ -78,42 +78,43 @@ export default function Footer() {
     <>
       {/* Newsletter Bar */}
       <section className="bg-[#2A6B2A] py-6">
-        <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-white font-serif text-lg font-medium">
-            Get monthly leadership insights delivered to your inbox
-          </p>
-          <div className="flex flex-col gap-2 w-full md:w-auto">
-            <div className="flex gap-2">
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => {
-                  setEmail(e.target.value)
-                  setStatus('idle')
-                  setMessage('')
-                }}
-                onKeyDown={handleKeyDown}
-                placeholder="Enter your email"
-                disabled={status === 'loading' || status === 'success'}
-                className="px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/50 flex-1 md:w-64 text-sm outline-none focus:border-[#D4A017] transition-colors disabled:opacity-50"
-              />
-              <button
-                onClick={handleSubscribe}
-                disabled={status === 'loading' || status === 'success'}
-                className="bg-[#D4A017] text-[#1A3320] text-xs font-semibold uppercase tracking-wider py-2 px-5 rounded-lg hover:bg-[#b8880f] transition-colors disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap"
-              >
-                {status === 'loading' ? 'Subscribing...' : 'Subscribe'}
-              </button>
-            </div>
-            {/* Feedback message */}
-            {message && (
-              <p className={`text-xs ${status === 'success' ? 'text-green-300' : 'text-red-300'}`}>
-                {message}
-              </p>
-            )}
-          </div>
-        </div>
-      </section>
+  <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
+    <p className="text-white font-serif text-lg font-medium">
+      Get monthly leadership insights delivered to your inbox
+    </p>
+    <div className="flex flex-col gap-2 w-full md:w-auto">
+      <div className="flex flex-col sm:flex-row gap-2">
+        <input
+          type="email"
+          value={email}
+          onChange={(e) => {
+            setEmail(e.target.value)
+            setStatus('idle')
+            setMessage('')
+          }}
+          onKeyDown={handleKeyDown}
+          placeholder="Enter your email"
+          disabled={status === 'loading' || status === 'success'}
+          className="px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/50 w-full sm:w-64 text-sm outline-none focus:border-[#D4A017] transition-colors disabled:opacity-50"
+        />
+        <button
+          onClick={handleSubscribe}
+          disabled={status === 'loading' || status === 'success'}
+          className="bg-[#D4A017] text-[#1A3320] text-xs font-semibold uppercase tracking-wider py-2 px-5 rounded-lg hover:bg-[#b8880f] transition-colors disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap w-full sm:w-auto"
+        >
+          {status === 'loading' ? 'Subscribing...' : 'Subscribe'}
+        </button>
+      </div>
+      {/* Feedback message */}
+      {message && (
+        <p className={`text-xs ${status === 'success' ? 'text-green-300' : 'text-red-300'}`}>
+          {message}
+        </p>
+      )}
+    </div>
+  </div>
+</section>
+
 
       {/* Footer */}
       <footer className="bg-[#1A3320] py-16">
@@ -188,13 +189,13 @@ export default function Footer() {
                   <Mail className="w-4 h-4 flex-shrink-0" />
                   info@ttl4g.com
                 </a>
-                <a
+                {/* <a
                   href="tel:+2349027099154"
                   className="flex items-center gap-2 hover:text-[#D4A017] transition-colors w-fit"
                 >
                   <Phone className="w-4 h-4 flex-shrink-0" />
                   +234 902 709 9154
-                </a>
+                </a> */}
                 <span className="flex items-center gap-2">
                   <MapPin className="w-4 h-4 flex-shrink-0" />
                   Abuja, Nigeria

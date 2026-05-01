@@ -1,14 +1,15 @@
-import Link from 'next/link'
-import BookingForm from '@/components/sections/BookingForm'
-import FaqAccordion from '@/components/sections/FaqAccordion'
-import { CalendarDays, Clock, Users, CheckCircle } from 'lucide-react'
+import Link from "next/link";
+import BookingForm from "@/components/sections/BookingForm";
+import FaqAccordion from "@/components/sections/FaqAccordion";
+import { CalendarDays, Clock, Users, CheckCircle } from "lucide-react";
+import CalEmbed from "@/components/sections/CalEmbed";
 
 const callBenefits = [
-  { icon: Clock, text: '30 minutes, completely free' },
-  { icon: Users, text: 'Speak directly with our team' },
-  { icon: CheckCircle, text: 'Get tailored recommendations' },
-  { icon: CalendarDays, text: 'No obligation, no hard sell' },
-]
+  { icon: Clock, text: "30 minutes, completely free" },
+  { icon: Users, text: "Speak directly with our team" },
+  { icon: CheckCircle, text: "Get tailored recommendations" },
+  { icon: CalendarDays, text: "No obligation, no hard sell" },
+];
 
 export default function BookPage() {
   return (
@@ -34,8 +35,7 @@ export default function BookPage() {
       <section className="bg-[#FAF7F0] py-20">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-
-            {/* ── Left: Calendar Embed ── */}
+            {/* ── Left: Calendar Embed ── *
             <div>
               <h2 className="font-serif text-2xl font-bold text-[#1A3320] mb-6">
                 Schedule Your Call
@@ -49,7 +49,7 @@ export default function BookPage() {
                 Then install:
                   A) Add <script src="https://assets.calendly.com/assets/external/widget.js"> in layout.tsx
                   B) npm install @calcom/embed-react
-              */}
+              *
               <div className="bg-white rounded-2xl border border-gray-100 p-8 min-h-[420px] flex flex-col items-center justify-center shadow-sm">
                 <div className="text-center">
                   <span className="text-5xl block mb-4">📅</span>
@@ -61,7 +61,7 @@ export default function BookPage() {
                     based on real-time availability.
                   </p>
 
-                  {/* Benefits list */}
+                  /* Benefits list *
                   <div className="space-y-3 text-left max-w-xs mx-auto mb-6">
                     {callBenefits.map((benefit, i) => (
                       <div key={i} className="flex items-center gap-3">
@@ -73,7 +73,7 @@ export default function BookPage() {
                     ))}
                   </div>
 
-                  {/* Integration note */}
+                  /* Integration note *
                   <div className="bg-[#D4A017]/10 rounded-xl p-4 text-xs text-left">
                     <p className="font-semibold text-[#D4A017] mb-1">
                       Hello sister Anni, your calendar will go here:
@@ -85,7 +85,7 @@ export default function BookPage() {
                 </div>
               </div>
 
-              {/* WhatsApp alternative */}
+              /* WhatsApp alternative *
               <div className="mt-4 bg-green-50 rounded-xl p-4 border border-green-100 flex items-center gap-3">
                 <span className="text-2xl">💬</span>
                 <div>
@@ -102,6 +102,33 @@ export default function BookPage() {
                   </a>
                 </div>
               </div>
+            </div> */}
+
+            <div>
+              <h2 className="font-serif text-2xl font-bold text-[#1A3320] mb-6">
+                Schedule Your Call
+              </h2>
+              <div className="bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm">
+                <CalEmbed />
+              </div>
+
+              {/* WhatsApp alternative */}
+              {/* <div className="mt-4 bg-green-50 rounded-xl p-4 border border-green-100 flex items-center gap-3">
+                <span className="text-2xl">💬</span>
+                <div>
+                  <p className="text-sm font-semibold text-gray-700">
+                    Prefer WhatsApp?
+                  </p>
+                  <a
+                    href="https://wa.me/2341234567890"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-green-600 hover:underline font-medium"
+                  >
+                    Chat with us directly →
+                  </a>
+                </div>
+              </div> */}
             </div>
 
             {/* ── Right: Intake Form ── */}
@@ -152,5 +179,5 @@ export default function BookPage() {
         </div>
       </section>
     </>
-  )
+  );
 }

@@ -80,7 +80,7 @@ export default function HomePage() {
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
         {/* Background Image */}
         <Image
-          src="/images/hero-boardroom.jpg"
+          src="/images/hero-boardroom-new.jpg"
           alt="African business leaders in a boardroom"
           fill
           priority
@@ -373,12 +373,12 @@ export default function HomePage() {
             >
               Book Now
             </Link>
-            <a
+            {/* <a
               href="tel:+2341234567890"
               className="text-[#D4A017] font-semibold text-sm hover:underline"
             >
               Or call: +234 902 709 9154
-            </a>
+            </a> */}
           </div>
         </div>
       </section>
