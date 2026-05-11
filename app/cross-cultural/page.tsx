@@ -39,7 +39,7 @@ export default function CrossCulturalPage() {
       </section>
 
       {/* ── Sino-Africa Deep Dive ── */}
-      <section className="bg-[#1A3320] py-20">
+      {/* <section className="bg-[#1A3320] py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
@@ -54,7 +54,7 @@ export default function CrossCulturalPage() {
             </div>
 
             <div className="grid md:grid-cols-2 gap-8 mb-12">
-              {/* Nigerian Dynamics */}
+              
               <div className="bg-white/5 rounded-2xl p-8 border border-[#D4A017]/20">
                 <h3 className="font-serif text-xl font-semibold text-[#D4A017] mb-4">
                   Nigerian Workplace Dynamics
@@ -75,7 +75,7 @@ export default function CrossCulturalPage() {
                 </ul>
               </div>
 
-              {/* Chinese Dynamics */}
+              
               <div className="bg-white/5 rounded-2xl p-8 border border-[#D4A017]/20">
                 <h3 className="font-serif text-xl font-semibold text-[#D4A017] mb-4">
                   Chinese Workplace Dynamics
@@ -112,7 +112,7 @@ export default function CrossCulturalPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ── Lead Magnet ── */}
       {/* <section className="bg-[#FAF7F0] py-20">

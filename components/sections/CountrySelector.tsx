@@ -35,7 +35,7 @@ const countries = [
     approach: "We train teams in American pitch culture, networking strategies, direct communication styles, and how to navigate the fast-paced deal-making environment.",
   },
   {
-    flag: "🇳🇬", country: "Nigeria (Home Base)",
+    flag: "🇳🇬", country: "Nigeria",
     dynamics: "Nigerian business culture blends traditional respect for elders and hierarchy with entrepreneurial dynamism. Relationships and trust are foundational, and adaptability is a key strength.",
     pitfalls: "For international partners: underestimating Nigerian business sophistication, applying stereotypes, ignoring regional cultural differences, and failing to respect relationship-building timelines.",
     approach: "We help international teams understand Nigeria's diverse business landscape, regional dynamics, communication styles, and how to build authentic partnerships that last.",

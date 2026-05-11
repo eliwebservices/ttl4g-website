@@ -77,11 +77,11 @@ export default function AboutPage() {
             About TTL4G
           </p>
           <h1 className="font-serif text-4xl md:text-5xl font-bold text-white mb-4">
-            Our Story of Impact
+          Building Leaders Who Transform Organizations <br/>
+            and Impact Society
           </h1>
           <p className="text-lg text-white/70 max-w-2xl mx-auto">
-            Proudly Nigerian, globally credible — building leaders who transform
-            organizations and impact society.
+          Leadership Development • Cross-Cultural Intelligence • Coaching • Performance & Change Management
           </p>
           <div className="w-16 h-0.5 bg-[#D4A017] mx-auto mt-6" />
         </div>
@@ -90,28 +90,29 @@ export default function AboutPage() {
       {/* ── Founder ── */}
       <section className="bg-[#FAF7F0] py-20">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          {/* <div className="grid md:grid-cols-2 gap-12 items-center">  I'LL ADD THIS WHEN SHE AGREES TO ADD HER PHOTO*/}
+          <div className="text-center">
 
             {/* 
               Photo placeholder — replace src with Annie's actual photo.
               Image sourced from Unsplash (professional African businesswoman).
               Replace with: src="/images/annie-wong.jpg" once client provides photo.
             */}
-            <div className="rounded-3xl overflow-hidden aspect-[3/4] relative shadow-lg">
+            {/* <div className="rounded-3xl overflow-hidden aspect-[3/4] relative shadow-lg">
               <Image
                 src="/images/annie-about-img-inc.png"
                 alt="Annie Wong — Founder & CEO, TTL4G"
                 fill
                 className="object-cover"
               />
-            </div>
+            </div> */}
 
             {/* Bio */}
             <div>
               <p className="text-[#D4A017] font-semibold uppercase tracking-widest text-sm mb-2">
                 Meet Our Founder
               </p>
-              <h2 className="font-serif text-3xl font-bold text-[#1A3320] mb-2">
+              <h2 className="font-serif text-3xl md:text-4xl font-bold text-[#1A3320] mb-2">
                 Annie Wong
               </h2>
               <p className="font-serif text-lg text-[#D4A017] mb-6 italic">
@@ -240,7 +241,7 @@ export default function AboutPage() {
       </section> */}
 
       {/* ── Timeline ── */}
-      <section className="bg-[#1A3320] py-20">
+      {/* <section className="bg-[#1A3320] py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-14">
             <p className="text-[#D4A017] font-semibold uppercase tracking-widest text-sm mb-2">
@@ -272,7 +273,7 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ── Core Values ── */}
       <section className="bg-[#FAF7F0] py-20">

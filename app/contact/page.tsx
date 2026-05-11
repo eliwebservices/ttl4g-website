@@ -117,7 +117,7 @@ export default function ContactPage() {
               </div>
 
               {/* Response time */}
-              <div className="bg-[#D4A017]/10 rounded-2xl p-6 border border-[#D4A017]/20 mb-6">
+              {/* <div className="bg-[#D4A017]/10 rounded-2xl p-6 border border-[#D4A017]/20 mb-6">
                 <p className="text-sm font-semibold text-[#D4A017] mb-1">
                   Response Time
                 </p>
@@ -125,7 +125,7 @@ export default function ContactPage() {
                   We respond within 24 hours. For urgent inquiries, WhatsApp us
                   directly.
                 </p>
-              </div>
+              </div> */}
 
               {/* Map placeholder */}
               {/* <div className="bg-white rounded-2xl border border-gray-100 overflow-hidden">

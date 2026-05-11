@@ -24,8 +24,7 @@ export default function BookPage() {
             Let's Start Your Leadership Journey
           </h1>
           <p className="text-lg text-white/70 max-w-2xl mx-auto">
-            Book a free 30-minute discovery call and let's discuss how we can
-            transform your team.
+            Book a free 30-minute discovery call.
           </p>
           <div className="w-16 h-0.5 bg-[#D4A017] mx-auto mt-6" />
         </div>

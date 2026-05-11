@@ -362,10 +362,10 @@ export default function HomePage() {
           <h2 className="font-serif text-3xl md:text-4xl font-bold text-white mb-4">
             Ready to Build Leaders Who Deliver?
           </h2>
-          <p className="text-lg text-white/70 mb-8 max-w-xl mx-auto">
+          {/* <p className="text-lg text-white/70 mb-8 max-w-xl mx-auto">
             Join the leading organizations across Africa who trust TTL4G to develop
             their most important asset — their people.
-          </p>
+          </p> */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/book"
