@@ -15,7 +15,7 @@ const quickLinks = [
   { href: '/services', label: 'Services' },
   { href: '/cross-cultural', label: 'Cross-Cultural Hub' },
   { href: '/book', label: 'Book a Call' },
-  { href: '/insights', label: 'Insights' },
+  // { href: '/insights', label: 'Insights' },
   { href: '/contact', label: 'Contact' },
 ]
 

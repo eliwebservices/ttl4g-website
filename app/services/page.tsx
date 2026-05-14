@@ -104,8 +104,8 @@ const culturalCards = [
     ],
   },
   {
-    flag: "🇮🇳",
-    country: "India",
+    flag: "🇳🇬",
+    country: "Nigeria",
     focus: [
       "Hierarchical business structures",
       "Relationship-driven negotiations",
@@ -433,11 +433,11 @@ export default function ServicesPage() {
       <section className="bg-[#FAF7F0] py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-14">
-            <p className="text-[#D4A017] font-semibold uppercase tracking-widest text-sm mb-2">
-              Cultural Awareness Training
-            </p>
+            {/* <p className="text-[#D4A017] font-semibold uppercase tracking-widest text-sm mb-2">
+            Destination Culture Guides
+            </p> */}
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-[#1A3320]">
-              Destination Culture Guides
+              Cultural Awareness Training
             </h2>
             <div className="w-16 h-0.5 bg-[#D4A017] mx-auto mt-4" />
           </div>
