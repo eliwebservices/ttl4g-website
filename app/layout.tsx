@@ -4,6 +4,7 @@ import "./globals.css";
 import ChatWidget from "@/components/chat/ChatWidget";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -33,12 +34,13 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Navbar />
-          <main className="pt-16">
-            {children}
-          </main>
+        <main className="pt-16">{children}</main>
         <Footer />
         <ChatWidget />
       </body>
+      {process.env.NODE_ENV === 'production' && process.env.NEXT_PUBLIC_GA_ID && (
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
+      )}
     </html>
   );
 }
