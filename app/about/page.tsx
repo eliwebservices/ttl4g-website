@@ -1,8 +1,9 @@
-import { Heart, Star, Globe, Lightbulb, Users, Zap, BookOpen } from 'lucide-react'
+import { Heart, Brain, Globe, Lightbulb, Users, Zap, BookOpen } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
 
 const values = [
+  { icon: Brain, title: "Insight", desc: "We discover hidden patterns that unlock meaningful change and we teach our clients to see it too, because Insight isn't value until it's shared." },
   { icon: Heart, title: "Integrity", desc: "We operate with transparency, honesty, and ethical commitment in every engagement." },
   // { icon: Star, title: "Excellence", desc: "We deliver world-class programs that meet the highest international standards." },
   // { icon: Globe, title: "Cultural Respect", desc: "We honor and leverage the richness of diverse cultures in every interaction." },

@@ -170,7 +170,7 @@ const trainingServices = [
     subtitle: "Developing Talent & Driving Performance as a Leader",
     desc: [
       "Great leaders are great coaches. This program transforms managers and executives into effective coaches who unlock the potential of their teams.",
-      "Using ICF-aligned coaching methodologies adapted for the African business context, participants develop the skills to have powerful coaching conversations, set meaningful goals, and drive sustained performance improvement.",
+      "Using ICF-aligned coaching methodologies, participants develop the skills to have powerful coaching conversations, set meaningful goals, and drive sustained performance improvement.",
       "The program includes one-on-one coaching practice sessions, peer coaching circles, and real-world application assignments.",
     ],
     audience: "Managers, team leaders, HR professionals, and executives who want to build a coaching culture within their organizations.",
@@ -202,7 +202,7 @@ const trainingServices = [
     subtitle: "Managing Performance & Transforming Effectively",
     desc: [
       "Change is the only constant — and how leaders navigate it determines organizational survival and success.",
-      "This program equips leaders with proven change management frameworks (including Kotter's 8-Step Model and ADKAR) adapted for the realities of African organizations — where change often meets cultural resistance, resource constraints, and political complexity.",
+      "This program equips leaders with proven change management frameworks (including Kotter's 8-Step Model and ADKAR) adapted for the realities — where change often meets cultural resistance, resource constraints, and political complexity.",
       "Participants develop the skills to lead transformations confidently, maintain team performance during uncertainty, and embed change sustainably.",
     ],
     audience: "Leaders and teams navigating mergers, restructuring, digital transformation, cultural shifts, or rapid growth.",
