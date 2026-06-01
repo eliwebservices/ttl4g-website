@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { bookingSchema, type BookingInput } from "@/lib/validations";
 import { CheckCircle } from "lucide-react";
+import { trackEvent } from "@/lib/analytics";
 
 // const services = [
 //   'Leadership Development',
@@ -72,6 +73,10 @@ export default function BookingForm() {
       }
 
       setStatus("success");
+      trackEvent('booking_submitted', {
+        service: data.service_interest,
+        organization: data.organization,
+      })      
       reset();
     } catch (err) {
       setStatus("error");

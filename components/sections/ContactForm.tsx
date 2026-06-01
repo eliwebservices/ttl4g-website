@@ -5,6 +5,7 @@ import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { contactSchema, type ContactInput } from '@/lib/validations'
 import { CheckCircle } from 'lucide-react'
+import { trackEvent } from '@/lib/analytics'
 
 export default function ContactForm() {
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
@@ -37,6 +38,7 @@ export default function ContactForm() {
       }
 
       setStatus('success')
+      trackEvent('contact_submitted', { subject: data.subject })
       reset()
     } catch (err) {
       setStatus('error')

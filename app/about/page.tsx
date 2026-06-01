@@ -45,25 +45,25 @@ const stories = [
     title: "A Bicultural Balance: Raised in a Chinese-Nigerian Household",
     preview: "Growing up in a mixed-race Chinese-Nigerian household, I didn't fully grasp my heritage until my early twenties...",
     content: [
-      "Growing up in a mixed-race Chinese-Nigerian household, I didn't fully grasp my heritage until my early twenties. That changed when a magazine asked me to write an article titled, \"A Bicultural Balance: Raised in a Chinese Nigerian Household, a Chinese African Master's Juggling Two Cultures.\" Writing it forced me to finally ask: Who am I, culturally?",
-      "People often ask, \"Do you identify more as Chinese or Nigerian?\" The honest answer: It depends on the context. That's not avoidance — it's the reality of living between two worlds. I don't have to choose; I get to embody both.",
-      "I love both cuisines. My Chinese top three: egg fried rice, braised chicken, sizzling beef with onions. My Nigerian top three: plantain, Jollof rice with chicken, savory Egusi with Eba or pounded yam. In health and wellness, Chinese culture took the lead — drinking warm water is second nature; I sometimes boil pears with goji berries and dates.",
-      "In language and humor, Nigerian Pidgin English is genuinely fun and hilarious. The rhythm, the wit, the way people stretch a word for effect — it always makes me laugh. Nigeria is multi-ethnic, and Pidgin English acts as the cultural glue, unifying everyone regardless of tribe or status. It's a masterclass in how language builds bridges.",
-      "My master's degree in the UK, my time with Beijing's international community, and my travels exposed me to many cultures. I learned there are biological cultures we are born into (family, heritage) and inherited cultures we gain through experience (places we live, people we meet, companies we work for). Today, I'm comfortable integrating what I love from Chinese, Nigerian, Western, and Middle Eastern cultures. Call it \"Annie's Culture.\"",
-      "That's why I've decided to spend more time building bridges — starting with China and Nigeria. I've noticed: when I'm in Nigeria, I naturally protect China's image; when I'm in China, I protect Nigeria's image. Despite increased trade, the two cultures know little about each other. Through my professional expertise, I want to build real connections — one conversation, one project, one moment of understanding at a time.",
+      "Growing up in a mixed Chinese-Nigerian household, I didn't fully grasp my heritage until my early twenties. That changed when a magazine asked me to write an article titled \"A Bicultural Balance: A Bicultural Balance: Raised in a Chinese-Nigerian Household — a Chinese-African Master's Juggling Two Cultures.\" Writing it forced me to finally ask: Who am I, culturally?",
+      "People often ask, \"Do you identify more as Chinese or Nigerian?\" My honest answer: it depends on the context. That's not avoidance — it's the reality of living between two worlds. I don't have to choose; I get to embody both.",
+      "I love both cuisines. My Chinese top three: egg fried rice, braised chicken, sizzling beef with onions. My Nigerian top three: plantain, Jollof rice with chicken, and savory Egusi with Eba or pounded yam. In health and wellness, Chinese culture takes the lead — drinking warm water is second nature, and I sometimes boil apples, pears with goji berries, hawthorns and dates. With my own creativity, I now add cinnamon for enhanced flavour.I love both cuisines. My Chinese top three: egg fried rice, braised chicken, sizzling beef with onions. My Nigerian top three: plantain, Jollof rice with chicken, savory Egusi with Eba or pounded yam. In health and wellness, Chinese culture took the lead — drinking warm water is second nature; I sometimes boil pears with goji berries and dates.",
+      "In language and humor, Nigerian Pidgin English is genuinely fun and full of life. The rhythm, the wit, the way people stretch a word for effect — it always makes me laugh. Nigeria is wonderfully multi-ethnic, and Pidgin acts as a cultural glue, bringing everyone together regardless of tribe or status. It's a masterclass in how language builds bridges.",
+      "My master's degree in the UK, my years within Beijing's international community, and my travels exposed me to many cultures. Through those experiences, I came to understand that there are cultures we are born into — biological and family heritage — and cultures we grow into through the places we live, the people we meet, and the environments we work in. Today, I am comfortable integrating what I love from Chinese, Nigerian, Western, and Middle Eastern cultures. Call it \"Annie's Culture.\"",
+      "That's why I've decided to invest more of myself in building bridges — starting with China and Nigeria. I've noticed something interesting: when I'm in Nigeria, I naturally find myself protecting China's image; when I'm in China, I protect Nigeria's. Despite growing trade between the two countries, the cultures still know surprisingly little about each other. Through my work and lived experience, I want to help change that — one conversation, one project, one moment of genuine understanding at a time.",
     ],
   },
   {
     title: "A Journey That Deepened My Perspective",
     preview: "I love traveling — Singapore, Turkey, Israel. But one trip stood out not for relaxation but for a profound lesson on peace and perception...",
     content: [
-      "I love traveling. So far I have a few favourites — Singapore, Turkey, Israel. But one trip stood out not for relaxation but for a profound lesson on peace and perception.",
-      "In October 2023, I visited Israel. On Thursday, October 5th, I was in Shaar HaNegev, right on the western border of the Gaza strip. Everything was peaceful. Quiet. Normal. The skies were blue, the sun burning hot. We even visited a bomb shelter where locals run into during warnings. At the time, it didn't feel like a current necessity.",
-      "On Saturday, October 7th, I left for the airport around 5:00 AM. I checked in, waiting to board like any other traveler. Then I received a text from a friend in Beijing: \"Are you ok? Is everything fine with you?\" I was confused. I hadn't heard the news. The area we'd visited just two days prior had erupted into chaos.",
-      "An announcement came over the loudspeaker. Calmly, a staff asked us to move away from the windows and gather toward the center of the terminal. An elderly Israeli man receiving updates on his phone told me that in similar situations, airports often close. Concern flickered in his eyes. I gently reassured him, \"Don't worry. The airport will not shut down and our flight will take off.\" The visit to the bomb shelter two days earlier now seemed like a rehearsal.",
-      "While we waited, this elderly Israeli man and I had a beautiful exchange. I learned more about Israel, the Jewish people, and their culture from a local. I was fascinated to learn he had even been to China before. A moment of connection right in the middle of a difficult situation. The flight finally took off. We said goodbye to catch different connecting flights. We may never meet again, but he is part of my story.",
-      "Later, I found out a missile had been fired toward Tel Aviv's International Airport and was intercepted. I was sitting in that terminal when it happened.",
-      "I don't tell this story to dramatize. Many have suffered far worse. But for me, it was a moment of crystallization — how quickly things can change. What stayed with me wasn't fear, but a clearer sense of what matters: to live with more love. To impact people positively — even if just with a smile. Being in Israel on October 7th taught me that our understanding of other cultures is often shaped by incomplete pictures — and that real exposure changes everything.",
+      "I love travelling. So far I have a few favourites — Singapore, Turkey, Israel. But one trip stood out not for relaxation, but for a profound lesson on peace and perception.",
+      "In October 2023, I visited Israel. On Thursday, October 5th, I was in Shaar HaNegev, right on the western border of the Gaza Strip. Everything was peaceful. Quiet. Normal. The skies were blue, the sun burning hot. We even visited a bomb shelter — the kind locals run into during warnings. At the time, it didn't feel like a current necessity.",
+      "On Saturday, October 7th, I left for the airport around 5:00 AM. I checked in and waited to board like any other traveller. Then I received a text from a friend in Beijing: \"Are you ok? Is everything fine with you?\" I was confused. I hadn't heard the news. The area we'd visited just two days prior had erupted into chaos.",
+      "Then an announcement came over the loudspeaker. A staff member calmly asked us to step away from the windows and gather toward the center of the terminal. An elderly Israeli man nearby was receiving updates on his phone. He mentioned that in situations like this, airports often close. Concern flickered in his eyes. I gently reassured him: \"Don't worry — the airport will not shut down and our flight will take off.\" The visit to the bomb shelter two days earlier now seemed like a rehearsal.",
+      "While we waited, the elderly Israeli man and I fell into a beautiful conversation. I learned more about Israel, the Jewish people, and their culture directly from a local — the kind of insight no article can give you. I was delighted to discover he had even been to China. A genuine moment of human connection, right in the middle of a deeply unsettling situation. The flight finally took off. We said our goodbyes before catching different connecting flights. We may never meet again, but he is part of my story.",
+      "Later, I found out that a missile had been fired toward Tel Aviv's International Airport and was intercepted. I was sitting in that terminal when it happened.",
+      "I don't tell this story to dramatize. Many have suffered far worse. But for me, it was a moment of crystallization — a sharp reminder of how quickly things can change. What stayed with me wasn't fear, but a clearer sense of what truly matters: to live with more love. To impact people positively — even if just with a smile. Being in Israel on October 7th taught me that our understanding of other cultures is often shaped by incomplete pictures — and that real exposure changes everything.",
     ],
   },
 ]
@@ -89,26 +89,30 @@ export default function AboutPage() {
       </section>
 
       {/* ── Founder ── */}
+      {/*
+        Layout: Two-column on md+ (photo left, bio right), single column on mobile.
+        Photo: IMG_8939 — Annie seated at a flipchart in a professional workshop setting.
+        Chosen for its relaxed-yet-commanding presence, ideal for a founder portrait.
+      */}
       <section className="bg-[#FAF7F0] py-20">
         <div className="container mx-auto px-4">
-          {/* <div className="grid md:grid-cols-2 gap-12 items-center">  I'LL ADD THIS WHEN SHE AGREES TO ADD HER PHOTO*/}
-          <div className="text-center">
+          <div className="grid md:grid-cols-2 gap-12 items-start max-w-5xl mx-auto">
 
-            {/* 
-              Photo placeholder — replace src with Annie's actual photo.
-              Image sourced from Unsplash (professional African businesswoman).
-              Replace with: src="/images/annie-wong.jpg" once client provides photo.
-            */}
-            {/* <div className="rounded-3xl overflow-hidden aspect-[3/4] relative shadow-lg">
-              <Image
-                src="/images/annie-about-img-inc.png"
-                alt="Annie Wong — Founder & CEO, TTL4G"
-                fill
-                className="object-cover"
-              />
-            </div> */}
+            {/* Founder photo — left column */}
+            <div className="sticky top-20">
+              <div className="rounded-2xl overflow-hidden aspect-[4/5] relative shadow-xl">
+                <Image
+                  src="/images/anni_professional.jpg"
+                  alt="Annie Wong facilitating a leadership workshop"
+                  fill
+                  className="object-cover object-top"
+                />
+              </div>
+              {/* Decorative gold accent bar */}
+              <div className="absolute -bottom-4 -left-4 w-24 h-1.5 bg-[#D4A017] rounded-full" />
+            </div>
 
-            {/* Bio */}
+            {/* Bio — right column */}
             <div>
               <p className="text-[#D4A017] font-semibold uppercase tracking-widest text-sm mb-2">
                 Meet Our Founder
@@ -120,38 +124,61 @@ export default function AboutPage() {
                 Founder & CEO, TTL4G
               </p>
               <p className="text-gray-500 leading-relaxed mb-4">
-                Annie Wong is a Chinese-Nigerian who, leveraging her unique heritage and a
-                professional toolkit built for global business, transforms intercultural and
-                leadership dynamics from challenges into strategic advantages.
+              Annie Wong is a Chinese-Nigerian entrepreneur who transforms intercultural and leadership dynamics from challenges into strategic advantages. Leveraging her unique bicultural heritage and a professional toolkit built for global business, she helps organizations and their people perform at their best — across cultures, borders, and contexts. 
               </p>
               <p className="text-gray-500 leading-relaxed mb-4">
-                Her 20-year career in NGOs and multinationals has equipped her with a pragmatic
-                understanding of the communication and performance gaps that arise from cultural
-                misunderstandings across Chinese, African, and Western contexts. Annie's
-                cross-cultural perspective is powered by a Master's degree in Intercultural
-                Communication, enabling her to translate theory into actionable insight.
+              With a 20-year career spanning NGOs and multinationals, Annie has developed deep expertise in leadership development, performance management, executive coaching, and talent development. Over the years, she has trained and coached hundreds of leaders across different levels — from emerging talent to senior management — equipping them with the clarity, skills, leadership assessment capabilities, and mindset to lead with impact. Her Master's degree in Intercultural Communication enables her to translate theory into actionable, culturally-informed insight.
               </p>
               <p className="text-gray-500 leading-relaxed mb-4">
-                As a certified coach and change practitioner, Annie provides expert guidance
-                in supporting businesses and training participants throughout their learning
-                and application journey. Her extensive background in leadership development
-                and change management — including training hundreds of leaders at different
-                levels — ensures that her consultation and training directly support key
-                organizational objectives: improving outcomes, retaining talent, and
-                strengthening team cohesion.
+              As a certified coach and change practitioner, Annie provides expert guidance throughout the entire learning and application journey — ensuring that her consultation and training directly support key organizational objectives: improving outcomes, retaining talent, and strengthening team cohesion.
               </p>
               <p className="text-gray-500 leading-relaxed mb-4">
-                In 2026, Annie is channeling this expertise into TTL4G — a new venture focused
-                on human resource development and Sino-African partnership building, making
-                her current work exceptionally timely and impactful.
+              In 2026, Annie is channelling this expertise into TTL4G — a venture focused on human resource development and Sino-African partnership building, with a mission of building leaders who transform organizations and impact society.
               </p>
               <p className="text-gray-500 leading-relaxed">
-                Annie further extends her commitment to empowerment through humanitarian
-                engagement, supporting charitable initiatives for orphans and at-risk children
-                in China, Uganda, and the Middle East. Beyond her professional and humanitarian
-                work, Annie enjoys writing during her free time.
+              
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Beyond the Boardroom ── */}
+      {/*
+        Full-width band placed between the Founder bio and the Stories section.
+        Photo: 20141213_143241 — Annie holding a smiling child at a Chinese orphanage.
+        Chosen over the floor-group shot for its warmth and emotional resonance.
+        Layout: photo left (fixed height), pull-quote + caption right.
+        Stacks vertically on mobile with photo on top.
+      */}
+      <section className="bg-[#1A3320]">
+        <div className="grid md:grid-cols-2 min-h-[420px]">
+
+          {/* Photo — fills left half on desktop, full width on mobile */}
+          <div className="relative h-72 md:h-auto">
+            <Image
+              src="/images/anni_charity_c.jpg"
+              alt="Annie Wong with children during charitable work in China"
+              fill
+              className="object-cover object-center"
+            />
+            {/* Subtle dark overlay for legibility on very bright images */}
+            <div className="absolute inset-0 bg-[#1A3320]/20" />
+          </div>
+
+          {/* Pull-quote — right half */}
+          <div className="flex flex-col justify-center px-10 py-14 md:px-16">
+            <div className="w-10 h-0.5 bg-[#D4A017] mb-6" />
+            <p className="text-[#D4A017] font-semibold uppercase tracking-widest text-xs mb-4">
+              Beyond the Boardroom
+            </p>
+            <blockquote className="font-serif text-2xl md:text-3xl text-white leading-snug mb-6 italic">
+              "To live with more love. To impact people positively — even if just with a smile."
+            </blockquote>
+            <p className="text-white/60 leading-relaxed max-w-sm">
+            Beyond her professional work, Annie is committed to empowerment through action. She actively supports charitable initiatives for orphans and at-risk children across China, Uganda, and the Middle East, and engages with communities dedicated to helping people move from self-doubt into lives of purpose and bold impact.
+Annie is also a writer and author, whose work reflects her passion for faith, personal growth, and human connection.
+            </p>
           </div>
         </div>
       </section>
