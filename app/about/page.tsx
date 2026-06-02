@@ -102,7 +102,7 @@ export default function AboutPage() {
             <div className="sticky top-20">
               <div className="rounded-2xl overflow-hidden aspect-[4/5] relative shadow-xl">
                 <Image
-                  src="/images/anni_professional.jpg"
+                  src="/images/anni_professional.png"
                   alt="Annie Wong facilitating a leadership workshop"
                   fill
                   className="object-cover object-top"
@@ -157,7 +157,7 @@ export default function AboutPage() {
           {/* Photo — fills left half on desktop, full width on mobile */}
           <div className="relative h-72 md:h-auto">
             <Image
-              src="/images/anni_charity_c.jpg"
+              src="/images/anni_charity.jpg"
               alt="Annie Wong with children during charitable work in China"
               fill
               className="object-cover object-center"
