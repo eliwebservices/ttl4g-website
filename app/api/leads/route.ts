@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { createClient } from '@/lib/supabase/server'
+import { createAdminClient } from '@/lib/supabase/server'
 import { leadSchema } from '@/lib/validations'
 import { sendLeadMagnetEmail } from '@/lib/email'
 
@@ -16,7 +16,7 @@ export async function POST(request: NextRequest) {
     }
 
     const data = parsed.data
-    const supabase = await createClient()
+    const supabase = createAdminClient()
 
     // Check if lead already exists
     const { data: existing } = await supabase

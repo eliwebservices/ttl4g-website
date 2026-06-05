@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { createClient } from '@/lib/supabase/server'
+import { createAdminClient } from '@/lib/supabase/server'
 import { newsletterSchema } from '@/lib/validations'
 import { sendWelcomeEmail } from '@/lib/email'
 
@@ -16,7 +16,7 @@ export async function POST(request: NextRequest) {
     }
 
     const data = parsed.data
-    const supabase = await createClient()
+    const supabase = createAdminClient()
 
     // Upsert — if email exists, just update source (no duplicate error)
     const { error: dbError } = await supabase
@@ -39,8 +39,14 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Send welcome email to subscriber
-    await sendWelcomeEmail(data.email, data.full_name)
+    // // Send welcome email to subscriber
+    // await sendWelcomeEmail(data.email, data.full_name)
+    // Non-fatal — don't let email failure block the subscription
+try {
+  await sendWelcomeEmail(data.email, data.full_name)
+} catch (emailError) {
+  console.error('Welcome email failed (non-fatal):', emailError)
+}
 
     return NextResponse.json(
       { success: true, message: 'You are subscribed! Check your inbox.' },

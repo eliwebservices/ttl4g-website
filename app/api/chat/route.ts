@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import Anthropic from '@anthropic-ai/sdk'
-import { createClient } from '@/lib/supabase/server'
+import { createAdminClient } from '@/lib/supabase/server'
 import { chatSchema } from '@/lib/validations'
 
 const anthropic = new Anthropic({
@@ -64,7 +64,7 @@ export async function POST(request: NextRequest) {
     }
 
     const { message, session_id, history = [] } = parsed.data
-    const supabase = await createClient()
+    const supabase = createAdminClient()
 
     // Build message history for Claude
     const messages: Anthropic.MessageParam[] = [

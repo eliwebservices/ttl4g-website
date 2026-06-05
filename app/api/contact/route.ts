@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { createClient } from '@/lib/supabase/server'
+import { createAdminClient } from '@/lib/supabase/server'
 import { contactSchema } from '@/lib/validations'
 import { sendContactNotification } from '@/lib/email'
 
@@ -17,7 +17,7 @@ export async function POST(request: NextRequest) {
     }
 
     const data = parsed.data
-    const supabase = await createClient()
+    const supabase = createAdminClient()
 
     // Save message to DB
     const { error: dbError } = await supabase
@@ -39,8 +39,15 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Send email notification to client
-    await sendContactNotification(data)
+    // // Send email notification to client
+    // await sendContactNotification(data)
+
+    // Non-fatal — message is already saved even if email fails
+try {
+  await sendContactNotification(data)
+} catch (emailError) {
+  console.error('Contact notification email failed (non-fatal):', emailError)
+}
 
     return NextResponse.json(
       { success: true, message: 'Message received! We will respond within 24 hours.' },
