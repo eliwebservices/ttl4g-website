@@ -42,26 +42,41 @@ export default function ContactForm() {
       reset()
     } catch (err) {
       setStatus('error')
-      setServerMessage('Something went wrong. Please try again or WhatsApp us directly.')
+      setServerMessage('Something went wrong. Please try again or email us directly.')
     }
   }
 
+  // Shared input className builder — keeps things consistent
+  const inputClass = (hasError: boolean) =>
+    `w-full px-4 py-3 border bg-brand-soft text-sm text-brand-navy placeholder:text-brand-charcoal/40 outline-none transition-colors focus:border-brand-gold focus:bg-white ${
+      hasError ? 'border-red-300' : 'border-gray-200'
+    }`
+
+  const labelClass = 'text-xs font-semibold text-brand-charcoal/60 uppercase tracking-widest block mb-2'
+
   if (status === 'success') {
     return (
-      <div className="bg-white rounded-2xl border border-gray-100 p-8 flex flex-col items-center justify-center text-center min-h-[400px]">
-        <div className="w-16 h-16 rounded-full bg-[#2A6B2A]/10 flex items-center justify-center mb-4">
-          <CheckCircle className="w-8 h-8 text-[#2A6B2A]" />
+      <div className="flex flex-col items-center justify-center text-center min-h-[400px] py-8">
+        <div className="w-16 h-16 flex items-center justify-center border border-brand-gold/30 mb-6">
+          <CheckCircle className="w-7 h-7 text-brand-gold" strokeWidth={1.5} />
         </div>
-        <h3 className="font-serif text-2xl font-bold text-[#1A3320] mb-2">
-          Message Sent!
+        <div className="flex items-center gap-3 mb-4">
+          <span className="w-8 h-px bg-brand-gold" />
+          <span className="text-brand-gold text-xs font-semibold uppercase tracking-[0.25em]">
+            Message Sent
+          </span>
+          <span className="w-8 h-px bg-brand-gold" />
+        </div>
+        <h3 className="font-serif text-2xl font-bold text-brand-navy mb-3">
+          Thank you for reaching out.
         </h3>
-        <p className="text-gray-500 mb-6 max-w-sm">
-          Thank you for reaching out. We'll respond within 24 hours.
-          For urgent matters, WhatsApp us directly.
+        <p className="text-brand-charcoal/70 mb-8 max-w-sm leading-relaxed">
+          We&apos;ll respond within 24 hours. For urgent matters, please reach
+          out via email directly.
         </p>
         <button
           onClick={() => setStatus('idle')}
-          className="text-[#D4A017] font-semibold text-sm hover:underline"
+          className="text-brand-navy text-xs font-semibold uppercase tracking-widest border-b border-brand-gold pb-1 hover:text-brand-gold transition-colors"
         >
           Send another message
         </button>
@@ -70,11 +85,169 @@ export default function ContactForm() {
   }
 
   return (
-    <div className="bg-white rounded-2xl border border-gray-100 p-8">
-      <form onSubmit={handleSubmit(onSubmit)} className="space-y-4" noValidate>
+    <form onSubmit={handleSubmit(onSubmit)} className="space-y-5" noValidate>
+
+      {/* Name + Email row */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div>
+          <label className={labelClass}>Full Name *</label>
+          <input
+            {...register('full_name')}
+            placeholder="Your name"
+            className={inputClass(!!errors.full_name)}
+          />
+          {errors.full_name && (
+            <p className="text-red-500 text-xs mt-1.5">{errors.full_name.message}</p>
+          )}
+        </div>
+        <div>
+          <label className={labelClass}>Email *</label>
+          <input
+            {...register('email')}
+            type="email"
+            placeholder="your@email.com"
+            className={inputClass(!!errors.email)}
+          />
+          {errors.email && (
+            <p className="text-red-500 text-xs mt-1.5">{errors.email.message}</p>
+          )}
+        </div>
+      </div>
+
+      {/* Phone + Subject row */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div>
+          <label className={labelClass}>Phone</label>
+          <input
+            {...register('phone')}
+            placeholder="+234..."
+            className={inputClass(false)}
+          />
+        </div>
+        <div>
+          <label className={labelClass}>Subject *</label>
+          <input
+            {...register('subject')}
+            placeholder="How can we help?"
+            className={inputClass(!!errors.subject)}
+          />
+          {errors.subject && (
+            <p className="text-red-500 text-xs mt-1.5">{errors.subject.message}</p>
+          )}
+        </div>
+      </div>
+
+      {/* Message */}
+      <div>
+        <label className={labelClass}>Message *</label>
+        <textarea
+          {...register('message')}
+          rows={5}
+          placeholder="Tell us about your needs..."
+          className={`${inputClass(!!errors.message)} resize-none`}
+        />
+        {errors.message && (
+          <p className="text-red-500 text-xs mt-1.5">{errors.message.message}</p>
+        )}
+      </div>
+
+      {/* Server error */}
+      {status === 'error' && serverMessage && (
+        <p className="text-red-600 text-sm bg-red-50 border-l-2 border-red-400 px-4 py-3">
+          {serverMessage}
+        </p>
+      )}
+
+      {/* Submit */}
+      <button
+        type="submit"
+        disabled={status === 'loading'}
+        className="w-full bg-brand-navy text-white font-semibold uppercase tracking-widest text-xs py-4 px-8 hover:bg-brand-gold hover:text-brand-navy transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+      >
+        {status === 'loading' ? 'Sending…' : 'Send Message'}
+      </button>
+    </form>
+  )
+}
+
+
+// 'use client'
+
+// import { useState } from 'react'
+// import { useForm } from 'react-hook-form'
+// import { zodResolver } from '@hookform/resolvers/zod'
+// import { contactSchema, type ContactInput } from '@/lib/validations'
+// import { CheckCircle } from 'lucide-react'
+// import { trackEvent } from '@/lib/analytics'
+
+// export default function ContactForm() {
+//   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
+//   const [serverMessage, setServerMessage] = useState('')
+
+//   const {
+//     register,
+//     handleSubmit,
+//     reset,
+//     formState: { errors },
+//   } = useForm<ContactInput>({
+//     resolver: zodResolver(contactSchema),
+//   })
+
+//   const onSubmit = async (data: ContactInput) => {
+//     setStatus('loading')
+//     setServerMessage('')
+
+//     try {
+//       const res = await fetch('/api/contact', {
+//         method: 'POST',
+//         headers: { 'Content-Type': 'application/json' },
+//         body: JSON.stringify(data),
+//       })
+
+//       const result = await res.json()
+
+//       if (!res.ok || !result.success) {
+//         throw new Error(result.error ?? 'Failed to send message')
+//       }
+
+//       setStatus('success')
+//       trackEvent('contact_submitted', { subject: data.subject })
+//       reset()
+//     } catch (err) {
+//       setStatus('error')
+//       setServerMessage('Something went wrong. Please try again or WhatsApp us directly.')
+//     }
+//   }
+
+//   if (status === 'success') {
+//     return (
+//       <div className="bg-white rounded-2xl border border-gray-100 p-8 flex flex-col items-center justify-center text-center min-h-[400px]">
+//         <div className="w-16 h-16 rounded-full bg-[#2A6B2A]/10 flex items-center justify-center mb-4">
+//           <CheckCircle className="w-8 h-8 text-[#2A6B2A]" />
+//         </div>
+//         <h3 className="font-serif text-2xl font-bold text-[#1A3320] mb-2">
+//           Message Sent!
+//         </h3>
+//         <p className="text-gray-500 mb-6 max-w-sm">
+//           Thank you for reaching out. We'll respond within 24 hours.
+//           For urgent matters, WhatsApp us directly.
+//         </p>
+//         <button
+//           onClick={() => setStatus('idle')}
+//           className="text-[#D4A017] font-semibold text-sm hover:underline"
+//         >
+//           Send another message
+//         </button>
+//       </div>
+//     )
+//   }
+
+//   return (
+//     <div className="bg-white rounded-2xl border border-gray-100 p-8">
+//       <form onSubmit={handleSubmit(onSubmit)} className="space-y-4" noValidate>
 
         {/* Name + Email row */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <label className="text-xs font-semibold text-gray-400 uppercase tracking-wider block mb-1.5">
               Full Name *
@@ -106,10 +279,10 @@ export default function ContactForm() {
               <p className="text-red-500 text-xs mt-1">{errors.email.message}</p>
             )}
           </div>
-        </div>
+        </div> */}
 
         {/* Phone + Subject row */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <label className="text-xs font-semibold text-gray-400 uppercase tracking-wider block mb-1.5">
               Phone
@@ -135,10 +308,10 @@ export default function ContactForm() {
               <p className="text-red-500 text-xs mt-1">{errors.subject.message}</p>
             )}
           </div>
-        </div>
+        </div> */}
 
         {/* Message */}
-        <div>
+        {/* <div>
           <label className="text-xs font-semibold text-gray-400 uppercase tracking-wider block mb-1.5">
             Message *
           </label>
@@ -153,17 +326,17 @@ export default function ContactForm() {
           {errors.message && (
             <p className="text-red-500 text-xs mt-1">{errors.message.message}</p>
           )}
-        </div>
+        </div> */}
 
         {/* Server error */}
-        {status === 'error' && serverMessage && (
+        {/* {status === 'error' && serverMessage && (
           <p className="text-red-500 text-sm bg-red-50 px-4 py-2 rounded-lg">
             {serverMessage}
           </p>
-        )}
+        )} */}
 
         {/* Submit */}
-        <button
+        {/* <button
           type="submit"
           disabled={status === 'loading'}
           className="bg-[#D4A017] text-[#1A3320] font-semibold uppercase tracking-wider py-3 px-8 rounded-full w-full hover:bg-[#b8880f] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
@@ -173,4 +346,4 @@ export default function ContactForm() {
       </form>
     </div>
   )
-}
+} */}

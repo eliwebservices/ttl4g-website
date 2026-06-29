@@ -37,10 +37,10 @@ export default function RootLayout({
         <main className="pt-16">{children}</main>
         <Footer />
         <ChatWidget />
-      </body>
       {process.env.NODE_ENV === 'production' && process.env.NEXT_PUBLIC_GA_ID && (
         <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
       )}
+      </body>
     </html>
   );
 }

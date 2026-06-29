@@ -48,7 +48,7 @@ export default function ChatWidget() {
       {/* Greeting Tooltip */}
       {hasGreeted && !isOpen && (
         <div className="animate-in slide-in-from-bottom-2 fade-in duration-200">
-          <div className="bg-[#1A3320] text-white text-sm px-4 py-2.5 rounded-2xl rounded-br-sm shadow-lg max-w-[220px] relative">
+          <div className="bg-brand-navy text-white text-sm px-4 py-2.5 rounded-2xl rounded-br-sm shadow-lg max-w-[220px] relative">
             <button
               onClick={() => setHasGreeted(false)}
               className="absolute -top-1.5 -right-1.5 w-5 h-5 bg-gray-500 rounded-full flex items-center justify-center hover:bg-gray-600 transition-colors"
@@ -58,7 +58,7 @@ export default function ChatWidget() {
             👋 Hi! I'm Joy. How can I help you today?
           </div>
           {/* Tooltip arrow */}
-          <div className="w-3 h-3 bg-[#1A3320] rotate-45 ml-auto mr-5 -mt-1.5" />
+          <div className="w-3 h-3 bg-brand-navy rotate-45 ml-auto mr-5 -mt-1.5" />
         </div>
       )}
 
@@ -66,9 +66,9 @@ export default function ChatWidget() {
       <button
         onClick={isOpen ? handleClose : handleOpen}
         className={`
-          relative w-14 h-14 bg-[#1A3320] rounded-full shadow-lg
+          relative w-14 h-14 bg-brand-navy rounded-full shadow-lg
           flex items-center justify-center
-          hover:bg-[#2A6B2A] transition-all duration-300
+          hover:bg-brand-navy transition-all duration-300
           hover:scale-110 active:scale-95
         `}
         aria-label="Open TTL4G chat assistant"
@@ -76,23 +76,23 @@ export default function ChatWidget() {
         {/* Pulse ring */}
         {showPulse && !isOpen && (
           <>
-            <span className="absolute inset-0 rounded-full bg-[#2A6B2A] animate-ping opacity-40" />
-            <span className="absolute inset-0 rounded-full bg-[#2A6B2A] animate-ping opacity-20 [animation-delay:300ms]" />
+            <span className="absolute inset-0 rounded-full bg-brand-navy animate-ping opacity-40" />
+            <span className="absolute inset-0 rounded-full bg-brand-navy animate-ping opacity-20 [animation-delay:300ms]" />
           </>
         )}
 
         {/* Icon */}
         <div className="transition-transform duration-300">
           {isOpen ? (
-            <X size={22} className="text-[#D4A017]" />
+            <X size={22} className="text-brand-gold" />
           ) : (
-            <MessageSquare size={22} className="text-[#D4A017]" />
+            <MessageSquare size={22} className="text-brand-gold" />
           )}
         </div>
 
         {/* Online indicator */}
         {!isOpen && (
-          <span className="absolute top-0.5 right-0.5 w-3 h-3 bg-green-400 rounded-full border-2 border-[#1A3320]" />
+          <span className="absolute top-0.5 right-0.5 w-3 h-3 bg-green-400 rounded-full border-2 border-brand-navy" />
         )}
       </button>
     </div>

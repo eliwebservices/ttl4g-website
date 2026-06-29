@@ -13,14 +13,14 @@ function MessageBubble({ message }: { message: ChatMessage }) {
   return (
     <div className={`flex ${isUser ? 'justify-end' : 'justify-start'} mb-3`}>
       {!isUser && (
-        <div className="w-7 h-7 rounded-full bg-[#1A3320] flex items-center justify-center text-[#D4A017] text-xs font-bold mr-2 flex-shrink-0 mt-1">
+        <div className="w-7 h-7 rounded-full bg-brand-navy flex items-center justify-center text-brand-gold text-xs font-bold mr-2 flex-shrink-0 mt-1">
           J
         </div>
       )}
       <div
         className={`max-w-[78%] rounded-2xl px-4 py-2.5 text-sm leading-relaxed ${
           isUser
-            ? 'bg-[#D4A017] text-[#1A3320] font-medium rounded-tr-sm'
+            ? 'bg-brand-navy text-white font-medium rounded-tr-sm'
             : 'bg-white text-gray-800 shadow-sm border border-gray-100 rounded-tl-sm'
         }`}
       >
@@ -33,14 +33,14 @@ function MessageBubble({ message }: { message: ChatMessage }) {
 function TypingIndicator() {
   return (
     <div className="flex justify-start mb-3">
-      <div className="w-7 h-7 rounded-full bg-[#1A3320] flex items-center justify-center text-[#D4A017] text-xs font-bold mr-2 flex-shrink-0">
+      <div className="w-7 h-7 rounded-full bg-brand-navy flex items-center justify-center text-brand-gold text-xs font-bold mr-2 flex-shrink-0">
         J
       </div>
       <div className="bg-white rounded-2xl rounded-tl-sm px-4 py-3 shadow-sm border border-gray-100">
         <div className="flex gap-1 items-center h-4">
-          <span className="w-2 h-2 bg-[#2A6B2A] rounded-full animate-bounce [animation-delay:0ms]" />
-          <span className="w-2 h-2 bg-[#2A6B2A] rounded-full animate-bounce [animation-delay:150ms]" />
-          <span className="w-2 h-2 bg-[#2A6B2A] rounded-full animate-bounce [animation-delay:300ms]" />
+          <span className="w-2 h-2 bg-brand-gold rounded-full animate-bounce [animation-delay:0ms]" />
+          <span className="w-2 h-2 bg-brand-gold rounded-full animate-bounce [animation-delay:150ms]" />
+          <span className="w-2 h-2 bg-brand-gold rounded-full animate-bounce [animation-delay:300ms]" />
         </div>
       </div>
     </div>
@@ -94,13 +94,13 @@ export default function ChatWindow({ onClose }: ChatWindowProps) {
   }
 
   const header = (
-    <div className="bg-[#1A3320] px-4 py-3 flex items-center justify-between flex-shrink-0">
+    <div className="bg-brand-navy px-4 py-3 flex items-center justify-between flex-shrink-0">
       <div className="flex items-center gap-3">
         <div className="relative">
-          <div className="w-9 h-9 rounded-full bg-[#D4A017] flex items-center justify-center text-[#1A3320] font-bold text-sm">
+          <div className="w-9 h-9 rounded-full bg-brand-gold flex items-center justify-center text-brand-navy font-bold text-sm">
             J
           </div>
-          <span className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-green-400 rounded-full border-2 border-[#1A3320]" />
+          <span className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-green-400 rounded-full border-2 border-brand-navy" />
         </div>
         <div>
           <p className="text-white font-semibold text-sm leading-tight">Joy</p>
@@ -147,7 +147,7 @@ export default function ChatWindow({ onClose }: ChatWindowProps) {
               <button
                 key={reply}
                 onClick={() => handleQuickReply(reply)}
-                className="text-xs px-3 py-1.5 bg-white border border-[#2A6B2A] text-[#2A6B2A] rounded-full hover:bg-[#2A6B2A] hover:text-white transition-colors"
+                className="text-xs px-3 py-1.5 bg-white border border-brand-navy text-brand-navy rounded-full hover:bg-brand-navy hover:text-white transition-colors"
               >
                 {reply}
               </button>
@@ -161,7 +161,7 @@ export default function ChatWindow({ onClose }: ChatWindowProps) {
 
   const inputArea = (
     <div className="px-3 py-3 bg-white border-t border-gray-100 flex-shrink-0">
-      <div className="flex items-center gap-2 bg-[#FAF7F0] rounded-xl px-3 py-2 border border-gray-200 focus-within:border-[#2A6B2A] transition-colors">
+      <div className="flex items-center gap-2 bg-[#FAF7F0] rounded-xl px-3 py-2 border border-gray-200 focus-within:border-brand-navy transition-colors">
         <input
           ref={inputRef}
           type="text"
