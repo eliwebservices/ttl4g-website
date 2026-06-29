@@ -126,7 +126,7 @@ export default function HomePage() {
             {/* Photo block */}
             <div className="relative w-full lg:w-[100%] aspect-[16/10] lg:aspect-[16/9] overflow-hidden">
               <Image
-                src="/images/anni_professional.png"
+                src="/images/annie_professional.png"
                 alt="Annie Wong — Founder & CEO, TTL4G"
                 fill
                 priority
@@ -177,7 +177,7 @@ export default function HomePage() {
         {/* Stats strip — sits below hero */}
         <div className="container mx-auto px-4 lg:px-16 mt-12 lg:mt-20 pb-12 lg:pb-20 relative">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[auto_auto_1fr_auto] items-start lg:items-center gap-8 lg:gap-16">
-            {stats.map((stat, i) => (
+            {/* {stats.map((stat, i) => (
               <div key={i} className="flex gap-4 items-start">
                 <div className="font-serif text-4xl lg:text-5xl font-bold text-brand-gold leading-none">
                   {stat.num}
@@ -186,7 +186,7 @@ export default function HomePage() {
                   {stat.label}
                 </div>
               </div>
-            ))}
+            ))} */}
 
             {/* Spacer + Prev/Next ghost (decorative) */}
             <div className="hidden lg:block" />
@@ -325,7 +325,7 @@ export default function HomePage() {
               {/* Photo */}
               <div className="relative w-full aspect-[4/5] overflow-hidden">
                 <Image
-                  src="/images/anni_professional.png"
+                  src="/images/annie_professional.png"
                   alt="Annie Wong, Founder of TTL4G"
                   fill
                   className="object-cover"
