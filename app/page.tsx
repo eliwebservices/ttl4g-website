@@ -416,7 +416,7 @@ export default function HomePage() {
               </p>
 
               <Link
-                href="/cross-cultural"
+                href="/services"
                 className="inline-flex items-center self-start gap-3 bg-brand-gold text-brand-navy font-semibold uppercase tracking-widest text-xs py-4 px-8 hover:bg-brand-navy hover:text-white transition-colors"
               >
                 Discover the Program
