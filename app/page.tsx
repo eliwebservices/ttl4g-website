@@ -12,11 +12,22 @@ export default function ComingSoonPage() {
     <main className="min-h-screen bg-brand-navy relative overflow-hidden flex items-center justify-center px-4">
 
       {/* Dot texture background */}
+
+      <div
+        className="absolute inset-0 opacity-10"
+        style={{
+          backgroundImage:
+            "url('/images/coming-soon-hero.jpg')",
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center'
+        }}
+      />
       <div
         className="absolute inset-0 opacity-5"
         style={{
           backgroundImage:
-            'radial-gradient(circle, rgba(255,255,255,0.5) 1px, transparent 1px)',
+            'radial-gradient(circle, rgba(255,255,255,0.9) 1px, transparent 1px)',
           backgroundSize: '20px 20px',
         }}
       />
