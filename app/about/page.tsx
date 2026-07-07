@@ -127,7 +127,7 @@ export default function AboutPage() {
               {/* Photo */}
               <div className="relative w-full aspect-[4/5] overflow-hidden">
                 <Image
-                  src="/images/anni_professional.png"
+                  src="/images/annie_professional.png"
                   alt="Annie Wong, Founder & CEO of TTL4G"
                   fill
                   className="object-cover object-top"
@@ -208,10 +208,10 @@ export default function AboutPage() {
           {/* Photo — left half */}
           <div className="relative h-72 lg:h-auto">
             <Image
-              src="/images/anni_charity.jpg"
+              src="/images/anni_charity_.png"
               alt="Annie Wong with children during charitable work"
               fill
-              className="object-cover object-center"
+              className="object-cover object-top"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
           </div>
@@ -239,6 +239,75 @@ export default function AboutPage() {
               whose work reflects her passion for faith, personal growth, and human
               connection.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ─────────────────────────────────────────────── */}
+      {/* CROSS-CULTURAL STORIES                          */}
+      {/* ─────────────────────────────────────────────── */}
+      <section className="bg-brand-bg py-16 lg:py-24">
+        <div className="container mx-auto px-4 lg:px-16">
+
+          {/* Header */}
+          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-14 lg:mb-16">
+            <div>
+              <div className="flex items-center gap-3 mb-4">
+                <span className="w-8 h-px bg-brand-gold" />
+                <span className="text-brand-gold text-xs font-semibold uppercase tracking-[0.25em]">
+                  In Her Own Words
+                </span>
+              </div>
+              <h2 className="font-serif text-3xl lg:text-5xl font-bold text-brand-navy leading-tight max-w-2xl">
+                Annie&apos;s Cross-Cultural Stories
+              </h2>
+            </div>
+            <p className="text-brand-charcoal/70 leading-relaxed max-w-sm lg:text-right">
+              Personal stories that shaped a cross-cultural expert and a
+              bridge-builder between China, Nigeria, and the world.
+            </p>
+          </div>
+
+          {/* Stories */}
+          <div className="space-y-8 lg:space-y-10">
+            {stories.map((story, i) => {
+              const num = String(i + 1).padStart(2, '0')
+              return (
+                <article
+                  key={i}
+                  className="bg-white border border-gray-200 overflow-hidden"
+                >
+                  {/* Story header bar */}
+                  <header className="bg-brand-navy px-8 lg:px-12 py-8 relative">
+                    <div className="grid grid-cols-[auto_1fr] gap-6 lg:gap-10 items-start">
+                      <div className="font-serif text-5xl lg:text-6xl font-bold text-brand-gold/40 leading-none">
+                        {num}
+                      </div>
+                      <div>
+                        <div className="flex items-center gap-3 mb-3">
+                          <BookOpen className="w-4 h-4 text-brand-gold" />
+                          <span className="text-brand-gold text-xs font-semibold uppercase tracking-[0.25em]">
+                            Story {num}
+                          </span>
+                        </div>
+                        <h3 className="font-serif text-2xl lg:text-3xl font-bold text-white leading-tight">
+                          {story.title}
+                        </h3>
+                      </div>
+                    </div>
+                  </header>
+
+                  {/* Story body */}
+                  <div className="px-8 lg:px-12 py-10 lg:py-14">
+                    <div className="max-w-3xl mx-auto space-y-5 text-brand-charcoal/80 leading-relaxed">
+                      {story.content.map((paragraph, j) => (
+                        <p key={j}>{paragraph}</p>
+                      ))}
+                    </div>
+                  </div>
+                </article>
+              )
+            })}
           </div>
         </div>
       </section>
@@ -305,122 +374,7 @@ export default function AboutPage() {
           </div>
         </div>
       </section> */}
-      {/* ─────────────────────────────────────────────── */}
-{/* CROSS-CULTURAL STORIES                          */}
-{/* ─────────────────────────────────────────────── */}
-<section className="bg-brand-bg py-16 lg:py-24">
-  <div className="container mx-auto px-4 lg:px-16">
 
-    {/* Header */}
-    <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-14 lg:mb-20">
-      <div>
-        <div className="flex items-center gap-3 mb-4">
-          <span className="w-8 h-px bg-brand-gold" />
-          <span className="text-brand-gold text-xs font-semibold uppercase tracking-[0.25em]">
-            In Her Own Words
-          </span>
-        </div>
-        <h2 className="font-serif text-3xl lg:text-5xl font-bold text-brand-navy leading-tight max-w-2xl">
-          Annie&apos;s Cross-Cultural Stories
-        </h2>
-      </div>
-      <p className="text-brand-charcoal/70 leading-relaxed max-w-sm lg:text-right">
-        Personal stories that shaped a cross-cultural expert and a
-        bridge-builder between China, Nigeria, and the world.
-      </p>
-    </div>
-
-    {/* Stories — alternating layout */}
-    <div className="space-y-20 lg:space-y-28">
-      {stories.map((story, i) => {
-        const num = String(i + 1).padStart(2, '0')
-        const imageSrc = i === 0
-          ? '/images/about/annie-about-img-inc.png'
-          : '/images/about/annie-about-img-inc.png'
-        const isReversed = i % 2 === 1
-
-        return (
-          <article key={i} className="relative">
-
-            {/* Story header — always full width */}
-            <div className="mb-10 lg:mb-12 max-w-3xl">
-              <div className="flex items-center gap-3 mb-4">
-                <BookOpen className="w-4 h-4 text-brand-gold" />
-                <span className="text-brand-gold text-xs font-semibold uppercase tracking-[0.25em]">
-                  Story {num}
-                </span>
-              </div>
-              <h3 className="font-serif text-2xl lg:text-4xl font-bold text-brand-navy leading-tight">
-                {story.title}
-              </h3>
-            </div>
-
-            {/* Image + Body — alternates side */}
-            <div className={`grid grid-cols-1 gap-10 lg:gap-16 items-start ${
-  isReversed ? 'lg:grid-cols-[7fr_5fr]' : 'lg:grid-cols-[5fr_7fr]'
-}`}>
-
-
-              {/* Image column */}
-              <div
-                className={`relative lg:sticky lg:top-24 ${
-                  isReversed ? 'lg:order-2' : ''
-                }`}
-              >
-                {/* Color block behind image */}
-                <div
-                  className={`
-                    absolute top-6 w-[55%] h-[88%] bg-brand-navy hidden lg:block
-                    ${isReversed ? '-right-6' : '-left-6'}
-                  `}
-                />
-
-                {/* Image */}
-                {/* Image */}
-<div className="relative w-full h-[400px] sm:h-[500px] lg:h-[600px] overflow-hidden">
-
-                  <Image
-                    src={imageSrc}
-                    alt={story.title}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 1024px) 100vw, 40vw"
-                  />
-                </div>
-
-                {/* Gold square decorative accent */}
-                {/* <div
-                  className={`
-                    absolute -bottom-4 w-16 h-16 bg-brand-gold hidden lg:block
-                    ${isReversed ? '-left-4' : '-right-4'}
-                  `}
-                /> */}
-
-                {/* Number badge over image */}
-                {/* <div className="absolute top-6 left-6 lg:top-8 lg:left-8 bg-brand-gold text-brand-navy px-4 py-2 z-10">
-                  <span className="font-serif text-2xl font-bold leading-none">
-                    {num}
-                  </span>
-                </div> */}
-              </div>
-
-              {/* Story body */}
-              <div className={isReversed ? 'lg:order-1' : ''}>
-                <div className="space-y-5 text-brand-charcoal/80 leading-relaxed">
-                  {story.content.map((paragraph, j) => (
-                    <p key={j} className={j === 0 ? 'text-lg' : ''}>
-                      {paragraph}
-                    </p>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </article>
-        )
-      })}
-    </div>
-  </div>
-</section>
 
 
       
@@ -528,3 +482,120 @@ export default function AboutPage() {
     </>
   )
 }
+
+
+//       {/* ─────────────────────────────────────────────── */}
+// {/* CROSS-CULTURAL STORIES                          */}
+// {/* ─────────────────────────────────────────────── */}
+// <section className="bg-brand-bg py-16 lg:py-24">
+//   <div className="container mx-auto px-4 lg:px-16">
+
+//      Header 
+//     <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-14 lg:mb-20">
+//       <div>
+//         <div className="flex items-center gap-3 mb-4">
+//           <span className="w-8 h-px bg-brand-gold" />
+//           <span className="text-brand-gold text-xs font-semibold uppercase tracking-[0.25em]">
+//             In Her Own Words
+//           </span>
+//         </div>
+//         <h2 className="font-serif text-3xl lg:text-5xl font-bold text-brand-navy leading-tight max-w-2xl">
+//           Annie&apos;s Cross-Cultural Stories
+//         </h2>
+//       </div>
+//       <p className="text-brand-charcoal/70 leading-relaxed max-w-sm lg:text-right">
+//         Personal stories that shaped a cross-cultural expert and a
+//         bridge-builder between China, Nigeria, and the world.
+//       </p>
+//     </div>
+
+//      Stories — alternating layout 
+//     <div className="space-y-20 lg:space-y-28">
+//       {stories.map((story, i) => {
+//         const num = String(i + 1).padStart(2, '0')
+//         const imageSrc = i === 0
+//           ? '/images/about/annie-about-img-inc.png'
+//           : '/images/about/annie-about-img-inc.png'
+//         const isReversed = i % 2 === 1
+
+//         return (
+//           <article key={i} className="relative">
+
+//              Story header — always full width 
+//             <div className="mb-10 lg:mb-12 max-w-3xl">
+//               <div className="flex items-center gap-3 mb-4">
+//                 <BookOpen className="w-4 h-4 text-brand-gold" />
+//                 <span className="text-brand-gold text-xs font-semibold uppercase tracking-[0.25em]">
+//                   Story {num}
+//                 </span>
+//               </div>
+//               <h3 className="font-serif text-2xl lg:text-4xl font-bold text-brand-navy leading-tight">
+//                 {story.title}
+//               </h3>
+//             </div>
+
+//              Image + Body — alternates side 
+//             <div className={`grid grid-cols-1 gap-10 lg:gap-16 items-start ${
+//   isReversed ? 'lg:grid-cols-[7fr_5fr]' : 'lg:grid-cols-[5fr_7fr]'
+// }`}>
+
+
+//                Image column 
+//               <div
+//                 className={`relative lg:sticky lg:top-24 ${
+//                   isReversed ? 'lg:order-2' : ''
+//                 }`}
+//               >
+//                 {/* Color block behind image */}
+//                 <div
+//                   className={`
+//                     absolute top-6 w-[55%] h-[88%] bg-brand-navy hidden lg:block
+//                     ${isReversed ? '-right-6' : '-left-6'}
+//                   `}
+//                 />
+
+//                 Image 
+// <div className="relative w-full h-[400px] sm:h-[500px] lg:h-[600px] overflow-hidden">
+
+//                   <Image
+//                     src={imageSrc}
+//                     alt={story.title}
+//                     fill
+//                     className="object-cover"
+//                     sizes="(max-width: 1024px) 100vw, 40vw"
+//                   />
+//                 </div>
+
+//                 {/* Gold square decorative accent */}
+//                 {/* <div
+//                   className={`
+//                     absolute -bottom-4 w-16 h-16 bg-brand-gold hidden lg:block
+//                     ${isReversed ? '-left-4' : '-right-4'}
+//                   `}
+//                 /> */}
+
+//                 {/* Number badge over image */}
+//                 {/* <div className="absolute top-6 left-6 lg:top-8 lg:left-8 bg-brand-gold text-brand-navy px-4 py-2 z-10">
+//                   <span className="font-serif text-2xl font-bold leading-none">
+//                     {num}
+//                   </span>
+//                 </div> */}
+//               </div>
+
+//               {/* Story body */}
+//               <div className={isReversed ? 'lg:order-1' : ''}>
+//                 <div className="space-y-5 text-brand-charcoal/80 leading-relaxed">
+//                   {story.content.map((paragraph, j) => (
+//                     <p key={j} className={j === 0 ? 'text-lg' : ''}>
+//                       {paragraph}
+//                     </p>
+//                   ))}
+//                 </div>
+//               </div>
+//             </div>
+//           </article>
+//         )
+//       })}
+//     </div>
+//   </div>
+// </section>

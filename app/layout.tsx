@@ -33,10 +33,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Navbar />
-        <main className="pt-16">{children}</main>
-        <Footer />
-        <ChatWidget />
+        {/* <Navbar /> */}
+        {/* <main className="pt-16">{children}</main> */}
+        <main className="">{children}</main>
+        {/* <Footer /> */}
+        {/* <ChatWidget /> */}
       {process.env.NODE_ENV === 'production' && process.env.NEXT_PUBLIC_GA_ID && (
         <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
       )}
