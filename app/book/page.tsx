@@ -6,9 +6,9 @@ import { CalendarDays, Clock, Users, CheckCircle } from 'lucide-react'
 
 const callBenefits = [
   { icon: Clock, text: '30 minutes, completely free' },
-  { icon: Users, text: 'Speak directly with Annie' },
+  // { icon: Users, text: 'Speak directly with Annie' },
   { icon: CheckCircle, text: 'Get tailored recommendations' },
-  { icon: CalendarDays, text: 'No obligation, no hard sell' },
+  // { icon: CalendarDays, text: 'No obligation' },
 ]
 
 export default function BookPage() {
@@ -42,14 +42,14 @@ export default function BookPage() {
                 <span className="text-brand-gold">discovery call</span>.
               </h1>
               <p className="text-lg text-white/70 leading-relaxed">
-                30 minutes. No obligation. Just an honest conversation about
+                30 minutes. Just an honest conversation about
                 where you are, where you want to go, and how TTL4G can help.
               </p>
             </div>
 
             {/* Right: what to expect */}
             <div className="border-l-2 border-brand-gold pl-6">
-              <p className="text-brand-gold text-xs font-semibold uppercase tracking-[0.25em] mb-5">
+              {/* <p className="text-brand-gold text-xs font-semibold uppercase tracking-[0.25em] mb-5">
                 What to Expect
               </p>
               <ul className="space-y-3">
@@ -59,7 +59,7 @@ export default function BookPage() {
                     {benefit.text}
                   </li>
                 ))}
-              </ul>
+              </ul> */}
             </div>
           </div>
         </div>
@@ -84,8 +84,7 @@ export default function BookPage() {
                 Pick a time that works.
               </h2>
               <p className="text-brand-charcoal/70 text-sm mb-8">
-                Choose any open slot — Annie&apos;s live calendar shows real-time
-                availability.
+                Choose any open slot
               </p>
 
               <div className="bg-white border border-gray-200 overflow-hidden">
@@ -130,7 +129,7 @@ export default function BookPage() {
                   Tell us a bit about you.
                 </h2>
                 <p className="text-brand-charcoal/70 text-sm mb-8">
-                  This helps Annie come to the call already prepared with
+                  This helps us come to the call already prepared with
                   relevant questions and ideas.
                 </p>
 

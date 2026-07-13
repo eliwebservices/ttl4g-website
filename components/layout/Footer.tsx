@@ -14,25 +14,22 @@ const Youtube = <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/200
 const quickLinks = [
   { href: '/about', label: 'About Us' },
   { href: '/services', label: 'Services' },
-  { href: '/cross-cultural', label: 'Cross-Cultural Hub' },
+  // { href: '/cross-cultural', label: 'Cross-Cultural Hub' },
   { href: '/book', label: 'Book a Call' },
   // { href: '/insights', label: 'Insights' },
   { href: '/contact', label: 'Contact' },
 ]
 
 const services = [
-  'Leadership Development',
-  'Cross-Cultural Intelligence',
-  'Coaching & Capacity Building',
-  'Performance Management',
-  'Change Management',
+  'Training & Development',
+  'Consulting',
 ]
 
 const socials = [
-  { Icon: Linkedin, href: '#', label: 'LinkedIn' },
-  { Icon: Twitter, href: '#', label: 'Twitter' },
-  { Icon: Instagram, href: '#', label: 'Instagram' },
-  { Icon: Youtube, href: '#', label: 'YouTube' },
+  // { Icon: Linkedin, href: '#', label: 'LinkedIn' },
+  // { Icon: Twitter, href: '#', label: 'Twitter' },
+  // { Icon: Instagram, href: '#', label: 'Instagram' },
+  // { Icon: Youtube, href: '#', label: 'YouTube' },
 ]
 
 export default function Footer() {

@@ -134,7 +134,7 @@ export default function ContactPage() {
               </div>
 
               {/* Response time note */}
-              <div className="bg-brand-soft border-l-2 border-brand-gold p-6">
+              {/* <div className="bg-brand-soft border-l-2 border-brand-gold p-6">
                 <p className="text-brand-gold text-xs font-semibold uppercase tracking-[0.25em] mb-2">
                   Response Time
                 </p>
@@ -143,7 +143,7 @@ export default function ContactPage() {
                   <span className="font-semibold text-brand-navy">24 hours</span>.
                   For urgent matters, please mention it in your message.
                 </p>
-              </div>
+              </div> */}
 
               {/* ── Map (commented out — uncomment when ready) ── */}
               {/* <div className="mt-8 border border-gray-200 overflow-hidden">

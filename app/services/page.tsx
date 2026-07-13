@@ -17,7 +17,7 @@ import {
 const trainingServices = [
   {
     icon: Globe,
-    image: "/images/services/sky-scrapper.jpg",
+    image: "/images/services/cross-cultural-leadership-n.png",
     eyebrow: "Cross-Cultural Leadership",
     title: "Turn Cultural Differences Into Your Team's Competitive Edge",
     intro:
@@ -26,7 +26,7 @@ const trainingServices = [
       "Misaligned expectations. Meetings that go nowhere. Feedback that lands wrong. When teams span cultures, even skilled leaders hit invisible walls — costing time, trust, and results.",
     stats: [
       {
-        num: "up to 60-70%",
+        num: "60-70%",
         label:
           "of strategic alliances fail, and cultural differences are one of the key challenges in making them work.",
         source: "Harvard Business Review",
@@ -62,7 +62,7 @@ const trainingServices = [
   {
     icon: Star,
     eyebrow: "Signature Programme",
-    image: "/images/services/sky-scrapper.jpg",
+    image: "/images/services/china-africa.png",
     title: "Lead China-Africa Partnerships With Cultural Confidence",
     intro:
       "A programme for African and Chinese professionals navigating one of the world's most strategically important business relationships.",
@@ -118,7 +118,7 @@ const trainingServices = [
   },
   {
     icon: TrendingUp,
-    image: "/images/services/sky-scrapper.jpg",
+    image: "/images/services/strategic-leadership.png",
     eyebrow: "Strategic Leadership",
     title: "Developing Strategic Leadership",
     intro:
@@ -131,7 +131,7 @@ const trainingServices = [
     },
     stats: [
       {
-        num: "Up to 80%",
+        num: "80%",
         label:
           "of the variation in organizational performance is accounted for by leaders.",
         source: "McKinsey & Company",
@@ -172,7 +172,7 @@ const trainingServices = [
   },
   {
     icon: Target,
-    image: "/images/services/sky-scrapper.jpg",
+    image: "/images/services/leadership-ai.jpg",
     eyebrow: "2–3 Hour Online Session",
     title: "Leadership, Your Industry & AI",
     intro:
@@ -255,7 +255,7 @@ const consultingServices = [
   },
   {
     icon: GraduationCap,
-    image: "/images/services/sky-scrapper.jpg",
+    image: "/images/services/ld-consulting.png",
     eyebrow: "L&D Consulting",
     title:
       "Learning & Development Consulting",
