@@ -25,12 +25,12 @@ const services = [
   'Consulting',
 ]
 
-const socials = [
-  // { Icon: Linkedin, href: '#', label: 'LinkedIn' },
-  // { Icon: Twitter, href: '#', label: 'Twitter' },
-  // { Icon: Instagram, href: '#', label: 'Instagram' },
-  // { Icon: Youtube, href: '#', label: 'YouTube' },
-]
+// const socials = [
+//   // { Icon: Linkedin, href: '#', label: 'LinkedIn' },
+//   // { Icon: Twitter, href: '#', label: 'Twitter' },
+//   // { Icon: Instagram, href: '#', label: 'Instagram' },
+//   // { Icon: Youtube, href: '#', label: 'YouTube' },
+// ]
 
 export default function Footer() {
   const [email, setEmail] = useState('')
@@ -161,7 +161,7 @@ export default function Footer() {
                 development and cross-cultural consultancy, serving organizations
                 across Africa and beyond.
               </p>
-              <div className="flex gap-3 mt-6">
+              {/* <div className="flex gap-3 mt-6">
                 {socials.map(({ Icon, href, label }) => (
                   <a
                     key={label}
@@ -172,7 +172,7 @@ export default function Footer() {
                     {Icon}
                   </a>
                 ))}
-              </div>
+              </div> */}
             </div>
 
             {/* Quick Links */}
