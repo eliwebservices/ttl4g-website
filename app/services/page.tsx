@@ -233,7 +233,7 @@ const consultingServices = [
     icon: Briefcase,
     image: "/images/services/sky-scrapper.jpg",
     eyebrow: "Business Consulting",
-    title: "Set up your business in Nigeria — the right way, from day one",
+    title: "Set up your business in Nigeria — the right way",
     intro:
       "Expert on-the-ground support for international companies, investors, and entrepreneurs entering Nigeria or China.",
     whyMatters:
