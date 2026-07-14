@@ -20,18 +20,19 @@ const services = [
   {
     num: "01",
     icon: Globe,
-    title: "Cross-Cultural Leadership for Global Teams",
+    title: "Turn Cultural Differences Into Your Team's Competitive Edge",
     points: [
       "Build trust across cultures",
       "Run inclusive meetings",
-      "Feedback that moves people forward",
+      "Give feedback that moves people",
       "Resolve cross-cultural conflict",
+      "Align Teams Faster",
     ],
   },
   {
     num: "02",
     icon: Star,
-    title: "China-Africa Business & Cultural Confidence",
+    title: "Lead China-Africa Partnerships With Cultural Confidence",
     points: [
       "Navigate Guanxi and Mianzi",
       "Command high-stakes negotiations",
@@ -55,10 +56,10 @@ const services = [
     icon: Target,
     title: "Leadership, Your Industry & AI",
     points: [
-      "AI's impact on your industry",
+      "Understand AI’s impact on your industry",
       "Lead AI adoption with confidence",
-      "Coach for an AI-powered future",
-      "Decisions powered by AI insights",
+      "Coach your team for an AI-powered future",
+      "Make strategic decisions with AI insights",
     ],
   },
 ];
@@ -219,9 +220,9 @@ export default function HomePage() {
                 </span>
               </div>
               <h2 className="font-serif text-3xl lg:text-5xl font-bold text-brand-navy leading-tight max-w-2xl">
-                Turn cultural complexity
+                Training and 
                 <br className="hidden lg:block" />
-                into competitive advantage.
+                Development
               </h2>
             </div>
 
@@ -258,7 +259,7 @@ export default function HomePage() {
                 </span>
 
                 {/* Icon */}
-                <div className="w-14 h-14 flex items-center justify-center mb-6 text-brand-gold border border-brand-gold/30">
+                <div className="w-14 h-14 flex items-center justify-center mb-6 text-brand-gold">
                   <s.icon className="w-6 h-6" strokeWidth={1.5} />
                 </div>
 

@@ -235,7 +235,7 @@ const consultingServices = [
     eyebrow: "Business Consulting",
     title: "Set up your business in Nigeria — the right way",
     intro:
-      "Expert on-the-ground support for international companies, investors, and entrepreneurs entering Nigeria or China.",
+      "Guiding businesses through setup processes and complaince requirements.",
     whyMatters:
       "Nigeria's regulatory, legal, and HR landscape is complex — and the cost of getting it wrong is high. The right local partner makes the difference between a smooth market entry and costly delays, compliance gaps, or the wrong hires.",
     programmeTitle: "Support from registration through to operations",
@@ -270,20 +270,16 @@ const consultingServices = [
     programmeTitle: "What we do",
     programmePoints: [
       {
-        title: "Learning & Development",
+        title: "Align Learning & Development with Business Strategy",
         // desc: "Map every initiative to a business priority.",
       },
       {
-        title: "Strategy & Alignment",
+        title: "Measure ROI and Demonstrate Impact",
         desc: "",
       },
       {
-        title: "ROI Measurement",
+        title: "Engage Stakeholders Effectively",
         // desc: "Build the data story that protects your budget.",
-      },
-      {
-        title: "Stakeholder Engagement",
-        // desc: "Bring senior leaders on board and keep them there.",
       },
     ],
     audience:
@@ -420,7 +416,7 @@ function ServiceSection({
             </p>
 
             {/* Pull quote (only for services that have one) */}
-            {"pullQuote" in service && service.pullQuote && (
+            {/* {"pullQuote" in service && service.pullQuote && (
               <div className="border-l-2 border-brand-gold pl-6 mt-8">
                 <Quote className="w-5 h-5 text-brand-gold mb-3" />
                 <p className="font-serif text-xl text-brand-navy leading-snug mb-3">
@@ -430,10 +426,10 @@ function ServiceSection({
                   — {service.pullQuote.attribution}
                 </p>
               </div>
-            )}
+            )} */}
 
             {/* Context blocks (China-Africa programme only) */}
-            {"contextBlocks" in service && service.contextBlocks && (
+            {/* {"contextBlocks" in service && service.contextBlocks && (
               <div className="grid sm:grid-cols-2 gap-6 mt-8">
                 {service.contextBlocks.map((c, i) => (
                   <div
@@ -449,7 +445,7 @@ function ServiceSection({
                   </div>
                 ))}
               </div>
-            )}
+            )} */}
           </div>
         </div>
 
@@ -651,11 +647,11 @@ export default function ServicesPage() {
                 </h2>
               </div>
             </div>
-            <p className="text-brand-charcoal/70 leading-relaxed max-w-xl lg:text-right">
+            {/* <p className="text-brand-charcoal/70 leading-relaxed max-w-xl lg:text-right">
               Four programmes built from real corporate experience, designed for
               the moments that matter most in cross-cultural and strategic
               leadership.
-            </p>
+            </p> */}
           </div>
         </div>
       </section>
@@ -687,10 +683,10 @@ export default function ServicesPage() {
                 </h2>
               </div>
             </div>
-            <p className="text-white/70 leading-relaxed max-w-xl lg:text-right">
+            {/* <p className="text-white/70 leading-relaxed max-w-xl lg:text-right">
               On-the-ground partnership for organisations entering Nigeria and
               L&D functions ready to become strategic business partners.
-            </p>
+            </p> */}
           </div>
         </div>
       </section>
