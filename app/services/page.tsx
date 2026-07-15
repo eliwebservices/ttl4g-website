@@ -19,6 +19,7 @@ const trainingServices = [
     icon: Globe,
     image: "/images/services/cross-cultural-leadership-n.png",
     eyebrow: "Cross-Cultural Leadership",
+    slug: "cross-cultural-leadership",
     title: "Turn Cultural Differences Into Your Team's Competitive Edge",
     intro:
       "A hands-on programme for leaders managing global and multicultural teams — built on real corporate experience, not theory.",
@@ -63,6 +64,7 @@ const trainingServices = [
     icon: Star,
     eyebrow: "Signature Programme",
     image: "/images/services/china-africa.png",
+    slug: "china-africa-partnerships",
     title: "Lead China-Africa Partnerships With Cultural Confidence",
     intro:
       "A programme for African and Chinese professionals navigating one of the world's most strategically important business relationships.",
@@ -120,6 +122,7 @@ const trainingServices = [
     icon: TrendingUp,
     image: "/images/services/strategic-leadership.png",
     eyebrow: "Strategic Leadership",
+    slug: "strategic-leadership",
     title: "Developing Strategic Leadership",
     intro:
       "A transformational programme that develops leaders at every level — from leading yourself to shaping the wider ecosystem.",
@@ -174,6 +177,7 @@ const trainingServices = [
     icon: Target,
     image: "/images/services/leadership-ai.jpg",
     eyebrow: "2–3 Hour Online Session",
+    slug: "leadership-industry-ai",
     title: "Leadership, Your Industry & AI",
     intro:
       "A practical session for leaders who need to understand AI's impact on their industry — and lead their organisations through AI-driven transformation with confidence. The 2–3 hour session delivers a high-level overview of key AI frameworks and practical guidelines. Extended sessions are available on request for teams requiring deeper engagement.",
@@ -184,19 +188,16 @@ const trainingServices = [
         num: "5 million",
         label:
           "Nigerians — the Federal Government's annual target for AI and digital skills training.",
-        source:
-          "Federal Ministry of Communications",
+        source: "Federal Ministry of Communications",
       },
       {
         num: "Fast",
-        label:
-          "Leaders who understand AI are making faster, better decisions.",
+        label: "Leaders who understand AI are making faster, better decisions.",
         source: "Corporate Education Market",
       },
       {
         num: "2-3h",
-        label:
-          "Online SMART Lecture — minimal time, maximum impact",
+        label: "Online SMART Lecture — minimal time, maximum impact",
         source: "TTL4G Programme",
       },
     ],
@@ -231,8 +232,9 @@ const trainingServices = [
 const consultingServices = [
   {
     icon: Briefcase,
-    image: "/images/services/sky-scrapper.jpg",
+    image: "/images/services/business-consulting.jpg",
     eyebrow: "Business Consulting",
+    slug: "business-setup-nigeria",
     title: "Set up your business in Nigeria — the right way",
     intro:
       "Guiding businesses through setup processes and complaince requirements.",
@@ -257,8 +259,8 @@ const consultingServices = [
     icon: GraduationCap,
     image: "/images/services/ld-consulting.png",
     eyebrow: "L&D Consulting",
-    title:
-      "Learning & Development Consulting",
+    slug: "ld-consulting",
+    title: "Learning & Development Consulting",
     intro:
       "Transform your Learning & Development function — from overhead to strategic business partner.",
     whyMatters:
@@ -308,72 +310,59 @@ function ServiceSection({
 }) {
   const Icon = service.icon;
   const num = String(index + 1).padStart(2, "0");
+  const isReversed = index % 2 === 1;
 
   return (
-    <section className={bg === "soft" ? "bg-brand-soft" : "bg-white"}>
+    <section
+      id={service.slug}
+      className={`scroll-mt-24 ${bg === "soft" ? "bg-brand-soft" : "bg-white"}`}
+    >
       <div className="container mx-auto px-4 lg:px-16 py-16 lg:py-24">
-        {/* ── Section header (asymmetric) ── */}
-        {/* <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-8 lg:gap-16 mb-12 lg:mb-16">
-
-          ////// Left: number + icon //////
-          <div className="flex lg:flex-col gap-6 items-start">
-            <div className="font-serif text-5xl lg:text-6xl font-bold text-brand-charcoal/15 leading-none">
-              {num}
-            </div>
-            <div className="w-14 h-14 flex items-center justify-center text-brand-gold border border-brand-gold/30">
-              <Icon className="w-6 h-6" strokeWidth={1.5} />
-            </div>
-          </div>
-
-          //Right: eyebrow + title + intro //
-          <div>
-            <div className="flex items-center gap-3 mb-4">
-              <span className="w-8 h-px bg-brand-gold" />
-              <span className="text-brand-gold text-xs font-semibold uppercase tracking-[0.25em]">
-                {service.eyebrow}
-              </span>
-            </div>
-            <h2 className="font-serif text-3xl lg:text-4xl font-bold text-brand-navy leading-tight mb-6">
-              {service.title}
-            </h2>
-            <p className="text-brand-charcoal/70 leading-relaxed">
-              {service.intro}
-            </p>
-          </div>
-        </div> */}
-
-        {/* ── Section header with hero image (alternating layout) ── */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 mb-16 lg:mb-20 items-center">
-          {/* Image side — order swaps based on index */}
-          <div className={`relative ${index % 2 === 1 ? "lg:order-2" : ""}`}>
-            {/* Color block behind image (offsets from opposite corner based on layout direction) */}
+        {/* ────────────────────────────────────────────── */}
+        {/* MAIN LAYOUT: image (sticky) + all content     */}
+        {/* Grid columns swap based on isReversed so     */}
+        {/* the image always sits in the 5fr track       */}
+        {/* ────────────────────────────────────────────── */}
+        <div
+          className={`grid grid-cols-1 gap-10 lg:gap-16 items-start ${
+            isReversed ? "lg:grid-cols-[7fr_5fr]" : "lg:grid-cols-[5fr_7fr]"
+          }`}
+        >
+          {/* ────────────── IMAGE COLUMN ────────────── */}
+          {/* ────────────── IMAGE COLUMN ────────────── */}
+          <div
+            className={`relative lg:self-start lg:sticky lg:top-24 ${
+              isReversed ? "lg:order-2" : ""
+            }`}
+          >
+            {/* Color block behind image */}
             <div
               className={`
       absolute top-6 w-[55%] h-[88%] bg-brand-navy hidden lg:block
-      ${index % 2 === 1 ? "-left-6" : "-right-6"}
+      ${isReversed ? "-left-6" : "-right-6"}
     `}
             />
 
             {/* Image */}
-            <div className="relative w-full aspect-[4/5] lg:aspect-[5/6] overflow-hidden">
+            <div className="relative w-full aspect-[4/5] overflow-hidden">
               <Image
                 src={service.image}
                 alt={service.title}
                 fill
                 className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
+                sizes="(max-width: 1024px) 100vw, 42vw"
               />
             </div>
 
-            {/* Small gold square — decorative accent (opposite corner from color block) */}
+            {/* Gold square accent */}
             <div
               className={`
       absolute -bottom-4 w-16 h-16 bg-brand-gold hidden lg:block
-      ${index % 2 === 1 ? "-right-4" : "-left-4"}
+      ${isReversed ? "-right-4" : "-left-4"}
     `}
             />
 
-            {/* Number badge — sits over the image */}
+            {/* Number badge over image */}
             <div className="absolute top-6 left-6 lg:top-8 lg:left-8 bg-brand-gold text-brand-navy px-4 py-2 z-10">
               <span className="font-serif text-2xl font-bold leading-none">
                 {num}
@@ -381,208 +370,163 @@ function ServiceSection({
             </div>
           </div>
 
-          {/* Content side */}
-          <div className={index % 2 === 1 ? "lg:order-1" : ""}>
-            <div className="flex items-center gap-3 mb-4">
-              <span className="w-8 h-px bg-brand-gold" />
-              <span className="text-brand-gold text-xs font-semibold uppercase tracking-[0.25em]">
-                {service.eyebrow}
-              </span>
-            </div>
-            <h2 className="font-serif text-3xl lg:text-4xl font-bold text-brand-navy leading-tight mb-6">
-              {service.title}
-            </h2>
-            <p className="text-brand-charcoal/70 leading-relaxed text-lg">
-              {service.intro}
-            </p>
-          </div>
-        </div>
-
-        {/* ── Why It Matters Now ── */}
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-8 lg:gap-16 mb-12 lg:mb-16">
-          <div>
-            <div className="flex items-center gap-3">
-              <span className="w-8 h-px bg-brand-gold" />
-              <span className="text-brand-navy text-xs font-semibold uppercase tracking-[0.25em]">
-                {"pullQuote" in service && service.eyebrow.includes("Strategic")
-                  ? "Why It Matters Now"
-                  : "Why It Matters Now"}
-              </span>
-            </div>
-          </div>
-          <div>
-            <p className="text-brand-charcoal/80 leading-relaxed text-lg">
-              {service.whyMatters}
-            </p>
-
-            {/* Pull quote (only for services that have one) */}
-            {/* {"pullQuote" in service && service.pullQuote && (
-              <div className="border-l-2 border-brand-gold pl-6 mt-8">
-                <Quote className="w-5 h-5 text-brand-gold mb-3" />
-                <p className="font-serif text-xl text-brand-navy leading-snug mb-3">
-                  {service.pullQuote.text}
-                </p>
-                <p className="text-xs uppercase tracking-widest text-brand-charcoal/50">
-                  — {service.pullQuote.attribution}
-                </p>
+          {/* ────────────── CONTENT COLUMN ────────────── */}
+          <div className={isReversed ? "lg:order-1" : ""}>
+            {/* Eyebrow + Title + Intro */}
+            <div className="mb-12 lg:mb-16">
+              <div className="flex items-center gap-3 mb-4">
+                <span className="w-8 h-px bg-brand-gold" />
+                <span className="text-brand-gold text-xs font-semibold uppercase tracking-[0.25em]">
+                  {service.eyebrow}
+                </span>
               </div>
-            )} */}
+              <h2 className="font-serif text-3xl lg:text-4xl font-bold text-brand-navy leading-tight mb-6">
+                {service.title}
+              </h2>
+              <p className="text-brand-charcoal/70 leading-relaxed text-lg">
+                {service.intro}
+              </p>
+            </div>
 
-            {/* Context blocks (China-Africa programme only) */}
-            {/* {"contextBlocks" in service && service.contextBlocks && (
-              <div className="grid sm:grid-cols-2 gap-6 mt-8">
-                {service.contextBlocks.map((c, i) => (
-                  <div
-                    key={i}
-                    className="bg-brand-bg p-6 border-l-2 border-brand-gold"
-                  >
-                    <p className="text-brand-navy font-semibold text-sm uppercase tracking-wider mb-3">
-                      {c.label}
-                    </p>
-                    <p className="text-sm text-brand-charcoal/70 leading-relaxed">
-                      {c.desc}
-                    </p>
-                  </div>
-                ))}
+            {/* Why It Matters Now */}
+            <div className="mb-12 lg:mb-16">
+              <div className="flex items-center gap-3 mb-4">
+                <span className="w-8 h-px bg-brand-gold" />
+                <span className="text-brand-navy text-xs font-semibold uppercase tracking-[0.25em]">
+                  Why It Matters Now
+                </span>
               </div>
-            )} */}
-          </div>
-        </div>
+              <p className="text-brand-charcoal/80 leading-relaxed text-lg">
+                {service.whyMatters}
+              </p>
+            </div>
 
-        {/* ── Stats strip (if present) ── */}
-        {"stats" in service && service.stats && (
-          <div className="bg-brand-navy p-8 lg:p-12 mb-12 lg:mb-16 relative overflow-hidden">
-            <div
-              className="absolute inset-0 opacity-5"
-              style={{
-                backgroundImage:
-                  "radial-gradient(circle, rgba(255,255,255,0.5) 1px, transparent 1px)",
-                backgroundSize: "20px 20px",
-              }}
-            />
-            <p className="text-brand-gold text-xs font-semibold uppercase tracking-[0.25em] mb-8 relative">
-              What the data shows
-            </p>
-            <div
-              className={`grid grid-cols-1 ${
-                service.stats.length === 2 ? "md:grid-cols-2" : "md:grid-cols-3"
-              } gap-8 lg:gap-12 relative`}
-            >
-              {service.stats.map((s, i) => (
+            {/* Stats strip */}
+            {"stats" in service && service.stats && (
+              <div className="bg-brand-navy p-8 lg:p-10 mb-12 lg:mb-16 relative overflow-hidden">
                 <div
-                  key={i}
-                  className={
-                    i < service.stats.length - 1
-                      ? "md:border-r md:border-white/10 md:pr-8 lg:pr-12"
-                      : ""
-                  }
-                >
-                  <div className="font-serif text-4xl lg:text-5xl font-bold text-brand-gold leading-none mb-3">
-                    {s.num}
-                  </div>
-                  <p className="text-white/90 text-sm leading-relaxed mb-2">
-                    {s.label}
-                  </p>
-                  <p className="text-white/50 text-xs uppercase tracking-wider">
-                    {s.source}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
-
-        {/* ── The Programme / Stages / What We Do ── */}
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-8 lg:gap-16 mb-12 lg:mb-16">
-          <div>
-            <div className="flex items-center gap-3 mb-3">
-              <span className="w-8 h-px bg-brand-gold" />
-              <span className="text-brand-navy text-xs font-semibold uppercase tracking-[0.25em]">
-              {service.eyebrow === "Business Consulting" ? "What we do" : "The Programme"}
-              </span>
-            </div>
-            <p className="font-serif text-xl lg:text-2xl text-brand-navy leading-tight">
-              {service.programmeTitle}
-            </p>
-          </div>
-
-          <div>
-            {/* Four-stage layout for Strategic Leadership */}
-            {"stages" in service && service.stages ? (
-              <div className="grid sm:grid-cols-2 gap-6">
-                {service.stages.map((stage, i) => (
-                  <div
-                    key={i}
-                    className="bg-white border border-gray-200 p-6 lg:p-7 relative"
-                  >
-                    <span className="absolute top-5 right-6 font-serif text-sm text-brand-charcoal/30 font-medium">
-                      {stage.num}
-                    </span>
-                    <p className="text-brand-gold text-xs font-semibold uppercase tracking-widest mb-3">
-                      Stage {stage.num}
-                    </p>
-                    <h4 className="font-serif text-lg font-bold text-brand-navy mb-3 leading-tight">
-                      {stage.title}
-                    </h4>
-                    <p className="text-sm text-brand-charcoal/70 leading-relaxed">
-                      {stage.desc}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            ) : (
-              /* Standard programme points list */
-              <div className="space-y-5">
-                {service.programmePoints?.map((p, i) => (
-                  <div key={i} className="flex gap-5 group">
-                    <div className="flex-shrink-0 w-1 self-stretch bg-brand-gold/30 group-hover:bg-brand-gold transition-colors" />
-                    <div>
-                      <h4 className="font-serif text-lg font-bold text-brand-navy mb-1.5 leading-snug">
-                        {p.title}
-                      </h4>
-                      <p className="text-sm text-brand-charcoal/70 leading-relaxed">
-                        {p.desc}
+                  className="absolute inset-0 opacity-5"
+                  style={{
+                    backgroundImage:
+                      "radial-gradient(circle, rgba(255,255,255,0.5) 1px, transparent 1px)",
+                    backgroundSize: "20px 20px",
+                  }}
+                />
+                <p className="text-brand-gold text-xs font-semibold uppercase tracking-[0.25em] mb-6 relative">
+                  What the data shows
+                </p>
+                <div className="space-y-6 relative">
+                  {service.stats.map((s, i) => (
+                    <div
+                      key={i}
+                      className={
+                        i < service.stats.length - 1
+                          ? "pb-6 border-b border-white/10"
+                          : ""
+                      }
+                    >
+                      <div className="font-serif text-4xl lg:text-5xl font-bold text-brand-gold leading-none mb-3">
+                        {s.num}
+                      </div>
+                      <p className="text-white/90 text-sm leading-relaxed mb-2">
+                        {s.label}
+                      </p>
+                      <p className="text-white/50 text-xs uppercase tracking-wider">
+                        {s.source}
                       </p>
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
             )}
-          </div>
-        </div>
 
-        {/* ── Who it's for + CTA ── */}
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-8 lg:gap-16">
-          <div>
-            <div className="flex items-center gap-3 mb-3">
-              <span className="w-8 h-px bg-brand-gold" />
-              <span className="text-brand-navy text-xs font-semibold uppercase tracking-[0.25em]">
-                Who It&apos;s For
-              </span>
-            </div>
-          </div>
-
-          <div>
-            <p className="text-brand-charcoal/80 leading-relaxed mb-10">
-              {service.audience}
-            </p>
-
-            <div className="border-t border-brand-charcoal/15 pt-8">
-              <p className="font-serif text-xl lg:text-2xl text-brand-navy font-bold mb-6 leading-snug">
-                {service.closing}
+            {/* The Programme / Stages / What We Do */}
+            <div className="mb-12 lg:mb-16">
+              <div className="flex items-center gap-3 mb-4">
+                <span className="w-8 h-px bg-brand-gold" />
+                <span className="text-brand-navy text-xs font-semibold uppercase tracking-[0.25em]">
+                  {service.eyebrow === "Business Consulting"
+                    ? "What we do"
+                    : "The Programme"}
+                </span>
+              </div>
+              <p className="font-serif text-xl lg:text-2xl text-brand-navy leading-tight mb-8">
+                {service.programmeTitle}
               </p>
-              <Link
-                href="/book"
-                className="inline-flex items-center gap-3 bg-brand-navy text-white font-semibold uppercase tracking-widest text-xs py-4 px-8 hover:bg-brand-gold hover:text-brand-navy transition-colors"
-              >
-                Book a Free 30-Minute Call
-              </Link>
+
+              {/* Four-stage layout for Strategic Leadership */}
+              {"stages" in service && service.stages ? (
+                <div className="grid sm:grid-cols-2 gap-5">
+                  {service.stages.map((stage, i) => (
+                    <div
+                      key={i}
+                      className="bg-white border border-gray-200 p-6 relative"
+                    >
+                      <span className="absolute top-5 right-6 font-serif text-sm text-brand-charcoal/30 font-medium">
+                        {stage.num}
+                      </span>
+                      <p className="text-brand-gold text-xs font-semibold uppercase tracking-widest mb-3">
+                        Stage {stage.num}
+                      </p>
+                      <h4 className="font-serif text-lg font-bold text-brand-navy mb-3 leading-tight">
+                        {stage.title}
+                      </h4>
+                      <p className="text-sm text-brand-charcoal/70 leading-relaxed">
+                        {stage.desc}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <div className="space-y-5">
+                  {service.programmePoints?.map((p, i) => (
+                    <div key={i} className="flex gap-5 group">
+                      <div className="flex-shrink-0 w-1 self-stretch bg-brand-gold/30 group-hover:bg-brand-gold transition-colors" />
+                      <div>
+                        <h4 className="font-serif text-lg font-bold text-brand-navy mb-1.5 leading-snug">
+                          {p.title}
+                        </h4>
+                        {p.desc && (
+                          <p className="text-sm text-brand-charcoal/70 leading-relaxed">
+                            {p.desc}
+                          </p>
+                        )}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Who It's For + CTA */}
+            <div>
+              <div className="flex items-center gap-3 mb-4">
+                <span className="w-8 h-px bg-brand-gold" />
+                <span className="text-brand-navy text-xs font-semibold uppercase tracking-[0.25em]">
+                  Who It&apos;s For
+                </span>
+              </div>
+              <p className="text-brand-charcoal/80 leading-relaxed mb-10">
+                {service.audience}
+              </p>
+
+              <div className="border-t border-brand-charcoal/15 pt-8">
+                <p className="font-serif text-xl lg:text-2xl text-brand-navy font-bold mb-6 leading-snug">
+                  {service.closing}
+                </p>
+                <Link
+                  href="/book"
+                  className="inline-flex items-center gap-3 bg-brand-navy text-white font-semibold uppercase tracking-widest text-xs py-4 px-8 hover:bg-brand-gold hover:text-brand-navy transition-colors"
+                >
+                  Book a Free 30-Minute Call
+                </Link>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Divider between services within the same category */}
+      {/* Divider between services */}
       {index < total - 1 && (
         <div className="container mx-auto px-4 lg:px-16">
           <div className="h-px bg-brand-charcoal/10" />

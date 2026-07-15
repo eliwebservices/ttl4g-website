@@ -8,6 +8,7 @@ import {
   RefreshCw,
   Briefcase,
   ArrowRight,
+  GraduationCap,
   ArrowLeft,
   Quote,
   // Linkedin,
@@ -16,22 +17,24 @@ import {
   // Youtube,
 } from "lucide-react";
 
-const services = [
+const trainingServices = [
   {
     num: "01",
     icon: Globe,
+    slug: "#cross-cultural-leadership",
     title: "Turn Cultural Differences Into Your Team's Competitive Edge",
     points: [
       "Build trust across cultures",
       "Run inclusive meetings",
       "Give feedback that moves people",
       "Resolve cross-cultural conflict",
-      "Align Teams Faster",
+      "Align teams faster",
     ],
   },
   {
     num: "02",
     icon: Star,
+    slug: "#china-africa-partnerships",
     title: "Lead China-Africa Partnerships With Cultural Confidence",
     points: [
       "Navigate Guanxi and Mianzi",
@@ -43,6 +46,7 @@ const services = [
   {
     num: "03",
     icon: TrendingUp,
+    slug: "#strategic-leadership",
     title: "Developing Strategic Leadership",
     points: [
       "Leading yourself",
@@ -54,12 +58,40 @@ const services = [
   {
     num: "04",
     icon: Target,
+    slug: "#leadership-industry-ai",
     title: "Leadership, Your Industry & AI",
     points: [
-      "Understand AI’s impact on your industry",
+      "Understand AI's impact on your industry",
       "Lead AI adoption with confidence",
       "Coach your team for an AI-powered future",
       "Make strategic decisions with AI insights",
+    ],
+  },
+];
+
+const consultingServices = [
+  {
+    num: "01",
+    icon: Briefcase,
+    slug: "#business-setup-nigeria",
+    title: "Set up your business in Nigeria — the right way",
+    points: [
+      "Company registration & compliance",
+      "Tax clearance & audit prep",
+      "Strategic market entry",
+      "Management recruitment",
+    ],
+  },
+  {
+    num: "02",
+    icon: GraduationCap,
+    slug: "#ld-consulting",
+    title: "Learning & Development Consulting",
+    points: [
+      "Align L&D with business strategy",
+      "Measure ROI and impact",
+      "Engage senior stakeholders",
+      "Position L&D as strategic partner",
     ],
   },
 ];
@@ -206,125 +238,268 @@ export default function HomePage() {
       </section>
 
       {/* ─────────────────────────────────────────────── */}
-      {/* WHAT WE DO                                      */}
+      {/* INTRODUCTION — WHO WE ARE                       */}
       {/* ─────────────────────────────────────────────── */}
-      <section className="bg-brand-soft py-16 lg:py-24">
-        <div className="container mx-auto px-4 lg:px-16">
-          {/* Header row — asymmetric: title left, CTA right */}
-          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12 lg:mb-16">
+      <section className="bg-brand-bg py-16 lg:py-24 relative overflow-hidden">
+        {/* Subtle dot texture in the background */}
+        <div
+          className="absolute top-8 right-8 w-40 h-40 opacity-20 hidden lg:block"
+          style={{
+            backgroundImage:
+              "radial-gradient(circle, var(--color-brand-charcoal) 1px, transparent 1px)",
+            backgroundSize: "8px 8px",
+          }}
+        />
+
+        <div className="container mx-auto px-4 lg:px-16 relative">
+          {/* Two-column: label on left, statement on right */}
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-8 lg:gap-16 mb-16 lg:mb-20">
+            {/* Left: kicker + short label */}
             <div>
               <div className="flex items-center gap-3 mb-4">
                 <span className="w-8 h-px bg-brand-gold" />
                 <span className="text-brand-gold text-xs font-semibold uppercase tracking-[0.25em]">
-                  What We Do
+                  Who We Are
                 </span>
               </div>
-              <h2 className="font-serif text-3xl lg:text-5xl font-bold text-brand-navy leading-tight max-w-2xl">
-                Training and 
-                <br className="hidden lg:block" />
-                Development
-              </h2>
+              <p className="font-serif text-brand-navy leading-tight text-3xl lg:text-5xl font-bold">
+                Nigeria-Based Training and Consulting
+              </p>
             </div>
 
-            <Link
-              href="/services"
-              className="inline-flex items-center gap-3 border border-brand-navy text-brand-navy font-semibold uppercase tracking-widest text-xs py-4 px-8 hover:bg-brand-navy hover:text-white transition-colors self-start lg:self-end"
-            >
-              <span className="w-4 h-px bg-current" /> View All Services
-            </Link>
+            {/* Right: main statement */}
+            <div>
+              <p className="font-serif text-2xl lg:text-3xl text-brand-navy leading-[1.35] mb-8">
+                TTL4G specializes in{" "}
+                <span className="text-brand-gold">training</span>,{" "}
+                <span className="text-brand-gold">leadership development</span>,{" "}
+                <span className="text-brand-gold">
+                  cross-cultural programmes
+                </span>{" "}
+                — with a mission to strengthen the Nigeria–China partnership —
+                and{" "}
+                <span className="text-brand-gold">business intelligence</span>.
+              </p>
+              <p className="font-serif leading-relaxed text-2xl lg:text-3xl text-brand-navy">
+                Drawing on real corporate experience, we equip leaders, teams,
+                and organizations to perform effectively across cultures and
+                diverse operating environments.
+              </p>
+            </div>
           </div>
 
-          {/* Service cards grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 bg-white border border-gray-200">
-            {services.map((s, i) => (
-              <div
-                key={i}
-                className={`
-            relative p-8 lg:p-10
-            ${
-              i < services.length - 1
-                ? "border-b sm:border-b sm:[&:nth-child(-n+2)]:border-b lg:border-b-0 lg:border-r"
-                : ""
-            }
-            ${i < 2 ? "sm:border-b" : ""}
-            ${i % 2 === 0 ? "sm:border-r lg:border-r" : ""}
-            ${i === services.length - 1 ? "lg:border-r-0" : ""}
-            border-gray-200
-            group hover:bg-brand-soft transition-colors
-          `}
-              >
-                {/* Number in top-right corner */}
-                <span className="absolute top-6 right-8 font-serif text-sm text-brand-charcoal/30 font-medium">
-                  {s.num}
-                </span>
-
-                {/* Icon */}
-                <div className="w-14 h-14 flex items-center justify-center mb-6 text-brand-gold">
-                  <s.icon className="w-6 h-6" strokeWidth={1.5} />
-                </div>
-
-                {/* Title */}
-                <h3 className="font-serif text-lg lg:text-xl font-bold text-brand-navy mb-5 leading-tight min-h-[3.5rem]">
-                  {s.title}
-                </h3>
-
-                {/* Points */}
-                <ul className="space-y-2.5 mb-8">
-                  {s.points.map((p, j) => (
-                    <li
-                      key={j}
-                      className="flex items-start gap-3 text-sm text-brand-charcoal/70"
-                    >
-                      <span className="w-1.5 h-1.5 bg-brand-gold mt-1.5 flex-shrink-0" />
-                      {p}
-                    </li>
-                  ))}
-                </ul>
-
-                {/* Arrow link */}
-                <Link
-                  href="/services"
-                  aria-label={`Learn more about ${s.title}`}
-                  className="inline-flex items-center text-brand-navy hover:text-brand-gold transition-colors"
-                >
-                  <ArrowRight className="w-5 h-5" />
-                </Link>
-              </div>
-            ))}
-          </div>
-
-          {/* Below the grid — small footnote indicating there's more */}
-          <p className="text-center text-xs uppercase tracking-widest text-brand-charcoal/50 mt-10">
-            Plus{" "}
-            <span className="text-brand-navy font-semibold">
-              Business Consulting
-            </span>{" "}
-            and{" "}
-            <span className="text-brand-navy font-semibold">
-              L&amp;D Consulting
-            </span>{" "}
-            services —
-            <Link
-              href="/services"
-              className="text-brand-gold hover:underline ml-1"
-            >
-              explore all offerings →
-            </Link>
-          </p>
+          {/* Four pillars strip — subtle reinforcement */}
+          {/* <div className="grid grid-cols-2 lg:grid-cols-4 border-t border-brand-charcoal/15">
+    {[
+      { label: "Training", num: "01" },
+      { label: "Leadership Development", num: "02" },
+      { label: "Cross-Cultural Programmes", num: "03" },
+      { label: "Business Intelligence", num: "04" },
+    ].map((pillar, i, arr) => (
+      <div
+        key={i}
+        className={`py-6 lg:py-8 px-4 lg:px-6 ${
+          i < arr.length - 1 ? "lg:border-r border-brand-charcoal/15" : ""
+        } ${i % 2 === 0 ? "border-r lg:border-r" : ""} ${
+          i < 2 ? "border-b lg:border-b-0" : ""
+        } border-brand-charcoal/15`}
+      >
+        <p className="font-serif text-sm text-brand-charcoal/40 font-medium mb-2">
+          {pillar.num}
+        </p>
+        <p className="font-serif text-base lg:text-lg font-bold text-brand-navy leading-tight">
+          {pillar.label}
+        </p>
+      </div>
+    ))}
+  </div> */}
         </div>
       </section>
 
       {/* ─────────────────────────────────────────────── */}
-{/* TRAINING & DEVELOPMENT — COLOR BLOCK CRASH      */}
+{/* WHAT WE DO — Training & Consulting               */}
 {/* ─────────────────────────────────────────────── */}
-<section className="bg-brand-bg py-16 lg:py-24">
+<section className="bg-brand-soft py-16 lg:py-24">
+  <div className="container mx-auto px-4 lg:px-16">
+
+    {/* Section master header — asymmetric */}
+    <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-14 lg:mb-20">
+      <div>
+        <div className="flex items-center gap-3 mb-4">
+          <span className="w-8 h-px bg-brand-gold" />
+          <span className="text-brand-gold text-xs font-semibold uppercase tracking-[0.25em]">
+            What We Do
+          </span>
+        </div>
+        <h2 className="font-serif text-3xl lg:text-5xl font-bold text-brand-navy leading-tight max-w-2xl">
+          Training and <br className="hidden lg:block" />Leadership
+        </h2>
+      </div>
+
+      <Link
+        href="/services"
+        className="inline-flex items-center gap-3 border border-brand-navy text-brand-navy font-semibold uppercase tracking-widest text-xs py-4 px-8 hover:bg-brand-navy hover:text-white transition-colors self-start lg:self-end"
+      >
+        <span className="w-4 h-px bg-current" /> View All Services
+      </Link>
+    </div>
+
+    {/* ── Category 01: Training & Development ── */}
+    <div className="mb-12 lg:mb-16">
+      {/* <div className="flex items-center gap-4 mb-6">
+        <div className="font-serif text-4xl lg:text-5xl font-bold text-brand-charcoal/15 leading-none">
+          I
+        </div>
+        <div>
+          <p className="text-brand-gold text-xs font-semibold uppercase tracking-[0.25em] mb-1">
+            Category One
+          </p>
+          <h3 className="font-serif text-xl lg:text-2xl font-bold text-brand-navy leading-tight">
+            Training & Development
+          </h3>
+        </div>
+      </div> */}
+
+      {/* 4-column grid for training services */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 bg-white border border-gray-200">
+        {trainingServices.map((s, i) => (
+          <div
+            key={i}
+            className={`
+              relative p-8 lg:p-10 flex flex-col
+              ${i < trainingServices.length - 1 ? "border-b sm:border-b sm:[&:nth-child(-n+2)]:border-b lg:border-b-0 lg:border-r" : ""}
+              ${i < 2 ? "sm:border-b" : ""}
+              ${i % 2 === 0 ? "sm:border-r lg:border-r" : ""}
+              ${i === trainingServices.length - 1 ? "lg:border-r-0" : ""}
+              border-gray-200
+              group hover:bg-brand-soft transition-colors
+            `}
+          >
+            {/* Number in top-right */}
+            <span className="absolute top-6 right-8 font-serif text-sm text-brand-charcoal/30 font-medium">
+              {s.num}
+            </span>
+
+            {/* Icon */}
+            <div className="w-14 h-14 flex items-center justify-center mb-6 text-brand-gold">
+              <s.icon className="w-6 h-6" strokeWidth={1.5} />
+            </div>
+
+            {/* Title */}
+            <h4 className="font-serif text-lg lg:text-xl font-bold text-brand-navy mb-5 leading-tight min-h-[3.5rem]">
+              {s.title}
+            </h4>
+
+            {/* Points */}
+            <ul className="space-y-2.5 mb-8 flex-grow">
+              {s.points.map((p, j) => (
+                <li
+                  key={j}
+                  className="flex items-start gap-3 text-sm text-brand-charcoal/70"
+                >
+                  <span className="w-1.5 h-1.5 bg-brand-gold mt-1.5 flex-shrink-0" />
+                  {p}
+                </li>
+              ))}
+            </ul>
+
+            {/* Read More link */}
+            <Link
+              href={`/services${s.slug}`}
+              className="inline-flex items-center gap-2 text-brand-navy text-xs font-semibold uppercase tracking-widest hover:text-brand-gold transition-colors mt-auto"
+            >
+              Read More <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    {/* ── Category 02: Consulting ── */}
+    <div>
+      {/* <div className="flex items-center gap-4 mb-6">
+        <div className="font-serif text-4xl lg:text-5xl font-bold text-brand-charcoal/15 leading-none">
+          II
+        </div>
+        <div>
+          <p className="text-brand-gold text-xs font-semibold uppercase tracking-[0.25em] mb-1">
+            Category Two
+          </p>
+          <h3 className="font-serif text-xl lg:text-2xl font-bold text-brand-navy leading-tight">
+            Consulting
+          </h3>
+        </div>
+      </div> */}
+      <h2 className="font-serif text-3xl lg:text-5xl font-bold text-brand-navy leading-tight max-w-2xl mb-14 lg:mb-20">
+          Consulting
+        </h2>
+
+      {/* 2-column grid for consulting services */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 bg-white border border-gray-200">
+        {consultingServices.map((s, i) => (
+          <div
+            key={i}
+            className={`
+              relative p-8 lg:p-10 flex flex-col
+              ${i === 0 ? "border-b sm:border-b-0 sm:border-r" : ""}
+              border-gray-200
+              group hover:bg-brand-soft transition-colors
+            `}
+          >
+            {/* Number in top-right */}
+            <span className="absolute top-6 right-8 font-serif text-sm text-brand-charcoal/30 font-medium">
+              {s.num}
+            </span>
+
+            {/* Icon */}
+            <div className="w-14 h-14 flex items-center justify-center mb-6 text-brand-gold">
+              <s.icon className="w-6 h-6" strokeWidth={1.5} />
+            </div>
+
+            {/* Title */}
+            <h4 className="font-serif text-lg lg:text-xl font-bold text-brand-navy mb-5 leading-tight min-h-[3.5rem]">
+              {s.title}
+            </h4>
+
+            {/* Points */}
+            <ul className="space-y-2.5 mb-8 flex-grow">
+              {s.points.map((p, j) => (
+                <li
+                  key={j}
+                  className="flex items-start gap-3 text-sm text-brand-charcoal/70"
+                >
+                  <span className="w-1.5 h-1.5 bg-brand-gold mt-1.5 flex-shrink-0" />
+                  {p}
+                </li>
+              ))}
+            </ul>
+
+            {/* Read More link */}
+            <Link
+              href={`/services${s.slug}`}
+              className="inline-flex items-center gap-2 text-brand-navy text-xs font-semibold uppercase tracking-widest hover:text-brand-gold transition-colors mt-auto"
+            >
+              Read More <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+
+      {/* ─────────────────────────────────────────────── */}
+      {/* TRAINING & DEVELOPMENT — COLOR BLOCK CRASH      */}
+      {/* ─────────────────────────────────────────────── */}
+      {/* <section className="bg-brand-bg py-16 lg:py-24">
   <div className="container mx-auto px-4 lg:px-16">
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-      {/* Photo with color-block behind it */}
+       Photo with color-block behind it 
       <div className="relative w-full max-w-md lg:max-w-none mx-auto lg:mx-0">
-        {/* Color block (sits behind photo, offset) */}
+         Color block (sits behind photo, offset) 
         <div className="absolute top-8 -right-4 lg:-right-8 w-[60%] h-[85%] bg-brand-navy" />
-        {/* Photo */}
+         Photo 
         <div className="relative w-full aspect-[4/5] overflow-hidden">
           <Image
             src="/images/training-development.png"
@@ -333,11 +508,11 @@ export default function HomePage() {
             className="object-cover"
           />
         </div>
-        {/* Small gold square — decorative */}
+        Small gold square — decorative 
         <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-brand-gold hidden lg:block" />
       </div>
 
-      {/* Content */}
+      {/* Content 
       <div>
         <div className="flex items-center gap-3 mb-4">
           <span className="w-8 h-px bg-brand-gold" />
@@ -357,7 +532,7 @@ export default function HomePage() {
           to lead with clarity, confidence, and cultural fluency.
         </p>
 
-        {/* Quote block */}
+        {/* Quote block 
         <div className="border-l-2 border-brand-gold pl-6 mb-10">
           <Quote className="w-6 h-6 text-brand-gold mb-3" />
           <p className="text-brand-charcoal/80 leading-relaxed">
@@ -370,7 +545,7 @@ export default function HomePage() {
           </p>
         </div>
 
-        {/* CTAs */}
+        {/* CTAs 
         <div className="flex flex-col sm:flex-row gap-3">
           <Link
             href="/services"
@@ -388,16 +563,15 @@ export default function HomePage() {
       </div>
     </div>
   </div>
-</section>
-
+</section> */}
 
       {/* ─────────────────────────────────────────────── */}
       {/* SINO-AFRICA SPOTLIGHT                           */}
       {/* ─────────────────────────────────────────────── */}
-      <section className="bg-brand-soft py-16 lg:py-24">
+      {/* <section className="bg-brand-soft py-16 lg:py-24">
         <div className="container mx-auto px-4 lg:px-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 bg-white border border-gray-200 overflow-hidden">
-            {/* Content side */}
+            {/* Content side 
             <div className="p-10 lg:p-16 flex flex-col justify-center">
               <div className="flex items-center gap-3 mb-4">
                 <span className="w-8 h-px bg-brand-gold" />
@@ -426,7 +600,7 @@ export default function HomePage() {
               </Link>
             </div>
 
-            {/* Visual side */}
+            {/* Visual side 
             <div className="bg-brand-navy p-12 lg:p-16 flex items-center justify-center relative overflow-hidden min-h-[280px]">
               <div
                 className="absolute inset-0 opacity-10"
@@ -448,7 +622,7 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ─────────────────────────────────────────────── */}
       {/* FINAL CTA                                       */}

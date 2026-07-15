@@ -5,6 +5,7 @@ import ChatWidget from "@/components/chat/ChatWidget";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { GoogleAnalytics } from '@next/third-parties/google'
+import SmoothScroll from "@/components/SmoothScroll";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -33,10 +34,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <SmoothScroll>
         <Navbar />
         <main className="pt-16">{children}</main>
         <Footer />
         <ChatWidget />
+        </SmoothScroll>
       {process.env.NODE_ENV === 'production' && process.env.NEXT_PUBLIC_GA_ID && (
         <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
       )}
