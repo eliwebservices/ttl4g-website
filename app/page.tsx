@@ -76,10 +76,11 @@ const consultingServices = [
     slug: "#business-setup-nigeria",
     title: "Set up your business in Nigeria — the right way",
     points: [
-      "Company registration & compliance",
-      "Tax clearance & audit prep",
-      "Strategic market entry",
-      "Management recruitment",
+      "Provide strategic insight and market (Nigeria & China)",
+      "Set up of business in Nigeria",
+      "Company registration ",
+      "Tax & regulatory compliance",
+      "Audit",
     ],
   },
   {
@@ -89,9 +90,8 @@ const consultingServices = [
     title: "Learning & Development Consulting",
     points: [
       "Align L&D with business strategy",
-      "Measure ROI and impact",
-      "Engage senior stakeholders",
-      "Position L&D as strategic partner",
+      "Measure ROI and demonstrate impact",
+      "Engage stakeholders effectively",
     ],
   },
 ];
