@@ -177,11 +177,10 @@ export default function ContactPage() {
                   </span>
                 </div>
                 <h3 className="font-serif text-2xl lg:text-3xl font-bold text-brand-navy leading-tight mb-2">
-                  Tell us about your needs.
+                  Reach out to us
                 </h3>
                 <p className="text-brand-charcoal/70 text-sm mb-8">
-                  Share a bit about your organization and the challenge you&apos;re
-                  looking to solve.
+                  We are here to help and answer any questions or concerns you may have.
                 </p>
 
                 <ContactForm />
@@ -194,7 +193,7 @@ export default function ContactPage() {
       {/* ─────────────────────────────────────────────── */}
       {/* FINAL CTA                                       */}
       {/* ─────────────────────────────────────────────── */}
-      <section className="bg-brand-navy py-16 lg:py-24 relative overflow-hidden">
+      {/* <section className="bg-brand-navy py-16 lg:py-24 relative overflow-hidden">
         <div
           className="absolute inset-0 opacity-5"
           style={{
@@ -226,7 +225,7 @@ export default function ContactPage() {
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   )
 }

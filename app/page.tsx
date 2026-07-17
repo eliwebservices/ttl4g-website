@@ -263,28 +263,31 @@ export default function HomePage() {
                 </span>
               </div>
               <p className="font-serif text-brand-navy leading-tight text-3xl lg:text-5xl font-bold">
-                Nigeria-Based Training and Consulting
+                Training & Consulting Companny
               </p>
             </div>
 
             {/* Right: main statement */}
             <div>
-              <p className="font-serif text-2xl lg:text-3xl text-brand-navy leading-[1.35] mb-8">
+              <p className="font-sans text-2xl lg:text-2xl text-brand-navy leading-[1.35] mb-8">
                 TTL4G specializes in{" "}
                 <span className="text-brand-gold">training</span>,{" "}
                 <span className="text-brand-gold">leadership development</span>,{" "}
                 <span className="text-brand-gold">
+                business intelligence
+                </span>,{" "} and {" "}
+                <span className="text-brand-gold">
                   cross-cultural programmes
                 </span>{" "}
-                — with a mission to strengthen the Nigeria–China partnership —
-                and{" "}
-                <span className="text-brand-gold">business intelligence</span>.
+                — including a focus on strengthening the Nigeria–China partnership. Drawing on real corporate experience, we equip leaders, teams, and organizations to perform effectively across cultures and diverse operating environments.
               </p>
-              <p className="font-serif leading-relaxed text-2xl lg:text-3xl text-brand-navy">
+              {/* <p className="font-serif leading-relaxed text-2xl lg:text-2xl text-brand-navy">
                 Drawing on real corporate experience, we equip leaders, teams,
                 and organizations to perform effectively across cultures and
                 diverse operating environments.
-              </p>
+
+                TTL4G specializes in training, leadership development, business intelligence, and cross-cultural programmes — including a focus on strengthening the Nigeria–China partnership. Drawing on real corporate experience, we equip leaders, teams, and organizations to perform effectively across cultures and diverse operating environments.
+              </p> */}
             </div>
           </div>
 
@@ -332,7 +335,7 @@ export default function HomePage() {
           </span>
         </div>
         <h2 className="font-serif text-3xl lg:text-5xl font-bold text-brand-navy leading-tight max-w-2xl">
-          Training and <br className="hidden lg:block" />Leadership
+          Training & Leadership
         </h2>
       </div>
 

@@ -15,13 +15,11 @@ const serviceGroups = [
       'Lead China-Africa Partnerships With Cultural Confidence',
       'Developing Strategic Leadership',
       'Leadership, Your Industry & AI',
-      'Set up your business in Nigeria',
-      'Learning & Development Consulting',
     ],
   },
   {
     label: 'Business Consulting',
-    options: ['Business Setup in Nigeria'],
+    options: ['Set up your business in Nigeria', 'Learning & Development Consulting'],
   },
 ]
 

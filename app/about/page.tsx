@@ -106,8 +106,7 @@ export default function AboutPage() {
               <span className="text-brand-gold">and impact society</span>.
             </h1>
             <p className="text-lg text-white/70 leading-relaxed max-w-2xl">
-              Leadership Development · Cross-Cultural Intelligence · Coaching ·
-              Performance &amp; Change Management
+              Training · Leadership · Cross-Cultural Programmes · Business Consulting
             </p>
           </div>
         </div>
@@ -118,7 +117,7 @@ export default function AboutPage() {
       {/* ─────────────────────────────────────────────── */}
       <section className="bg-brand-bg py-16 lg:py-24">
         <div className="container mx-auto px-4 lg:px-16">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start lg:grid-cols-[5fr_7fr]">
 
             {/* Photo with color block behind */}
             <div className="relative w-full max-w-md lg:max-w-none mx-auto lg:mx-0 lg:sticky lg:top-24">
@@ -153,38 +152,18 @@ export default function AboutPage() {
                 Founder &amp; CEO, TTL4G
               </p>
 
-              <div className="space-y-5 text-brand-charcoal/75 leading-relaxed">
+              <div className="space-y-5 text-brand-charcoal/75 leading-relaxed text-lg">
                 <p>
-                  Annie Wong is a Chinese-Nigerian entrepreneur who transforms
-                  intercultural and leadership dynamics from challenges into strategic
-                  advantages. Leveraging her unique bicultural heritage and a
-                  professional toolkit built for global business, she helps organizations
-                  and their people perform at their best — across cultures, borders,
-                  and contexts.
+                Annie Wong is a Chinese-Nigerian entrepreneur who transforms intercultural and leadership dynamics from challenges into strategic advantages. Leveraging her unique bicultural heritage, a Bachelor’s degree in Law that strengthened her governance and compliance consciousness, and a professional toolkit built for global business, she helps organizations and their people optimize their performance — across cultures, borders, and contexts.
                 </p>
                 <p>
-                  With a 20-year career spanning NGOs and multinationals, Annie has
-                  developed deep expertise in leadership development, performance
-                  management, executive coaching, and talent development. Over the
-                  years, she has trained and coached hundreds of leaders across
-                  different levels — from emerging talent to senior management —
-                  equipping them with the clarity, skills, leadership assessment
-                  capabilities, and mindset to lead with impact. Her Master&apos;s
-                  degree in Intercultural Communication enables her to translate theory
-                  into actionable, culturally-informed insight.
+                With a 20-year career spanning NGOs and multinationals, Annie has developed deep expertise in leadership development, performance management, executive coaching, and talent development. Her legal training continues to anchor her work by shaping her disciplined approach to organizational systems and her sensitivity to ethical, regulatory, and structural considerations. Over the years, she has trained and coached hundreds of leaders across different levels — from emerging talent to senior management — equipping them with the clarity, skills, leadership assessment capabilities, and mindset to lead with impact. Her Master’s degree in Intercultural Communication further enables her to translate theory into actionable, culturally informed insight.
                 </p>
                 <p>
-                  As a certified coach and change practitioner, Annie provides expert
-                  guidance throughout the entire learning and application journey —
-                  ensuring that her consultation and training directly support key
-                  organizational objectives: improving outcomes, retaining talent, and
-                  strengthening team cohesion.
+                As a certified coach and change practitioner, Annie provides expert guidance throughout the entire learning and application journey — ensuring that her consultation and training directly support key organizational objectives: improving outcomes, retaining talent, and strengthening team cohesion.
                 </p>
                 <p>
-                  In 2026, Annie is channelling this expertise into TTL4G — a venture
-                  focused on human resource development and Sino-African partnership
-                  building, with a mission of building leaders who transform
-                  organizations and impact society.
+                From 2026, Annie is channelling this expertise into TTL4G — a venture focused on human resource development and Sino-African partnership building, with a mission of building leaders who transform organizations and impact society.
                 </p>
               </div>
             </div>
@@ -230,7 +209,7 @@ export default function AboutPage() {
               To live with more love. To impact people positively — even if just with a smile.
             </p>
 
-            <p className="text-white/70 leading-relaxed max-w-md">
+            <p className="text-white/70 leading-relaxed max-w-md text-lg">
               Beyond her professional work, Annie is committed to empowerment through
               action. She actively supports charitable initiatives for orphans and
               at-risk children across China, Uganda, and the Middle East, and engages
@@ -262,10 +241,10 @@ export default function AboutPage() {
                 Annie&apos;s Cross-Cultural Stories
               </h2>
             </div>
-            <p className="text-brand-charcoal/70 leading-relaxed max-w-sm lg:text-right">
+            {/* <p className="text-brand-charcoal/70 leading-relaxed max-w-sm lg:text-right">
               Personal stories that shaped a cross-cultural expert and a
               bridge-builder between China, Nigeria, and the world.
-            </p>
+            </p> */}
           </div>
 
           {/* Stories */}

@@ -160,8 +160,7 @@ export default function BookPage() {
               </h2>
               <p className="text-brand-charcoal/70 leading-relaxed text-sm">
                 A few things people often ask before booking. Don&apos;t see
-                your question? Send us a message — we&apos;re happy to clarify
-                anything.
+                your question? Send us a message.
               </p>
             </div>
 

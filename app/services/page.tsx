@@ -180,25 +180,20 @@ const trainingServices = [
     slug: "leadership-industry-ai",
     title: "Leadership, Your Industry & AI",
     intro:
-      "A practical session for leaders who need to understand AI's impact on their industry — and lead their organisations through AI-driven transformation with confidence. The 2–3 hour session delivers a high-level overview of key AI frameworks and practical guidelines. Extended sessions are available on request for teams requiring deeper engagement.",
+      "A practical session for leaders who need to grasp AI's impact on their industry and lead their organizations through transformation with confidence. Delivered as an online SMART Lecture — a high-level overview of key AI frameworks and practical guidelines, minimal time, maximum impact. Extended sessions available for teams wanting deeper engagement.",
     whyMatters:
       "We're living through a genuine shift — not a trend, not a buzzword. AI is changing how decisions get made, how teams operate, and how industries compete. The leaders navigating this well aren't necessarily the most technical. They're the ones who stay curious, ask the right questions, and learn how to put AI to work for their people and their goals.",
     stats: [
       {
         num: "5 million",
         label:
-          "Nigerians — the Federal Government's annual target for AI and digital skills training.",
+          "The Federal Government's annual target for Nigerians trained in AI and digital skills.",
         source: "Federal Ministry of Communications",
       },
       {
-        num: "Fast",
-        label: "Leaders who understand AI are making faster, better decisions.",
+        num: "Faster Decisions",
+        label: "Leaders who understand AI make better calls, sooner.",
         source: "Corporate Education Market",
-      },
-      {
-        num: "2-3h",
-        label: "Online SMART Lecture — minimal time, maximum impact",
-        source: "TTL4G Programme",
       },
     ],
     programmeTitle: "Skills that work in the moments that matter most",
@@ -561,14 +556,11 @@ export default function ServicesPage() {
               </span>
             </div>
             <h1 className="font-serif text-4xl lg:text-6xl font-bold text-white leading-[1.1] mb-6">
-              Training and consulting that turns cultural complexity into{" "}
+              Training and consulting that turns complexity into{" "}
               <span className="text-brand-gold">competitive advantage</span>.
             </h1>
             <p className="text-lg text-white/70 leading-relaxed max-w-2xl">
-              Built on twenty years of corporate experience across three
-              continents. Designed for leaders managing global teams,
-              China-Africa partnerships, and the business of getting things done
-              in Nigeria.
+            Built on twenty years of corporate experience, we equip leaders and organizations to perform effectively and to establish successful operations in Nigeria.
             </p>
           </div>
         </div>
