@@ -172,55 +172,69 @@ export default function AboutPage() {
       </section>
 
       {/* ─────────────────────────────────────────────── */}
-      {/* BEYOND THE BOARDROOM — full-width band         */}
-      {/* ─────────────────────────────────────────────── */}
-      <section className="bg-brand-navy relative overflow-hidden">
+{/* BEYOND THE BOARDROOM                            */}
+{/* ─────────────────────────────────────────────── */}
+<section className="bg-brand-soft py-16 lg:py-24 relative">
+  <div className="container mx-auto px-4 lg:px-16">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center lg:grid-cols-[5fr_7fr]">
+
+      {/* Photo with color block behind — matches founder section */}
+      <div className="relative w-full max-w-md lg:max-w-none mx-auto lg:mx-0">
+        {/* Small gold square — decorative accent */}
+        <div className="absolute -top-4 -left-4 w-16 h-16 bg-brand-gold hidden lg:block z-0" />
+
+        {/* Photo */}
+        <div className="relative w-full aspect-[4/5] overflow-hidden z-10">
+          <Image
+            src="/images/anni_charity_full.png"
+            alt="Annie Wong with children during charitable work"
+            fill
+            className="object-cover object-top"
+            sizes="(max-width: 1024px) 100vw, 50vw"
+          />
+        </div>
+      </div>
+
+      {/* Navy panel with quote and text */}
+      <div className="relative bg-brand-navy p-10 lg:p-14 overflow-hidden">
+        {/* Dot texture inside the navy panel */}
         <div
           className="absolute inset-0 opacity-5"
           style={{
-            backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.5) 1px, transparent 1px)',
+            backgroundImage:
+              'radial-gradient(circle, rgba(255,255,255,0.5) 1px, transparent 1px)',
             backgroundSize: '20px 20px',
           }}
         />
-        <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[440px] relative">
 
-          {/* Photo — left half */}
-          <div className="relative h-72 lg:h-auto">
-            <Image
-              src="/images/anni_charity_.png"
-              alt="Annie Wong with children during charitable work"
-              fill
-              className="object-cover object-top"
-              sizes="(max-width: 1024px) 100vw, 50vw"
-            />
+        <div className="relative">
+          <div className="flex items-center gap-3 mb-6">
+            <span className="w-8 h-px bg-brand-gold" />
+            <span className="text-brand-gold text-xs font-semibold uppercase tracking-[0.25em]">
+              Beyond the Boardroom
+            </span>
           </div>
 
-          {/* Quote — right half */}
-          <div className="flex flex-col justify-center px-8 py-14 lg:px-16 lg:py-20">
-            <div className="flex items-center gap-3 mb-6">
-              <span className="w-8 h-px bg-brand-gold" />
-              <span className="text-brand-gold text-xs font-semibold uppercase tracking-[0.25em]">
-                Beyond the Boardroom
-              </span>
-            </div>
+          <Quote className="w-7 h-7 text-brand-gold mb-5" />
+          <p className="font-serif text-2xl lg:text-3xl text-white leading-snug mb-8 font-medium">
+            To live with more love. To impact people positively — even if just with a smile.
+          </p>
 
-            <Quote className="w-7 h-7 text-brand-gold mb-5" />
-            <p className="font-serif text-2xl lg:text-3xl text-white leading-snug mb-8 font-medium">
-              To live with more love. To impact people positively — even if just with a smile.
-            </p>
-
-            <p className="text-white/70 leading-relaxed max-w-md text-lg">
-              Beyond her professional work, Annie is committed to empowerment through
-              action. She actively supports charitable initiatives for orphans and
-              at-risk children across China, Uganda, and the Middle East, and engages
-              with communities dedicated to helping people move from self-doubt into
-              lives of purpose and bold impact. Annie is also a writer and author,
-              whose work reflects her passion for faith, personal growth, and human
-              connection.
-            </p>
-          </div>
+          <p className="text-white/70 leading-relaxed text-lg">
+            Beyond her professional work, Annie is committed to empowerment through
+            action. She actively supports charitable initiatives for orphans and
+            at-risk children across China, Uganda, and the Middle East, and engages
+            with communities dedicated to helping people move from self-doubt into
+            lives of purpose and bold impact. Annie is also a writer and author,
+            whose work reflects her passion for faith, personal growth, and human
+            connection.
+          </p>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* ─────────────────────────────────────────────── */}
       {/* CROSS-CULTURAL STORIES                          */}

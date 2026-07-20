@@ -568,7 +568,7 @@ export default function ServicesPage() {
 
       {/* ── Category 01: Training & Development ── */}
       <section className="bg-white border-b border-brand-charcoal/10">
-        <div className="container mx-auto px-4 lg:px-16 py-12 lg:py-16">
+        <div className="container mx-auto px-4 lg:px-16 py-12 lg:py-16 scroll-mt-24" id="trainingdevelopment">
           <div className="grid grid-cols-1 lg:grid-cols-[auto_1fr] gap-8 items-end">
             <div className="flex items-center gap-6">
               <div className="font-serif text-7xl lg:text-8xl font-bold text-brand-charcoal/10 leading-none">
@@ -604,7 +604,7 @@ export default function ServicesPage() {
 
       {/* ── Category 02: Consulting ── */}
       <section className="bg-brand-navy border-b border-white/10">
-        <div className="container mx-auto px-4 lg:px-16 py-12 lg:py-16">
+        <div className="container mx-auto px-4 lg:px-16 py-12 lg:py-16 scroll-mt-24" id="consulting">
           <div className="grid grid-cols-1 lg:grid-cols-[auto_1fr] gap-8 items-end">
             <div className="flex items-center gap-6">
               <div className="font-serif text-7xl lg:text-8xl font-bold text-white/10 leading-none">

@@ -76,9 +76,9 @@ export default function BookPage() {
             <div>
               <div className="flex items-center gap-3 mb-4">
                 <span className="w-8 h-px bg-brand-gold" />
-                <span className="text-brand-gold text-xs font-semibold uppercase tracking-[0.25em]">
+                {/* <span className="text-brand-gold text-xs font-semibold uppercase tracking-[0.25em]">
                   Step One
-                </span>
+                </span> */}
               </div>
               <h2 className="font-serif text-2xl lg:text-3xl font-bold text-brand-navy leading-tight mb-2">
                 Pick a time that works.
@@ -121,9 +121,9 @@ export default function BookPage() {
               <div className="bg-white border border-gray-200 p-8 lg:p-10 relative">
                 <div className="flex items-center gap-3 mb-4">
                   <span className="w-8 h-px bg-brand-gold" />
-                  <span className="text-brand-gold text-xs font-semibold uppercase tracking-[0.25em]">
+                  {/* <span className="text-brand-gold text-xs font-semibold uppercase tracking-[0.25em]">
                     Step Two
-                  </span>
+                  </span> */}
                 </div>
                 <h2 className="font-serif text-2xl lg:text-3xl font-bold text-brand-navy leading-tight mb-2">
                   Tell us a bit about you.

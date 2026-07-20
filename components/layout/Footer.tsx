@@ -21,8 +21,8 @@ const quickLinks = [
 ]
 
 const services = [
-  'Training & Development',
-  'Consulting',
+  {title: 'Training & Development', slug: "#trainingdevelopment"},
+  {title: 'Consulting', slug: "#consulting"},
 ]
 
 // const socials = [
@@ -156,11 +156,11 @@ export default function Footer() {
                   TTL<span className="text-brand-gold">4</span>G
                 </span>
               </Link>
-              <p className="mt-4 text-sm text-white/70 leading-relaxed">
+              {/* <p className="mt-4 text-sm text-white/70 leading-relaxed">
                 Training The Leaders For Greatness — a premier leadership
                 development and cross-cultural consultancy, serving organizations
                 across Africa and beyond.
-              </p>
+              </p> */}
               {/* <div className="flex gap-3 mt-6">
                 {socials.map(({ Icon, href, label }) => (
                   <a
@@ -200,7 +200,7 @@ export default function Footer() {
               </h4>
               <ul className="flex flex-col gap-2.5 text-sm text-white/70">
                 {services.map((service) => (
-                  <li key={service}>{service}</li>
+                  <Link href={`services/${service.slug}`} key={service.title}>{service.title}</Link>
                 ))}
               </ul>
             </div>
