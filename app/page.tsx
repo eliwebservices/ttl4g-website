@@ -263,7 +263,7 @@ export default function HomePage() {
                 </span>
               </div>
               <p className="font-serif text-brand-navy leading-tight text-3xl lg:text-5xl font-bold">
-                Training & Consulting Companny
+                Training & Consulting Company
               </p>
             </div>
 
