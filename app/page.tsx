@@ -398,7 +398,7 @@ export default function HomePage() {
               {s.points.map((p, j) => (
                 <li
                   key={j}
-                  className="flex items-start gap-3 text-sm text-brand-charcoal/70"
+                  className="flex items-start gap-3 text-md text-brand-charcoal/70"
                 >
                   <span className="w-1.5 h-1.5 bg-brand-gold mt-1.5 flex-shrink-0" />
                   {p}
@@ -469,7 +469,7 @@ export default function HomePage() {
               {s.points.map((p, j) => (
                 <li
                   key={j}
-                  className="flex items-start gap-3 text-sm text-brand-charcoal/70"
+                  className="flex items-start gap-3 text-md text-brand-charcoal/70"
                 >
                   <span className="w-1.5 h-1.5 bg-brand-gold mt-1.5 flex-shrink-0" />
                   {p}

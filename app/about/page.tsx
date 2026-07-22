@@ -16,7 +16,7 @@ const values = [
   {
     icon: Zap,
     title: 'Impact',
-    desc: 'We measure our success by the tangible transformation we create in organizations.',
+    desc: 'We measure our success by the tangible transformation we create in people and organizations.',
   },
 ]
 
@@ -157,7 +157,7 @@ export default function AboutPage() {
                 Annie Wong is a Chinese-Nigerian entrepreneur who transforms intercultural and leadership dynamics from challenges into strategic advantages. Leveraging her unique bicultural heritage, a Bachelor’s degree in Law that strengthened her governance and compliance consciousness, and a professional toolkit built for global business, she helps organizations and their people optimize their performance — across cultures, borders, and contexts.
                 </p>
                 <p>
-                With a 20-year career spanning NGOs and multinationals, Annie has developed deep expertise in leadership development, performance management, executive coaching, and talent development. Her legal training continues to anchor her work by shaping her disciplined approach to organizational systems and her sensitivity to ethical, regulatory, and structural considerations. Over the years, she has trained and coached hundreds of leaders across different levels — from emerging talent to senior management — equipping them with the clarity, skills, leadership assessment capabilities, and mindset to lead with impact. Her Master’s degree in Intercultural Communication further enables her to translate theory into actionable, culturally informed insight.
+                With a 20-year career spanning NGOs and multinationals, Annie has developed deep expertise in leadership development, performance management, executive coaching, and talent development. Over the years, she has trained and coached hundreds of leaders across different levels — from emerging talent to senior management — equipping them with the clarity, skills, leadership assessment capabilities, and mindset to lead with impact. Her Master’s degree in Intercultural Communication further enables her to translate theory into actionable, culturally informed insight.
                 </p>
                 <p>
                 As a certified coach and change practitioner, Annie provides expert guidance throughout the entire learning and application journey — ensuring that her consultation and training directly support key organizational objectives: improving outcomes, retaining talent, and strengthening team cohesion.
@@ -391,10 +391,10 @@ export default function AboutPage() {
                 Our Core Values
               </h2>
             </div>
-            <p className="text-brand-charcoal/70 leading-relaxed max-w-sm lg:text-right">
+            {/* <p className="text-brand-charcoal/70 leading-relaxed max-w-sm lg:text-right">
               Three principles that shape how TTL4G works with every client,
               every engagement.
-            </p>
+            </p> */}
           </div>
 
           {/* Values grid */}

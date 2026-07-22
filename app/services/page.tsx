@@ -466,7 +466,7 @@ function ServiceSection({
                       <h4 className="font-serif text-lg font-bold text-brand-navy mb-3 leading-tight">
                         {stage.title}
                       </h4>
-                      <p className="text-sm text-brand-charcoal/70 leading-relaxed">
+                      <p className="text-md text-brand-charcoal/70 leading-relaxed">
                         {stage.desc}
                       </p>
                     </div>
@@ -482,7 +482,7 @@ function ServiceSection({
                           {p.title}
                         </h4>
                         {p.desc && (
-                          <p className="text-sm text-brand-charcoal/70 leading-relaxed">
+                          <p className="text-md text-brand-charcoal/70 leading-relaxed">
                             {p.desc}
                           </p>
                         )}
@@ -559,9 +559,9 @@ export default function ServicesPage() {
               Training and consulting that turns complexity into{" "}
               <span className="text-brand-gold">competitive advantage</span>.
             </h1>
-            <p className="text-lg text-white/70 leading-relaxed max-w-2xl">
+            {/* <p className="text-lg text-white/70 leading-relaxed max-w-2xl">
             Built on twenty years of corporate experience, we equip leaders and organizations to perform effectively and to establish successful operations in Nigeria.
-            </p>
+            </p> */}
           </div>
         </div>
       </section>
