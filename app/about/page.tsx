@@ -186,7 +186,7 @@ export default function AboutPage() {
         {/* Photo */}
         <div className="relative w-full aspect-[4/5] overflow-hidden z-10">
           <Image
-            src="/images/anni_charity_full.png"
+            src="/images/anni_charity_full.jpeg"
             alt="Annie Wong with children during charitable work"
             fill
             className="object-cover object-top"
