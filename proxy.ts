@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   // Only password-protect preview/staging environments, never production
   const isProduction = process.env.VERCEL_ENV === 'production'
   if (isProduction) return NextResponse.next()
