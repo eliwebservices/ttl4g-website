@@ -18,7 +18,7 @@ export default function CalEmbed() {
   return (
     <Cal
       namespace="discovery-call"
-      calLink="eli-web-services/free-discovery-call"
+      calLink="ttl4g-training-consulting/free-discovery-call"
       style={{ width: '100%', height: '100%', minHeight: '600px', overflow: 'scroll' }}
       config={{ layout: 'month_view' }}
     />

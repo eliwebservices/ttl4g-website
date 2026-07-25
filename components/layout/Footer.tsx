@@ -14,26 +14,23 @@ const Youtube = <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/200
 const quickLinks = [
   { href: '/about', label: 'About Us' },
   { href: '/services', label: 'Services' },
-  { href: '/cross-cultural', label: 'Cross-Cultural Hub' },
+  // { href: '/cross-cultural', label: 'Cross-Cultural Hub' },
   { href: '/book', label: 'Book a Call' },
   // { href: '/insights', label: 'Insights' },
   { href: '/contact', label: 'Contact' },
 ]
 
 const services = [
-  'Leadership Development',
-  'Cross-Cultural Intelligence',
-  'Coaching & Capacity Building',
-  'Performance Management',
-  'Change Management',
+  {title: 'Training & Development', slug: "#trainingdevelopment"},
+  {title: 'Consulting', slug: "#consulting"},
 ]
 
-const socials = [
-  { Icon: Linkedin, href: '#', label: 'LinkedIn' },
-  { Icon: Twitter, href: '#', label: 'Twitter' },
-  { Icon: Instagram, href: '#', label: 'Instagram' },
-  { Icon: Youtube, href: '#', label: 'YouTube' },
-]
+// const socials = [
+//   // { Icon: Linkedin, href: '#', label: 'LinkedIn' },
+//   // { Icon: Twitter, href: '#', label: 'Twitter' },
+//   // { Icon: Instagram, href: '#', label: 'Instagram' },
+//   // { Icon: Youtube, href: '#', label: 'YouTube' },
+// ]
 
 export default function Footer() {
   const [email, setEmail] = useState('')
@@ -159,12 +156,12 @@ export default function Footer() {
                   TTL<span className="text-brand-gold">4</span>G
                 </span>
               </Link>
-              <p className="mt-4 text-sm text-white/70 leading-relaxed">
+              {/* <p className="mt-4 text-sm text-white/70 leading-relaxed">
                 Training The Leaders For Greatness — a premier leadership
                 development and cross-cultural consultancy, serving organizations
                 across Africa and beyond.
-              </p>
-              <div className="flex gap-3 mt-6">
+              </p> */}
+              {/* <div className="flex gap-3 mt-6">
                 {socials.map(({ Icon, href, label }) => (
                   <a
                     key={label}
@@ -175,7 +172,7 @@ export default function Footer() {
                     {Icon}
                   </a>
                 ))}
-              </div>
+              </div> */}
             </div>
 
             {/* Quick Links */}
@@ -203,7 +200,7 @@ export default function Footer() {
               </h4>
               <ul className="flex flex-col gap-2.5 text-sm text-white/70">
                 {services.map((service) => (
-                  <li key={service}>{service}</li>
+                  <Link href={`services/${service.slug}`} key={service.title}>{service.title}</Link>
                 ))}
               </ul>
             </div>

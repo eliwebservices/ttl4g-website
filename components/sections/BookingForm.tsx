@@ -11,17 +11,15 @@ const serviceGroups = [
   {
     label: 'Training & Development',
     options: [
-      'Building High-Performance Global Teams',
-      'Equipping Diplomats & Executives: Cross-Cultural Awareness for China',
-      'Coaching for Growth: Developing Talent & Driving Performance',
+      "Turn Cultural Differences Into Your Team's Competitive Edge",
+      'Lead China-Africa Partnerships With Cultural Confidence',
       'Developing Strategic Leadership',
-      'Leading Through Change: Managing Performance & Transforming Effectively',
-      'Transforming L&D into a Strategic Business Partner',
+      'Leadership, Your Industry & AI',
     ],
   },
   {
     label: 'Business Consulting',
-    options: ['Business Setup in Nigeria'],
+    options: ['Set up your business in Nigeria', 'Learning & Development Consulting'],
   },
 ]
 
@@ -212,7 +210,7 @@ export default function BookingForm() {
           <label className={labelClass}>Country</label>
           <input
             {...register('country')}
-            placeholder="Nigeria"
+            placeholder="E.g. Nigeria"
             className={inputClass(false)}
           />
         </div>
