@@ -180,43 +180,48 @@ const trainingServices = [
     slug: "leadership-industry-ai",
     title: "Leadership, Your Industry & AI",
     intro:
-      "A practical session for leaders who need to grasp AI's impact on their industry and lead their organizations through transformation with confidence. Delivered as an online SMART Lecture — a high-level overview of key AI frameworks and practical guidelines, minimal time, maximum impact. Extended sessions available for teams wanting deeper engagement.",
+      "Generative AI is changing how people work, make decisions and compete. Our practical, non-technical programmes help participants understand what AI means for their industry, apply it responsibly to real workplace challenges, and build the confidence needed to navigate continued change.",
     whyMatters:
       "We're living through a genuine shift — not a trend, not a buzzword. AI is changing how decisions get made, how teams operate, and how industries compete. The leaders navigating this well aren't necessarily the most technical. They're the ones who stay curious, ask the right questions, and learn how to put AI to work for their people and their goals.",
     stats: [
       {
-        num: "5 million",
+        num: "Foundations",
         label:
-          "The Federal Government's annual target for Nigerians trained in AI and digital skills.",
-        source: "Federal Ministry of Communications",
+          "Build shared understanding, confidence and essential workplace AI literacy.",
+        source: "",
       },
       {
-        num: "Faster Decisions",
-        label: "Leaders who understand AI make better calls, sooner.",
-        source: "Corporate Education Market",
+        num: "Applied Practice",
+        label: "Develop practical skills through guided exercises and relevant business scenarios.",
+        source: "",
+      },
+      {
+        num: "Leadership & Transformation",
+        label: "Explore team adoption, responsible governance, workflow improvement and strategic opportunity.",
+        source: "",
       },
     ],
     programmeTitle: "Skills that work in the moments that matter most",
     programmePoints: [
       {
-        title: "Understand AI's impact on your industry",
-        desc: "Cut through the hype and focus on what actually matters for your sector.",
+        title: "Understand AI’s Relevance to Your Industry",
+        desc: "Separate meaningful developments from hype and identify where AI may affect your organisation, customers and workforce.",
       },
       {
-        title: "Lead AI adoption with confidence",
-        desc: "Guide your team through integration without creating fear or resistance.",
+        title: "Apply AI to Real Work",
+        desc: "Explore practical applications in communication, research, analysis, planning and problem-solving.",
       },
       {
-        title: "Coach your team for an AI-powered future",
-        desc: "Help your people adapt, upskill, and thrive alongside AI.",
+        title: "Use AI Responsibly",
+        desc: "Recognise limitations, accuracy concerns, confidentiality risks and situations requiring human judgment.",
       },
       {
-        title: "Make strategic decisions with AI insights",
-        desc: "Use AI-generated data to inform better, faster leadership decisions.",
+        title: "Lead People Through Change",
+        desc: "Support teams as roles, expectations and ways of working evolve alongside AI.",
       },
     ],
     audience:
-      "Leaders, executives, and managers in any industry who want to understand AI's strategic implications — and lead their teams through the transition with clarity and confidence.",
+      "Leaders, managers, professionals, entrepreneurs and corporate teams seeking practical and immediately relevant guidance on AI adoption.",
     closing: "Ready to lead with AI confidence?",
   },
 ];
@@ -408,7 +413,7 @@ function ServiceSection({
                   }}
                 />
                 <p className="text-brand-gold text-xs font-semibold uppercase tracking-[0.25em] mb-6 relative">
-                  What the data shows
+                  {service.icon === Target ? "FLEXIBLE LEARNING PATHWAYS" : "What the data shows"}
                 </p>
                 <div className="space-y-6 relative">
                   {service.stats.map((s, i) => (
