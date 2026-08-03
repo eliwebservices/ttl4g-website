@@ -1,11 +1,52 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
-import { X, Send, RefreshCw } from 'lucide-react'
+import Link from 'next/link'
+import { X, Send, RefreshCw, ArrowRight } from 'lucide-react'
 import { useChat, type ChatMessage } from '@/hooks/useChat'
 
 interface ChatWindowProps {
   onClose: () => void
+}
+
+/**
+ * Renders Joy's message text, converting mentions of /book and /contact
+ * into styled inline buttons. Also strips stray markdown asterisks.
+ */
+function renderMessageContent(text: string) {
+  // Strip markdown asterisks (Joy sometimes tries to bold things)
+  const cleaned = text.replace(/\*\*/g, '')
+
+  // Split on /book or /contact (word boundary aware)
+  const parts = cleaned.split(/(\/book\b|\/contact\b)/g)
+
+  return parts.map((part, i) => {
+    if (part === '/book') {
+      return (
+        <Link
+          key={i}
+          href="/book"
+          className="inline-flex items-center gap-1 bg-brand-navy text-white text-[10px] font-semibold uppercase tracking-widest py-1 px-2.5 mx-0.5 my-0.5 hover:bg-brand-gold hover:text-brand-navy transition-colors align-middle"
+        >
+          Book a Call <ArrowRight className="w-2.5 h-2.5" />
+        </Link>
+      )
+    }
+
+    if (part === '/contact') {
+      return (
+        <Link
+          key={i}
+          href="/contact"
+          className="inline-flex items-center gap-1 border border-brand-navy text-brand-navy text-[10px] font-semibold uppercase tracking-widest py-1 px-2.5 mx-0.5 my-0.5 hover:bg-brand-navy hover:text-white transition-colors align-middle"
+        >
+          Contact <ArrowRight className="w-2.5 h-2.5" />
+        </Link>
+      )
+    }
+
+    return <span key={i}>{part}</span>
+  })
 }
 
 function MessageBubble({ message }: { message: ChatMessage }) {
@@ -24,7 +65,7 @@ function MessageBubble({ message }: { message: ChatMessage }) {
             : 'bg-white text-gray-800 shadow-sm border border-gray-100 rounded-tl-sm'
         }`}
       >
-        {message.content}
+        {isUser ? message.content : renderMessageContent(message.content)}
       </div>
     </div>
   )
@@ -49,7 +90,7 @@ function TypingIndicator() {
 
 const QUICK_REPLIES = [
   'What services do you offer?',
-  'Tell me about Sino-Africa training',
+  'Tell me about China-Africa training',
   'Book a discovery call',
   'What is your pricing?',
 ]
@@ -161,7 +202,7 @@ export default function ChatWindow({ onClose }: ChatWindowProps) {
 
   const inputArea = (
     <div className="px-3 py-3 bg-white border-t border-gray-100 flex-shrink-0">
-      <div className="flex items-center gap-2 bg-[#FAF7F0] rounded-xl px-3 py-2 border border-gray-200 focus-within:border-brand-navy transition-colors">
+      <div className="flex items-center gap-2 bg-brand-soft rounded-xl px-3 py-2 border border-gray-200 focus-within:border-brand-navy transition-colors">
         <input
           ref={inputRef}
           type="text"
@@ -175,9 +216,9 @@ export default function ChatWindow({ onClose }: ChatWindowProps) {
         <button
           onClick={handleSend}
           disabled={!input.trim() || isLoading}
-          className="w-7 h-7 bg-[#D4A017] rounded-lg flex items-center justify-center flex-shrink-0 hover:bg-[#b8880f] transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+          className="w-7 h-7 bg-brand-gold rounded-lg flex items-center justify-center flex-shrink-0 hover:bg-brand-gold-hover transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
         >
-          <Send size={13} className="text-[#1A3320]" />
+          <Send size={13} className="text-brand-navy" />
         </button>
       </div>
       <p className="text-center text-[10px] text-gray-400 mt-1.5">
@@ -197,7 +238,7 @@ export default function ChatWindow({ onClose }: ChatWindowProps) {
         />
 
         {/* Sheet */}
-        <div className="relative flex flex-col bg-[#FAF7F0] rounded-t-3xl shadow-2xl animate-slide-up"
+        <div className="relative flex flex-col bg-brand-soft rounded-t-3xl shadow-2xl animate-slide-up"
           style={{ height: '85dvh' }}
         >
           {/* Drag handle */}
@@ -216,7 +257,7 @@ export default function ChatWindow({ onClose }: ChatWindowProps) {
       </div>
 
       {/* ── DESKTOP: Floating Window ── */}
-      <div className="hidden sm:flex flex-col w-[360px] h-[540px] bg-[#FAF7F0] rounded-2xl shadow-2xl border border-gray-200 overflow-hidden">
+      <div className="hidden sm:flex flex-col w-[360px] h-[540px] bg-brand-soft rounded-2xl shadow-2xl border border-gray-200 overflow-hidden">
         {header}
         {messagesArea}
         {inputArea}
@@ -224,3 +265,231 @@ export default function ChatWindow({ onClose }: ChatWindowProps) {
     </>
   )
 }
+
+
+// 'use client'
+
+// import { useEffect, useRef, useState } from 'react'
+// import { X, Send, RefreshCw } from 'lucide-react'
+// import { useChat, type ChatMessage } from '@/hooks/useChat'
+
+// interface ChatWindowProps {
+//   onClose: () => void
+// }
+
+// function MessageBubble({ message }: { message: ChatMessage }) {
+//   const isUser = message.role === 'user'
+//   return (
+//     <div className={`flex ${isUser ? 'justify-end' : 'justify-start'} mb-3`}>
+//       {!isUser && (
+//         <div className="w-7 h-7 rounded-full bg-brand-navy flex items-center justify-center text-brand-gold text-xs font-bold mr-2 flex-shrink-0 mt-1">
+//           J
+//         </div>
+//       )}
+//       <div
+//         className={`max-w-[78%] rounded-2xl px-4 py-2.5 text-sm leading-relaxed ${
+//           isUser
+//             ? 'bg-brand-navy text-white font-medium rounded-tr-sm'
+//             : 'bg-white text-gray-800 shadow-sm border border-gray-100 rounded-tl-sm'
+//         }`}
+//       >
+//         {message.content}
+//       </div>
+//     </div>
+//   )
+// }
+
+// function TypingIndicator() {
+//   return (
+//     <div className="flex justify-start mb-3">
+//       <div className="w-7 h-7 rounded-full bg-brand-navy flex items-center justify-center text-brand-gold text-xs font-bold mr-2 flex-shrink-0">
+//         J
+//       </div>
+//       <div className="bg-white rounded-2xl rounded-tl-sm px-4 py-3 shadow-sm border border-gray-100">
+//         <div className="flex gap-1 items-center h-4">
+//           <span className="w-2 h-2 bg-brand-gold rounded-full animate-bounce [animation-delay:0ms]" />
+//           <span className="w-2 h-2 bg-brand-gold rounded-full animate-bounce [animation-delay:150ms]" />
+//           <span className="w-2 h-2 bg-brand-gold rounded-full animate-bounce [animation-delay:300ms]" />
+//         </div>
+//       </div>
+//     </div>
+//   )
+// }
+
+// const QUICK_REPLIES = [
+//   'What services do you offer?',
+//   'Tell me about Sino-Africa training',
+//   'Book a discovery call',
+//   'What is your pricing?',
+// ]
+
+// export default function ChatWindow({ onClose }: ChatWindowProps) {
+//   const { messages, isLoading, error, sendMessage, clearChat } = useChat()
+//   const [input, setInput] = useState('')
+//   const [showQuickReplies, setShowQuickReplies] = useState(true)
+//   const messagesEndRef = useRef<HTMLDivElement>(null)
+//   const inputRef = useRef<HTMLInputElement>(null)
+
+//   useEffect(() => {
+//     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
+//   }, [messages, isLoading])
+
+//   useEffect(() => {
+//     // Small delay so the sheet animation completes before focusing
+//     const timer = setTimeout(() => inputRef.current?.focus(), 300)
+//     return () => clearTimeout(timer)
+//   }, [])
+
+//   useEffect(() => {
+//     if (messages.length > 1) setShowQuickReplies(false)
+//   }, [messages.length])
+
+//   const handleSend = () => {
+//     if (!input.trim()) return
+//     sendMessage(input)
+//     setInput('')
+//   }
+
+//   const handleQuickReply = (text: string) => {
+//     setShowQuickReplies(false)
+//     sendMessage(text)
+//   }
+
+//   const handleKeyDown = (e: React.KeyboardEvent) => {
+//     if (e.key === 'Enter' && !e.shiftKey) {
+//       e.preventDefault()
+//       handleSend()
+//     }
+//   }
+
+//   const header = (
+//     <div className="bg-brand-navy px-4 py-3 flex items-center justify-between flex-shrink-0">
+//       <div className="flex items-center gap-3">
+//         <div className="relative">
+//           <div className="w-9 h-9 rounded-full bg-brand-gold flex items-center justify-center text-brand-navy font-bold text-sm">
+//             J
+//           </div>
+//           <span className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-green-400 rounded-full border-2 border-brand-navy" />
+//         </div>
+//         <div>
+//           <p className="text-white font-semibold text-sm leading-tight">Joy</p>
+//           <p className="text-green-300 text-xs">TTL4G Assistant · Online</p>
+//         </div>
+//       </div>
+//       <div className="flex items-center gap-1">
+//         <button
+//           onClick={clearChat}
+//           title="Clear chat"
+//           className="p-1.5 hover:bg-white/10 rounded-lg transition-colors text-white/70 hover:text-white"
+//         >
+//           <RefreshCw size={14} />
+//         </button>
+//         <button
+//           onClick={onClose}
+//           title="Close chat"
+//           className="p-1.5 hover:bg-white/10 rounded-lg transition-colors text-white/70 hover:text-white"
+//         >
+//           <X size={16} />
+//         </button>
+//       </div>
+//     </div>
+//   )
+
+//   const messagesArea = (
+//     <div className="flex-1 overflow-y-auto px-4 py-4 space-y-1 scroll-smooth">
+//       {messages.map((message, index) => (
+//         <MessageBubble key={index} message={message} />
+//       ))}
+//       {isLoading && <TypingIndicator />}
+//       {error && (
+//         <div className="text-center">
+//           <p className="text-red-500 text-xs bg-red-50 px-3 py-2 rounded-lg inline-block">
+//             {error}
+//           </p>
+//         </div>
+//       )}
+//       {showQuickReplies && !isLoading && (
+//         <div className="pt-2">
+//           <p className="text-xs text-gray-400 mb-2 text-center">Quick questions:</p>
+//           <div className="flex flex-wrap gap-2 justify-center">
+//             {QUICK_REPLIES.map((reply) => (
+//               <button
+//                 key={reply}
+//                 onClick={() => handleQuickReply(reply)}
+//                 className="text-xs px-3 py-1.5 bg-white border border-brand-navy text-brand-navy rounded-full hover:bg-brand-navy hover:text-white transition-colors"
+//               >
+//                 {reply}
+//               </button>
+//             ))}
+//           </div>
+//         </div>
+//       )}
+//       <div ref={messagesEndRef} />
+//     </div>
+//   )
+
+//   const inputArea = (
+//     <div className="px-3 py-3 bg-white border-t border-gray-100 flex-shrink-0">
+//       <div className="flex items-center gap-2 bg-[#FAF7F0] rounded-xl px-3 py-2 border border-gray-200 focus-within:border-brand-navy transition-colors">
+//         <input
+//           ref={inputRef}
+//           type="text"
+//           value={input}
+//           onChange={(e) => setInput(e.target.value)}
+//           onKeyDown={handleKeyDown}
+//           placeholder="Ask Joy anything..."
+//           disabled={isLoading}
+//           className="flex-1 bg-transparent text-sm text-gray-800 placeholder-gray-400 outline-none disabled:opacity-50"
+//         />
+//         <button
+//           onClick={handleSend}
+//           disabled={!input.trim() || isLoading}
+//           className="w-7 h-7 bg-[#D4A017] rounded-lg flex items-center justify-center flex-shrink-0 hover:bg-[#b8880f] transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+//         >
+//           <Send size={13} className="text-[#1A3320]" />
+//         </button>
+//       </div>
+//       <p className="text-center text-[10px] text-gray-400 mt-1.5">
+//         Powered by TTL4G · AI may make mistakes
+//       </p>
+//     </div>
+//   )
+
+//   return (
+//     <>
+//       {/* ── MOBILE: Bottom Sheet ── */}
+//       <div className="flex sm:hidden fixed inset-0 z-50 flex-col justify-end">
+//         {/* Backdrop */}
+//         <div
+//           className="absolute inset-0 bg-black/40 backdrop-blur-sm"
+//           onClick={onClose}
+//         />
+
+//         {/* Sheet */}
+//         <div className="relative flex flex-col bg-[#FAF7F0] rounded-t-3xl shadow-2xl animate-slide-up"
+//           style={{ height: '85dvh' }}
+//         >
+//           {/* Drag handle */}
+//           <div className="flex justify-center pt-3 pb-1 flex-shrink-0">
+//             <div className="w-10 h-1 rounded-full bg-gray-300" />
+//           </div>
+
+//           {/* Rounded top header */}
+//           <div className="overflow-hidden rounded-t-2xl flex-shrink-0">
+//             {header}
+//           </div>
+
+//           {messagesArea}
+//           {inputArea}
+//         </div>
+//       </div>
+
+//       {/* ── DESKTOP: Floating Window ── */}
+//       <div className="hidden sm:flex flex-col w-[360px] h-[540px] bg-[#FAF7F0] rounded-2xl shadow-2xl border border-gray-200 overflow-hidden">
+//         {header}
+//         {messagesArea}
+//         {inputArea}
+//       </div>
+//     </>
+//   )
+// }
