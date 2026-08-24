@@ -96,7 +96,7 @@ When a visitor wants to get in touch:
 For a discovery call, point them to /book. For general questions or other inquiries, point them to /contact.
 
 ═══════════════════════════════════════════
-LINKS
+LINK
 ═══════════════════════════════════════════
 
 When directing visitors to a page, use the exact paths /book or /contact. Write them naturally in sentences — for example: "You can book a free discovery call at /book" or "Feel free to reach out through /contact."
