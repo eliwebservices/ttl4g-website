@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { createAdminClient } from '@/lib/supabase/server'
+import { sql } from "@/lib/db";
 import { leadSchema } from '@/lib/validations'
 import { sendLeadMagnetEmail } from '@/lib/email'
 
@@ -16,34 +16,27 @@ export async function POST(request: NextRequest) {
     }
 
     const data = parsed.data
-    const supabase = createAdminClient()
 
     // Check if lead already exists
-    const { data: existing } = await supabase
-      .from('leads')
-      .select('id, email')
-      .eq('email', data.email)
-      .single()
+    // Replace the existing check + insert block with:
+const existing = await sql`
+SELECT id FROM leads WHERE email = ${data.email} LIMIT 1
+`
 
-    if (!existing) {
-      // Insert new lead
-      const { error: dbError } = await supabase
-        .from('leads')
-        .insert({
-          full_name: data.full_name,
-          email: data.email,
-          source: data.source,
-          status: 'new',
-        })
-
-      if (dbError) {
-        console.error('DB Error:', dbError)
-        return NextResponse.json(
-          { error: 'Failed to save lead' },
-          { status: 500 }
-        )
-      }
-    }
+if (existing.length === 0) {
+try {
+  await sql`
+    INSERT INTO leads (full_name, email, source, status)
+    VALUES (${data.full_name}, ${data.email}, ${data.source}, 'new')
+  `
+} catch (dbError) {
+  console.error('DB Error:', dbError)
+  return NextResponse.json(
+    { error: 'Failed to save lead' },
+    { status: 500 }
+  )
+}
+}
 
     // Send lead magnet delivery email
     await sendLeadMagnetEmail(data.email, data.full_name)

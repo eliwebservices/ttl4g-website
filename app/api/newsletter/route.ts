@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { createAdminClient } from '@/lib/supabase/server'
+import { sql } from "@/lib/db";
 import { newsletterSchema } from '@/lib/validations'
 import { sendWelcomeEmail } from '@/lib/email'
 
@@ -16,22 +16,23 @@ export async function POST(request: NextRequest) {
     }
 
     const data = parsed.data
-    const supabase = createAdminClient()
 
     // Upsert — if email exists, just update source (no duplicate error)
-    const { error: dbError } = await supabase
-      .from('subscribers')
-      .upsert(
-        {
-          email: data.email,
-          full_name: data.full_name ?? null,
-          source: data.source ?? 'newsletter_bar',
-          subscribed: true,
-        },
-        { onConflict: 'email', ignoreDuplicates: false }
-      )
-
-    if (dbError) {
+    try {
+      await sql`
+        INSERT INTO subscribers (email, full_name, source, subscribed)
+        VALUES (
+          ${data.email},
+          ${data.full_name ?? null},
+          ${data.source ?? 'newsletter_bar'},
+          true
+        )
+        ON CONFLICT (email) DO UPDATE SET
+          full_name = EXCLUDED.full_name,
+          source = EXCLUDED.source,
+          subscribed = EXCLUDED.subscribed
+      `
+    } catch (dbError) {
       console.error('DB Error:', dbError)
       return NextResponse.json(
         { error: 'Failed to subscribe' },

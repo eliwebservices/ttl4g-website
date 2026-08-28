@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { createClient } from '@/lib/supabase/server'
+import { sql } from '@/lib/db'
 
 export async function GET(request: NextRequest) {
   try {
@@ -9,27 +9,24 @@ export async function GET(request: NextRequest) {
     const page = parseInt(searchParams.get('page') ?? '1')
     const offset = (page - 1) * limit
 
-    const supabase = await createClient()
+    const posts =
+      category && category !== 'all'
+        ? await sql`
+            SELECT id, title, slug, excerpt, category, cover_image, author, published_at, created_at
+            FROM posts
+            WHERE published = true AND category = ${category}
+            ORDER BY published_at DESC
+            LIMIT ${limit} OFFSET ${offset}
+          `
+        : await sql`
+            SELECT id, title, slug, excerpt, category, cover_image, author, published_at, created_at
+            FROM posts
+            WHERE published = true
+            ORDER BY published_at DESC
+            LIMIT ${limit} OFFSET ${offset}
+          `
 
-    let query = supabase
-      .from('posts')
-      .select('id, title, slug, excerpt, category, cover_image, author, published_at, created_at')
-      .eq('published', true)
-      .order('published_at', { ascending: false })
-      .range(offset, offset + limit - 1)
-
-    if (category && category !== 'all') {
-      query = query.eq('category', category)
-    }
-
-    const { data, error } = await query
-
-    if (error) {
-      console.error('Blog fetch error:', error)
-      return NextResponse.json({ error: 'Failed to fetch posts' }, { status: 500 })
-    }
-
-    return NextResponse.json({ success: true, posts: data ?? [] })
+    return NextResponse.json({ success: true, posts })
   } catch (error) {
     console.error('Blog route error:', error)
     return NextResponse.json({ error: 'Something went wrong' }, { status: 500 })

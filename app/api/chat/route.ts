@@ -1,11 +1,11 @@
-import { NextRequest, NextResponse } from 'next/server'
-import Anthropic from '@anthropic-ai/sdk'
-import { createAdminClient } from '@/lib/supabase/server'
-import { chatSchema } from '@/lib/validations'
+import { NextRequest, NextResponse } from "next/server";
+import Anthropic from "@anthropic-ai/sdk";
+import { sql } from "@/lib/db";
+import { chatSchema } from "@/lib/validations";
 
 const anthropic = new Anthropic({
   apiKey: process.env.ANTHROPIC_API_KEY!,
-})
+});
 
 const TTL4G_SYSTEM_PROMPT = `You are Joy, the virtual assistant for TTL4G — a Nigeria-based training and consulting company. TTL4G specializes in training, leadership development, business intelligence, and cross-cultural programmes — including a focus on strengthening the Nigeria–China partnership. Drawing on real corporate experience, TTL4G equips leaders, teams, and organizations to perform effectively across cultures and diverse operating environments.
 
@@ -112,77 +112,71 @@ RULES
 - If asked something you don't know (exact durations, past clients, dates), say: "That's something the team can walk you through on a discovery call."
 - If a visitor mentions old services no longer offered (Performance Management, Change Management, Coaching for Growth as standalones), redirect: "Those areas are now covered under [relevant current programme]. Want to hear more about it?"
 - If a visitor is clearly not a good fit, be honest — suggest they check the site or reach out via /contact
-- Keep responses to 2-3 sentences unless the visitor explicitly asks for more detail`
-
-
-
+- Keep responses to 2-3 sentences unless the visitor explicitly asks for more detail`;
 
 export async function POST(request: NextRequest) {
   try {
-    const body = await request.json()
+    const body = await request.json();
 
-    const parsed = chatSchema.safeParse(body)
+    const parsed = chatSchema.safeParse(body);
     if (!parsed.success) {
-      return NextResponse.json(
-        { error: 'Invalid message' },
-        { status: 400 }
-      )
+      return NextResponse.json({ error: "Invalid message" }, { status: 400 });
     }
 
-    const { message, session_id, history = [] } = parsed.data
-    const supabase = createAdminClient()
+    const { message, session_id, history = [] } = parsed.data;
 
     // Build message history for Claude
     const messages: Anthropic.MessageParam[] = [
       ...history.map((msg) => ({
-        role: msg.role as 'user' | 'assistant',
+        role: msg.role as "user" | "assistant",
         content: msg.content,
       })),
-      { role: 'user', content: message },
-    ]
+      { role: "user", content: message },
+    ];
 
     // Call Claude API
     const response = await anthropic.messages.create({
-      model: 'claude-haiku-4-5',
+      model: "claude-haiku-4-5",
       max_tokens: 400,
       system: TTL4G_SYSTEM_PROMPT,
       messages,
-    })
+    });
 
     const assistantMessage =
-      response.content[0].type === 'text'
+      response.content[0].type === "text"
         ? response.content[0].text
-        : 'I apologize, I could not process that. Please try again.'
+        : "I apologize, I could not process that. Please try again.";
 
     // Build updated history
     const updatedMessages = [
       ...history,
-      { role: 'user', content: message, timestamp: new Date().toISOString() },
-      { role: 'assistant', content: assistantMessage, timestamp: new Date().toISOString() },
-    ]
+      { role: "user", content: message, timestamp: new Date().toISOString() },
+      {
+        role: "assistant",
+        content: assistantMessage,
+        timestamp: new Date().toISOString(),
+      },
+    ];
 
     // Upsert chat session in DB
-    await supabase
-      .from('chat_sessions')
-      .upsert(
-        {
-          session_id,
-          messages: updatedMessages,
-          updated_at: new Date().toISOString(),
-        },
-        { onConflict: 'session_id' }
-      )
+    await sql`
+  INSERT INTO chat_sessions (session_id, messages, updated_at)
+  VALUES (${session_id}, ${JSON.stringify(updatedMessages)}::jsonb, NOW())
+  ON CONFLICT (session_id) DO UPDATE SET
+    messages = EXCLUDED.messages,
+    updated_at = EXCLUDED.updated_at
+`;
 
     return NextResponse.json({
       success: true,
       message: assistantMessage,
       session_id,
-    })
+    });
   } catch (error) {
-    console.error('Chat route error:', error)
+    console.error("Chat route error:", error);
     return NextResponse.json(
-      { error: 'Chat unavailable. Please try again shortly.' },
+      { error: "Chat unavailable. Please try again shortly." },
       { status: 500 }
-    )
+    );
   }
 }

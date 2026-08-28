@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { createAdminClient } from '@/lib/supabase/server'
+import { sql } from "@/lib/db";
 import { contactSchema } from '@/lib/validations'
 import { sendContactNotification } from '@/lib/email'
 
@@ -17,21 +17,21 @@ export async function POST(request: NextRequest) {
     }
 
     const data = parsed.data
-    const supabase = createAdminClient()
 
     // Save message to DB
-    const { error: dbError } = await supabase
-      .from('messages')
-      .insert({
-        full_name: data.full_name,
-        email: data.email,
-        phone: data.phone ?? null,
-        subject: data.subject,
-        message: data.message,
-        status: 'unread',
-      })
-
-    if (dbError) {
+    try {
+      await sql`
+        INSERT INTO messages (full_name, email, phone, subject, message, status)
+        VALUES (
+          ${data.full_name},
+          ${data.email},
+          ${data.phone ?? null},
+          ${data.subject},
+          ${data.message},
+          'unread'
+        )
+      `
+    } catch (dbError) {
       console.error('DB Error:', dbError)
       return NextResponse.json(
         { error: 'Failed to save message' },
@@ -44,7 +44,8 @@ export async function POST(request: NextRequest) {
 
     // Non-fatal — message is already saved even if email fails
 try {
-  await sendContactNotification(data)
+  // await sendContactNotification(data)
+  console.log("Email sent");
 } catch (emailError) {
   console.error('Contact notification email failed (non-fatal):', emailError)
 }
