@@ -44,8 +44,7 @@ export async function POST(request: NextRequest) {
 
     // Non-fatal — message is already saved even if email fails
 try {
-  // await sendContactNotification(data)
-  console.log("Email sent");
+  await sendContactNotification(data)
 } catch (emailError) {
   console.error('Contact notification email failed (non-fatal):', emailError)
 }
