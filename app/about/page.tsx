@@ -59,8 +59,10 @@ const stories = [
     content: [
       "Growing up in a mixed Chinese-Nigerian household, I didn't fully grasp my heritage until my early twenties. That changed when a magazine asked me to write an article titled \"A Bicultural Balance: Raised in a Chinese-Nigerian Household — a Chinese-African Master's Juggling Two Cultures.\" Writing it forced me to finally ask: Who am I, culturally?",
       "People often ask, \"Do you identify more as Chinese or Nigerian?\" My honest answer: it depends on the context. That's not avoidance — it's the reality of living between two worlds. I don't have to choose; I get to embody both.",
-      'I love both cuisines. My Chinese top three: egg fried rice, braised chicken, sizzling beef with onions. My Nigerian top three: plantain, Jollof rice with chicken, and savory Egusi with Eba or pounded yam. In health and wellness, Chinese culture takes the lead — drinking warm water is second nature, and I sometimes boil apples, pears with goji berries, hawthorns and dates. With my own creativity, I now add cinnamon for enhanced flavour.',
-      "In language and humor, Nigerian Pidgin English is genuinely fun and full of life. The rhythm, the wit, the way people stretch a word for effect — it always makes me laugh. Nigeria is wonderfully multi-ethnic, and Pidgin acts as a cultural glue, bringing everyone together regardless of tribe or status. It's a masterclass in how language builds bridges.",
+      "I love both cuisines. In health and wellness, Chinese culture takes the lead. In language and humor, Nigerian Pidgin English is genuinely fun and full of life. The rhythm, the wit, the way people stretch a word for effect — it always makes me laugh. Nigeria is wonderfully multi-ethnic, and Pidgin acts as a cultural glue, bringing everyone together regardless of tribe or status. It's a masterclass in how language builds bridges.",
+
+      "My studies in the UK, my years within Beijing's international community, and my travels exposed me to many cultures. Through those experiences, I came to understand that there are cultures we are born into — biological and family heritage — and cultures we grow into through the places we live, the people we meet, and the environments we work in. Today, I am comfortable integrating what I love from Chinese, Nigerian, Western, and Middle Eastern cultures. I call it \"Annie's Culture.\"",
+
       'My master\'s degree in the UK, my years within Beijing\'s international community, and my travels exposed me to many cultures. Through those experiences, I came to understand that there are cultures we are born into — biological and family heritage — and cultures we grow into through the places we live, the people we meet, and the environments we work in. Today, I am comfortable integrating what I love from Chinese, Nigerian, Western, and Middle Eastern cultures. Call it "Annie\'s Culture."',
       "That's why I've decided to invest more of myself in building bridges — starting with China and Nigeria. I've noticed something interesting: when I'm in Nigeria, I naturally find myself protecting China's image; when I'm in China, I protect Nigeria's. Despite growing trade between the two countries, there remains a need for greater mutual understanding. Through my work and lived experience, I want to help change that — one conversation, one project, one moment of genuine understanding at a time.",
     ],
@@ -223,7 +225,7 @@ export default function AboutPage() {
           <p className="text-white/70 leading-relaxed text-lg">
             Beyond her professional work, Annie is committed to empowerment through
             action. She actively supports charitable initiatives for orphans and
-            at-risk children across China, Uganda, and the Middle East, and engages
+            at-risk children, and engages
             with communities dedicated to helping people move from self-doubt into
             lives of purpose and bold impact. Annie is also a writer and author,
             whose work reflects her passion for faith, personal growth, and human
