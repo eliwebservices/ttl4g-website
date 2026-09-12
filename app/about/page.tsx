@@ -63,7 +63,6 @@ const stories = [
 
       "My studies in the UK, my years within Beijing's international community, and my travels exposed me to many cultures. Through those experiences, I came to understand that there are cultures we are born into — biological and family heritage — and cultures we grow into through the places we live, the people we meet, and the environments we work in. Today, I am comfortable integrating what I love from Chinese, Nigerian, Western, and Middle Eastern cultures. I call it \"Annie's Culture.\"",
 
-      'My master\'s degree in the UK, my years within Beijing\'s international community, and my travels exposed me to many cultures. Through those experiences, I came to understand that there are cultures we are born into — biological and family heritage — and cultures we grow into through the places we live, the people we meet, and the environments we work in. Today, I am comfortable integrating what I love from Chinese, Nigerian, Western, and Middle Eastern cultures. Call it "Annie\'s Culture."',
       "That's why I've decided to invest more of myself in building bridges — starting with China and Nigeria. I've noticed something interesting: when I'm in Nigeria, I naturally find myself protecting China's image; when I'm in China, I protect Nigeria's. Despite growing trade between the two countries, there remains a need for greater mutual understanding. Through my work and lived experience, I want to help change that — one conversation, one project, one moment of genuine understanding at a time.",
     ],
   },
