@@ -650,7 +650,7 @@ export default function HomePage() {
                 </span>
               </div>
               <h2 className="font-serif text-3xl lg:text-5xl font-bold text-white leading-tight">
-                Ready to build leaders
+                Ready to build leaders {" "}
                 <br className="hidden lg:block" />
                 who deliver?
               </h2>
