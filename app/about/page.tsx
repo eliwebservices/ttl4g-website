@@ -459,7 +459,7 @@ export default function AboutPage() {
                 </span>
               </div>
               <h2 className="font-serif text-3xl lg:text-5xl font-bold text-white leading-tight">
-                Ready to work<br className="hidden lg:block" />
+                Ready to work{" "}<br className="hidden lg:block" />
                 with us?
               </h2>
             </div>

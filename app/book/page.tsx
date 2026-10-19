@@ -38,7 +38,7 @@ export default function BookPage() {
                 </span>
               </div>
               <h1 className="font-serif text-4xl lg:text-6xl font-bold text-white leading-[1.1] mb-6">
-                Book a free<br className="hidden lg:block" />
+                Book a free{" "}<br className="hidden lg:block" />
                 <span className="text-brand-gold">discovery call</span>.
               </h1>
               <p className="text-lg text-white/70 leading-relaxed">
@@ -194,7 +194,7 @@ export default function BookPage() {
                 </span>
               </div>
               <h2 className="font-serif text-3xl lg:text-5xl font-bold text-white leading-tight">
-                Send us a message<br className="hidden lg:block" />
+                Send us a message{" "}<br className="hidden lg:block" />
                 instead.
               </h2>
             </div>

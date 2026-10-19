@@ -662,7 +662,7 @@ export default function ServicesPage() {
                 </span>
               </div>
               <h2 className="font-serif text-3xl lg:text-5xl font-bold text-white leading-tight">
-                Let&apos;s figure it out
+                Let&apos;s figure it out {" "}
                 <br className="hidden lg:block" />
                 in 30 minutes.
               </h2>

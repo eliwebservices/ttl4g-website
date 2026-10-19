@@ -57,7 +57,7 @@ export default function ContactPage() {
               </span>
             </div>
             <h1 className="font-serif text-4xl lg:text-6xl font-bold text-white leading-[1.1] mb-6">
-              Let&apos;s start the<br className="hidden lg:block" />
+              Let&apos;s start the{" "}<br className="hidden lg:block" />
               <span className="text-brand-gold">conversation</span>.
             </h1>
             <p className="text-lg text-white/70 leading-relaxed max-w-2xl">
