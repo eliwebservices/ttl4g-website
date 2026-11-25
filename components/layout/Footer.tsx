@@ -97,7 +97,7 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-white font-serif text-xl lg:text-2xl font-bold tracking-tight">
-              Monthly leadership insights, delivered.
+              Quarterly leadership insights, delivered.
             </p>
           </div>
 

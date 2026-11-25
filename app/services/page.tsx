@@ -123,11 +123,11 @@ const trainingServices = [
     image: "/images/services/strategic-leadership.png",
     eyebrow: "Strategic Leadership",
     slug: "strategic-leadership",
-    title: "Developing Strategic Leadership",
+    title: "Developing Strategic & Intentional Leadership",
     intro:
       "A transformational programme that develops leaders at every level — from leading yourself to shaping the wider ecosystem.",
     whyMatters:
-      "A manager excels individually but struggles to bring others along. A team lead delivers results but can't yet think strategically. A senior leader influences their organisation but hasn't found their voice beyond it. Developing strategic leadership isn't a single leap — it's a structured journey with four distinct stages.",
+      "A manager excels individually but struggles to bring others along. A team lead delivers results but can't yet think strategically. A senior leader influences their organisation but hasn't found their voice beyond it. Developing strategic and intentional leadership isn't a single leap — it's a structured journey with four distinct stages.",
     pullQuote: {
       text: "Leadership development is not an event — it is a journey. Organisations that treat it as such consistently outperform those that don't.",
       attribution: "McKinsey & Company",
@@ -237,7 +237,7 @@ const consultingServices = [
     slug: "business-setup-nigeria",
     title: "Set up your business in Nigeria — the right way",
     intro:
-      "Guiding businesses through setup processes and complaince requirements.",
+      "Guiding businesses in identifying the right collaborations while navigating setup processes and compliance requirements.",
     whyMatters:
       "Nigeria's regulatory, legal, and HR landscape is complex — and the cost of getting it wrong is high. The right local partner makes the difference between a smooth market entry and costly delays, compliance gaps, or the wrong hires.",
     programmeTitle: "Support from registration through to operations",

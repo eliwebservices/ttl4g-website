@@ -47,7 +47,7 @@ const trainingServices = [
     num: "03",
     icon: TrendingUp,
     slug: "#strategic-leadership",
-    title: "Developing Strategic Leadership",
+    title: "Developing Strategic & Intentional Leadership",
     points: [
       "Leading yourself",
       "Leading others",
