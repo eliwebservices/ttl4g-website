@@ -76,7 +76,7 @@ const consultingServices = [
     slug: "#business-setup-nigeria",
     title: "Set up your business in Nigeria — the right way",
     points: [
-      "Provide strategic insight and market (Nigeria & China)",
+      "Provide strategic insight and market intelligence (Nigeria & China)",
       "Set up of business in Nigeria",
       "Company registration ",
       "Tax & regulatory compliance",
@@ -263,7 +263,7 @@ export default function HomePage() {
                 </span>
               </div>
               <p className="font-serif text-brand-navy leading-tight text-3xl lg:text-5xl font-bold">
-                Training & Consulting Company
+                Training & Business Consulting Company
               </p>
             </div>
 
